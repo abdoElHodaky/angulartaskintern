@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/codesandbox",
+            "outputPath": "./build",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/scripts.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

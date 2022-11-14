@@ -1,0 +1,1 @@
+$(".slider-area").slick({dots:!0,infinite:!0,slidesToShow:1,slidesToScroll:1});
