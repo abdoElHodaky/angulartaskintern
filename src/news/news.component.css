@@ -1,0 +1,19 @@
+.navbar li {
+    float: left;
+    list-style: none;
+    margin: 14px 8px;
+    color: white;
+  }
+  .nav-item a{
+    color: white;
+  }
+ .navbar{
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../assets/Mask_Group_3.jpg");
+  position: relative;
+  margin-bottom: 50px;
+ }
+
+ 

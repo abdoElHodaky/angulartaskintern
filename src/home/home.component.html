@@ -1,7 +1,61 @@
-<div class="container">
-  <main class="row">
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+<header>
+  <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top bg-light">
+    <div class="container-fluid row">
+      <a class="navbar-brand col-5" href="#">
+        <img src="https://moe.gov.eg/wwwroot/images/logo.png">
+
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="تبديل التنقل">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse col-5" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/news">اخبار المنصه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              التسجيل علي البوابه
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              تعلم معنا
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              نظام الامتحانات
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              تقديم شكوي
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              دعم فني
+             </a>
+          </li>
+        </ul>
+        <!--form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="بحث" aria-label="بحث">
+          <button class="btn btn-outline-success" type="submit">بحث</button>
+        </form-->
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container my-5">
+  <main class="container">
+    <!--
+    <div id="myCarousel" class="carousel slide row" data-bs-ride="carousel">
+      <div class="carousel-indicators col-1">
         <button
           type="button"
           data-bs-target="#myCarousel"
@@ -25,43 +79,45 @@
           aria-current="true"
         ></button>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item">
+      <div class="carousel-inner container-fluid">
+        <div class="carousel-item row">
           <img
             src="https://moe.gov.eg//media/jovbc1tx/minstry.jpeg?anchor=center&mode=crop&width=1560&height=528&rnd=133117732152830000"
-            width="100%"
-            height="100%"
             alt=""
+            width="100px"
+            height="100px"
+            
           />
 
           <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>
+            <div class="carousel-caption row">
+              <h1 class="text-end">
                 "التعليم" تعلن عن إطلاق النسخة الثالثة من المشروع الوطني للقراءة
                 لعام 2022/2023.
               </h1>
-              <p>
+              <p class="text-end">
                 في إطار دعم ورعاية الدكتور رضا حجازي وزير التربية والتعليم
                 والتعليم الفني للقراءة وتنمية الوعي وتمكين الأجيال من مفاتيح
                 الابتكار، عقدت الوزارة اجتماعًا، عبر الفيديو كونفرانس، مع مديري
                 الشؤون التنفيذية وموجهي عموم المكتبات استعدادًا لإطلاق النسخة
                 الثالثة من المشروع الوطني للقراءة لعام 2022/2023..
               </p>
-              <p>
+              <p class="text-end">
                 <a class="btn btn-lg btn-primary" href="/news">تفاصيل اكثر</a>
               </p>
             </div>
           </div>
         </div>
-        <div class="carousel-item active">
+        <div class="carousel-item active col flex-row">
           <img
             src="https://moe.gov.eg//media/4lrb220n/whatsapp-image-2022-11-01-at-1-36-29-pm.jpeg?anchor=center&mode=crop&width=1560&height=528&rnd=133117778229570000"
             width="100%"
             height="100%"
             alt=""
+            class="col-5 float-end"
           />
 
-          <div class="container">
+          <div class="container float-start">
             <div class="carousel-caption">
               <h1>
                 وزير التربية والتعليم يكرم طلاب مدارس المتفوقين في العلوم
@@ -84,14 +140,14 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item col flex-row">
           <img
             width="100%"
             height="100%"
             src="https://moe.gov.eg//media/ioojpjmu/reda-hegazy.jpeg?anchor=center&mode=crop&width=1560&height=528&rnd=133117907759530000"
           />
 
-          <div class="container">
+          <div class="container col-5 float-start">
             <div class="carousel-caption text-end">
               <h1>
                 خلال اجتماع لجنة التعليم بمجلس النواب وزير التربية والتعليم:
@@ -119,7 +175,7 @@
           </div>
         </div>
       </div>
-
+      
       <button
         class="carousel-control-prev"
         type="button"
@@ -137,7 +193,54 @@
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">التالي</span>
-      </button>
-    </div>
+      </button-->
+      
+      <section class="slider-area slider carousel">
+        <div>
+          hello
+        </div>
+        <div>abdo</div>
+        <div>moh</div>
+      </section>
+  
+
+
+      <section class="row d-flex">
+        <div class="col-3 flex-column">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      
+          <h2>شرح طريقه التسجيل</h2>
+          <p>وصف طريقه التسجيل.</p>
+          <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div>
+  
+        <div class="col-3 flex-column">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      
+          <h2>شرح طريقه التسجيل</h2>
+          <p>وصف طريقه التسجيل.</p>
+          <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div>
+  
+        <div class="col-3 flex-column">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      
+          <h2>شرح طريقه التسجيل</h2>
+          <p>وصف طريقه التسجيل.</p>
+          <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div>
+        
+        <div class="col-3 flex-column">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+      
+          <h2>شرح طريقه التسجيل</h2>
+          <p>وصف طريقه التسجيل.</p>
+          <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div>
+      
+      </section>
+
+    
+    
   </main>
 </div>
