@@ -15,6 +15,9 @@ export class HomeComponent {
     { img: '../assets/hugo-productive-work.png', p: 'bye' },
   ];
     slideConfig = {
+      adaptiveHeight:true,
+      swipe:true,
+      mobileFirst:true
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
