@@ -1,0 +1,15 @@
+.navbar li {
+  float: left;
+  list-style: none;
+  margin: 14px 8px;
+  
+}
+.nav-item a{
+  color: black;
+  transition: all ease-in-out .5s;
+}
+.nav-item a:active,.nav-item a:hover{
+  color: white;
+  border-radius: 10%;
+  background-color: var(--bs-cyan);
+}
