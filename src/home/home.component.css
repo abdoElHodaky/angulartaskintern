@@ -2,11 +2,11 @@
   margin-bottom: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../assets/hugo-productive-work.png");
+  background-color: azure;
   height: 600px;
   background-position: center;
-    background-attachment: fixed;
-    width: 100%;
+  background-attachment: fixed;
+  width: 100%;
 }
 /* Since positioning the image, we need to help out the caption */
 /*.carousel-caption {
@@ -29,7 +29,7 @@
   margin-bottom: 5rem;
   background-color: #efce;
 }
-._navactive{
+._navactive {
   color: white;
   background-color: var(--bs-cyan);
   border-radius: 30%;
