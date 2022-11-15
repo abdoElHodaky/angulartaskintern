@@ -104,3 +104,26 @@ body .slick-next {
   border-radius: 10%;
   background-color: var(--bs-cyan);
 }
+
+
+
+
+
+
+
+
+.slick-dots li.slick-active button:before, .slick-dots li button:before {
+    color: #FFF;
+    opacity: 1;
+    font-size: 16px;
+}
+.slick-dots li.slick-active button {
+    border: 5px solid #00AC9F;
+    border-radius: 100%;
+}
+.slick-dots li button {
+  border: 5px solid #FFF;
+}
+.slick-dots li.slick-active button:before {
+    color: transparent;
+}
