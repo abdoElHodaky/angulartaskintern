@@ -195,12 +195,32 @@
         <span class="visually-hidden">التالي</span>
       </button-->
       
-      <section class="slider-area slider carousel">
-        <div>
-          hello
-        </div>
-        <div>abdo</div>
-        <div>moh</div>
+      <section id="caroselsection">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+          (init)="slickInit($event)"
+          (breakpoint)="breakpoint($event)"
+          (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)"
+        >
+          <div
+            ngxSlickItem
+            *ngFor="let slide of slides; let i = index"
+            class="slide"
+          >
+            <img src="{{ slide.img }}" alt="" width="100%" />
+            <p class="text-start text-white mx-1">
+              {{ slide.p }}
+            </p>
+          </div>
+        </ngx-slick-carousel>
+        <!--
+        <button (click)="addSlide()">Add</button>
+        <button (click)="removeSlide()">Remove</button>
+        <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+        <button (click)="slickModal.unslick()">unslick</button-->
       </section>
   
 

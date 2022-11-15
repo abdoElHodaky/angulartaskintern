@@ -1,4 +1,4 @@
-.carousel {
+/*.carousel {
   margin-bottom: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,13 +9,13 @@
     width: 100%;
 }
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
+/*.carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
-.carousel-item {
+/*.carousel-item {
   height: 32rem;
 }
 .carousel-item > img {
@@ -24,7 +24,11 @@
   height: 32rem;
   float: left;
 }
-
+*/
+#caroselsection {
+  margin-bottom: 5rem;
+  background-color: #efce;
+}
 ._navactive{
   color: white;
   background-color: var(--bs-cyan);
@@ -32,34 +36,52 @@
 }
 
 .slider {
-  width: 100vw;
-  margin: 100px auto;
-  height: 50vh;
+  width: 100%;
+  margin: auto;
+  height: 50%;
+  position: relative;
 }
 
 .slick-slide {
-margin: 0px 20px;
+  margin: 0px 20px;
 }
 
-.slick-slide img {
-width: 100%;
+.slick-slide di {
+  width: 100%;
+  color: re;
 }
 
 .slick-prev:before,
 .slick-next:before {
-color: black;
+  color: black;
 }
 
-
 .slick-slide {
-transition: all ease-in-out .3s;
-opacity: .2;
+  transition: all ease-in-out 0.3s;
+  opacity: 0.2;
 }
 
 .slick-active {
-opacity: .5;
+  opacity: 0.5;
 }
 
 .slick-current {
-opacity: 1;
+  opacity: 1;
+}
+.slick-dots {
+  text-align: end;
+}
+
+.slick-slider {
+  width: 88%;
+  margin: auto;
+  background: rgb(14, 13, 13);
+}
+
+body .slick-prev,
+body .slick-next {
+  height: 45px;
+  width: 40px;
+  background: grey !important;
+  z-index: 100;
 }
