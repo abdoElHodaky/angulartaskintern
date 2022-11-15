@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-light bg-white bg-light">
+  <nav class="navbar navbar-expand-md navbar-light bg-white bg-light nav-fill w-100">
     <div class="container-fluid row">
       <a class="navbar-brand col-5" href="#">
         <img src="https://moe.gov.eg/wwwroot/images/logo.png">
@@ -197,6 +197,7 @@
       
       <section id="caroselsection">
         <ngx-slick-carousel
+          style="background: transparent"
           class="carousel"
           #slickModal="slick-carousel"
           [config]="slideConfig"
@@ -210,10 +211,14 @@
             *ngFor="let slide of slides; let i = index"
             class="slide"
           >
-            <img src="{{ slide.img }}" alt="" width="100%" />
-            <p class="text-start text-white mx-1">
+            <p class="text-start align-top text-success mx-1 mt-5" style="transform: translate(-10px,200px); font-size: x-large;">
               {{ slide.p }}
             </p>
+            <img src="{{ slide.img }}" alt="" width="100%" />
+            <p class="text-start text-warning mx-1 mb-5" style="transform: translate(-10px,-230px); font-size: x-large;">
+              {{ slide.p }}
+            </p>
+            
           </div>
         </ngx-slick-carousel>
         <!--

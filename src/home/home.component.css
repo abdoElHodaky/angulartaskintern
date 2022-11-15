@@ -27,7 +27,7 @@
 */
 #caroselsection {
   margin-bottom: 5rem;
-  background-color: #efce;
+  background-color: var(--bs-white);
 }
 ._navactive {
   color: white;
