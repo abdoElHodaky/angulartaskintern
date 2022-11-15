@@ -130,14 +130,12 @@
     </div>
   -->
   <div class="container-fluid">
+    <!--
     <section class="row d-flex">
       <div class="col-md-3 col-sm-6 flex-column">
         <img claas="rounded-circle" src="../assets/image_bg.jpg" alt=""
          width="200px"
          height="200px">
-        <!--svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%"></rect>
-          <image href="../assets/image_bg.jpg" x="0" y="0" width="100" height="100"></image>
-        </svg-->
     
         <h2>شرح طريقه التسجيل</h2>
         <p>وصف طريقه التسجيل.</p>
@@ -171,6 +169,64 @@
         <p><a class="btn btn-secondary" href="/news/4">عرض التفاصيل</a></p>
       </div>
       </section>
+    -->
+
+    <section id="caroselsection">
+      <ngx-slick-carousel
+        style="background: transparent"
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let slide of slides; let i = index"
+          class="slide"
+        >
+        <div class="row d-flex">
+          <div class="col-4 flex-column">
+            <img src="{{slide.img}}" alt="" width="300px" height="300px">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;">
+              شرح طريقه التسجيل
+            </p>
+
+          </div>
+          <div class="col-4 flex-column">
+            <img src="{{slide.img}}" alt="" width="300px" height="300px">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;">
+              شرح طريقه التسجيل
+            </p>
+
+          </div>
+          <div class="col-4 flex-column">
+            <img src="{{slide.img}}" alt="" width="300px" height="300px">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;">
+              شرح طريقه التسجيل
+            </p>
+
+          </div>
+          
+          <!---->
+          <!--
+          <p class="text-start text-warning mx-1 mb-5" style="transform: translate(-10px,-230px); font-size: x-large;">
+            {{ slide.p }}
+          </p>
+        -->
+        </div>
+          
+        </div>
+      </ngx-slick-carousel>
+      <!--
+      <button (click)="addSlide()">Add</button>
+      <button (click)="removeSlide()">Remove</button>
+      <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+      <button (click)="slickModal.unslick()">unslick</button-->
+    </section>
+
 
   </div>
   
