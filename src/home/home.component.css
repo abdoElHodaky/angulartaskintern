@@ -27,7 +27,7 @@
 */
 #caroselsection {
   margin-bottom: 5rem;
-  background-color: var(--bs-white);
+  background-color: var(--bs-light);
 }
 ._navactive {
   color: white;
@@ -41,7 +41,9 @@
   height: 50%;
   position: relative;
 }
-
+/*.slide{
+  height: 500px;
+}*/
 .slick-slide {
   margin: 0px 20px;
 }
@@ -68,8 +70,8 @@
 .slick-current {
   opacity: 1;
 }
-.slick-dots {
-  text-align: end;
+.slick-dots[role=tablist] {
+  text-align: right;
 }
 
 .slick-slider {
@@ -84,4 +86,21 @@ body .slick-next {
   width: 40px;
   background: grey !important;
   z-index: 100;
+}
+
+
+.navbar li {
+  float: left;
+  list-style: none;
+  margin: 14px 8px;
+  
+}
+.nav-item a{
+  color: black;
+  transition: all ease-in-out .5s;
+}
+.nav-item a:active,.nav-item a:hover{
+  color: white;
+  border-radius: 10%;
+  background-color: var(--bs-cyan);
 }
