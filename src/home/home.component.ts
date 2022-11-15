@@ -17,7 +17,7 @@ export class HomeComponent {
     slideConfig = {
       adaptiveHeight:true,
       swipe:true,
-      mobileFirst:true
+      mobileFirst:true,
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
