@@ -5,6 +5,7 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "../home/home.component";
 import { NewsComponent } from "../news/news.component";
 import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +14,7 @@ import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
     NewsDetailComponent
   ],
   imports: [
+    SlickCarouselModule,
     BrowserModule,
     RouterModule.forRoot([
       { path: "", redirectTo: "/home", pathMatch: "full" },
