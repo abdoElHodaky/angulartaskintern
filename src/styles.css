@@ -10,7 +10,7 @@ app-home .slick-dots{
   text-align: right;
 }
 .slick-dots button{
- transition:all cubic-bezier(.17,.67,.83,.67) .5s;
+ transition:all cubic-bezier(.17,.67,.83,.67) .7s;
 }
 app-home .slick-dots li.slick-active button:before,
 app-home .slick-dots li button:before {
