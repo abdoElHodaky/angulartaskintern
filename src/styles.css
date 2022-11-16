@@ -23,7 +23,7 @@ app-home .slick-dots li.slick-active button {
   border-radius: 100%;
 }
 app-home .slick-dots li.slick-active button:before {
-  color: transparent;
+  color: var(--bs-cyan);
 }
 
 
@@ -43,5 +43,5 @@ app-news .slick-dots li.slick-active button {
   border-radius: 100%;
 }
 app-news .slick-dots li.slick-active button:before {
-  color: transparent;
+  color: var(--bs-warning);
 }
