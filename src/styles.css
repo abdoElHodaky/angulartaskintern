@@ -4,3 +4,41 @@ html,
 body {
   font-family: sans-serif;
 }
+
+
+app-home .slick-dots{
+  text-align: right;
+}
+app-home .slick-dots li.slick-active button:before,
+app-home .slick-dots li button:before {
+  color: grey;
+  opacity: 1;
+  font-size: 16px;
+}
+app-home .slick-dots li.slick-active button {
+  border: 5px solid var(--bs-cyan);
+  border-radius: 100%;
+}
+app-home .slick-dots li.slick-active button:before {
+  color: transparent;
+}
+
+
+
+
+
+
+
+app-news .slick-dots li.slick-active button:before,
+app-news .slick-dots li button:before {
+  color: grey;
+  opacity: 1;
+  font-size: 16px;
+}
+app-news .slick-dots li.slick-active button {
+  border: 5px solid var(--bs-warning);
+  border-radius: 100%;
+}
+app-news .slick-dots li.slick-active button:before {
+  color: transparent;
+}
