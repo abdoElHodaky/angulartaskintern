@@ -1,4 +1,4 @@
-import { Article } from "../models/Article";
+import { Article } from "../models/article";
 export interface AppState {
 	articleState: ArticleState;
 }
