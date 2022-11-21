@@ -1,5 +1,5 @@
-import Article from "./article.d.ts"
-export class _Article extends Article {
+import _Article from "./article.d.ts"
+export class Article extends _Article {
     id: number;
     title: string;
     category: string;
