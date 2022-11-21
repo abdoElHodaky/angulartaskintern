@@ -5,3 +5,4 @@ decalre interface Article {
     content:string;
     imgurl:string
 }
+export default Article
