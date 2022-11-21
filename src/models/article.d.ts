@@ -1,4 +1,4 @@
-decalre interface Article {
+declare interface Article {
     id: number;
     title: string;
     category: string;
