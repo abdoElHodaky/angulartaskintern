@@ -1,4 +1,5 @@
-export interface Article {
+import Article from "./article.d.ts"
+export class Articl extends Article {
     id: number;
     title: string;
     category: string;
