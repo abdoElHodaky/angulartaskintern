@@ -1,4 +1,4 @@
-declare interface Article {
+declare interface _Article {
     id: number;
     title: string;
     category: string;
