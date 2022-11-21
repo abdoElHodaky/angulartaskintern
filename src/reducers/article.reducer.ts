@@ -15,7 +15,7 @@ const _articleReducer = createReducer(
 
 export function articleReducer(state: any, action: Action) {
   return _articleReducer(state, action);
-}
+};
 
 export const getArticleState = createFeatureSelector<ArticleState>('articleState');
 
