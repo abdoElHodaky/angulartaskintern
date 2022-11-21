@@ -1,5 +1,5 @@
 import Article from "./article.d.ts"
-export class Articl extends Article {
+export class Article extends Article {
     id: number;
     title: string;
     category: string;
