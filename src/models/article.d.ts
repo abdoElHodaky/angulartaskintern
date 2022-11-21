@@ -5,4 +5,4 @@ declare interface _Article {
     content:string;
     imgurl:string
 }
-export default Article
+export default _Article
