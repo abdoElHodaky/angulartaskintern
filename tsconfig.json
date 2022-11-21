@@ -24,6 +24,7 @@
                 "node_modules/core-js/proposals/reflect-metadata"
             ]
         }
-  }
+  },
+  "include": ["src/**/*"]
 
  }
