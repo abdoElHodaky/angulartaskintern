@@ -1,10 +1,7 @@
 import _Article from "./article.d"
-export class Article extends _Article {
-    id: number;
-    title: string;
-    category: string;
-    content:string;
-    imgurl:string
+export class Article implements _Article {
+    constructor(){
+    }
 }
 
 export const JAVA_ARTICLES: Article[] = [
