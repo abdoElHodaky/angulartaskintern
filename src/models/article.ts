@@ -1,5 +1,11 @@
 import _Article from "./article.d"
 export class Article implements _Article {
+    id: number;
+    title: string;
+    category: string;
+    content:string;
+    imgurl:string;
+    
     constructor(){
     }
 }
