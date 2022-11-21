@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import  {_Article}  from '../models/article';
+import  {Article}  from '../models/article';
 
 export const JavaArticlesAction = createAction('[ Article ] Java');
 export const AngularArticlesAction = createAction('[ Article ] Angular');
