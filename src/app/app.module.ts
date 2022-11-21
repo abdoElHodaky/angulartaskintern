@@ -6,6 +6,8 @@ import { HomeComponent } from "../home/home.component";
 import { NewsComponent } from "../news/news.component";
 import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { StoreModule } from "@ngrx/store";
+import { reducers } from '../reducers/reducers';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +16,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     NewsDetailComponent
   ],
   imports: [
+    StoreModule.forRoot(reducers),
     SlickCarouselModule,
     BrowserModule,
     RouterModule.forRoot([

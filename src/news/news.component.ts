@@ -10,7 +10,7 @@ export class NewsComponent {
   slides = [
     { img: '../assets/image_bg.jpg', p: 'hello' },
     { img: '../assets/image_bg.jpg', p: 'abdo' },
-    { img: '../assets/image_bg.jpg', p: 'moh' },
+    { img: '../assets/image_bg.jpg', p: 'abdo' }
   ];
     slideConfig = {
       adaptiveHeight:true,

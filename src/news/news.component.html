@@ -189,13 +189,13 @@
       >
         <div
           ngxSlickItem
-          *ngFor="let slide of slides; let i = index"
+          *ngFor="let slide of slides; let i = 'index+1'"
           class="slide"
         >
         <div class="row d-flex">
           <div class="col-sm-6 col-md-4 flex-column">
             <img src="{{slide.img}}" alt="" width="250px" height="250px">
-            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i}}">
               شرح طريقه التسجيل
             </p>
 
@@ -209,7 +209,7 @@
           </div>
           <div class="col-sm-6 col-md-4 flex-column">
             <img src="{{slide.img}}" alt="" width="250px" height="250px">
-            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+2}}">
               شرح طريقه التسجيل
             </p>
 
