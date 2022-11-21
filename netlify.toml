@@ -1,4 +1,4 @@
 [build]
- base=angulartaskintern
+ base="angulartaskintern"
  command="CI=npm run build"
- build=publish
+ build="publish"
