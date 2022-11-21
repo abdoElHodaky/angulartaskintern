@@ -1,4 +1,4 @@
-import _Article from "./article.d.ts"
+import _Article from "./article.d"
 export class Article extends _Article {
     id: number;
     title: string;
