@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 import { Store } from '@ngrx/store';
 import { Observable,pipe } from 'rxjs';
-import * as articleReducer from '../reducers/article.reducer.ts';
-import * as fromActions from '../actions/article.actions.ts';
-import { ArticleState } from '../reducers/app.states.ts';
-import { Article } from '../models/article.ts';
+import * as articleReducer from '../reducers/article.reducer';
+import * as fromActions from '../actions/article.actions';
+import { ArticleState } from '../reducers/app.states';
+import { Article } from '../models/article';
 import {filter} from 'rxjs/operators';
 import { ActivatedRoute } from "@angular/router";
 @Component({
