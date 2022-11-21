@@ -25,6 +25,7 @@
             ]
         }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+   "skipLibCheck": true
 
  }
