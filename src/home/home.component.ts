@@ -24,6 +24,8 @@ export class HomeComponent {
       dots: true,
       infinite: true,
       rtl: true,
+      useTransform: true,
+      cssEase: "ease-in-out"
     };
     addSlide() {
       this.slides.push({ img: '../assets/hugo-productive-work.png', p: 'hello' });
