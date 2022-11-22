@@ -29,28 +29,12 @@ export class NewsComponent {
       swipe:true,
       mobileFirst:true,
       arrows: false,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 3,
       dots: true,
       infinite: true,
-      rtl: true,
-      responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 2,
-      },
-    },
-    {
-      breakpoint: 1008,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 3,
-      },
-    }
-    
-     ]
+      rtl: true
+      
     };
     constructor(private store: Store<ArticleState>) {
       this.articles$ = store.select(articleReducer.getArticles);
