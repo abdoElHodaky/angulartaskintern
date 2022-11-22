@@ -41,7 +41,7 @@ export class NewsDetailComponent {
       this.fetechedArticles=e
     })
     this.showedArticle=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
-    if(this.showedArticle=={}){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
+    if(Object.keys(this.showedArticle).length==0){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
 
 
 
