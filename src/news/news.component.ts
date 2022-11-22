@@ -30,7 +30,7 @@ export class NewsComponent {
       mobileFirst:true,
       arrows: false,
       slidesToShow: 3,
-      slidesToScroll: 2,
+      slidesToScroll: 3,
       dots: true,
       infinite: true,
       rtl: true
