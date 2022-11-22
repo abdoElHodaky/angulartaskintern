@@ -1,4 +1,10 @@
 import { Component } from "@angular/core";
+import { Store } from '@ngrx/store';
+import { Observable,pipe } from 'rxjs';
+import * as articleReducer from '../reducers/article.reducer';
+import * as fromActions from '../actions/article.actions';
+import { ArticleState } from '../reducers/app.states';
+import  {Article}  from '../models/article';
 
 @Component({
   selector: "<app-news></app-news>",
@@ -7,6 +13,9 @@ import { Component } from "@angular/core";
 })
 export class NewsComponent {
   title = "news";
+  articles$: Observable<Article[]>;
+  fetechedArticles:Article[];
+  
   slides = [
     { img: '../assets/image_bg.jpg', p: 'hello' },
     { img: '../assets/image_bg.jpg', p: 'abdo' },
@@ -26,6 +35,13 @@ export class NewsComponent {
       infinite: true,
       rtl: true
     };
+    constructor(private store: Store<ArticleState>) {
+      this.articles$ = store.select(articleReducer.getArticles);
+      
+    }
+    ngOnInit(){
+      this.showMinsArticles()
+    }
     addSlide() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
     }
@@ -44,4 +60,11 @@ export class NewsComponent {
     beforeChange(e: any) {
       console.log('beforeChange');
     }
+    showMinsArticles() {
+        this.store.dispatch(fromActions.MinsArticlesAction());
+        this.articles$.subscribe(e=>{
+          this.fetechedArticles=e
+        })
+    
+      }
 }
