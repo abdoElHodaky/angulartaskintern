@@ -27,7 +27,6 @@ export class NewsComponent {
       rtl: true,
       centerMode: true,
       centerPadding: '0',
-      responsive: [{breakpoint: 1024,},{breakpoint: 600,},{breakpoint: 480,}]
     };
     addSlide() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
