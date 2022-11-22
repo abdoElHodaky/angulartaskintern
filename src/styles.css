@@ -46,3 +46,10 @@ app-news .slick-dots li.slick-active button {
 app-news .slick-dots li.slick-active button:before {
   color: var(--bs-warning);
 }
+
+app-news .slick-slide {
+  margin: 0 10px;
+}
+app-news .slick-list {
+  margin: 0 -10px;
+}
