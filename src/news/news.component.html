@@ -179,7 +179,7 @@
     <section id="caroselsection">
       <ngx-slick-carousel
         style="background: transparent"
-        class="carousel row d-flex"
+        class="carousel"
         #slickModal="slick-carousel"
         [config]="slideConfig"
         (init)="slickInit($event)"
@@ -191,12 +191,14 @@
         <div
           ngxSlickItem
           *ngFor="let slide of slides; let i = 'index+1'"
-          class="slide col-sm-6 col-md-4 flex-column mx-1"
+          class="slide row d-flex "
         >
+        <div class="col-sm-6 col-md-4 flex-column">
          <img src="{{slide.img}}" alt="" width="250px" height="250px">
             <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i}}">
               شرح طريقه التسجيل
             </p>
+        </div>
         </div>
         
         <!--
