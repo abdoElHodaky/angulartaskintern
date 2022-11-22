@@ -33,7 +33,27 @@ export class NewsComponent {
       slidesToScroll: 3,
       dots: true,
       infinite: true,
-      rtl: true
+      rtl: true,
+      responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1008,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: 'unslick',
+    },
+     ]
     };
     constructor(private store: Store<ArticleState>) {
       this.articles$ = store.select(articleReducer.getArticles);
