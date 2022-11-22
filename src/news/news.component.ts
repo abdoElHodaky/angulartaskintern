@@ -39,20 +39,17 @@ export class NewsComponent {
       breakpoint: 1200,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 1008,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
       },
-    },
-    {
-      breakpoint: 800,
-      settings: 'unslick',
-    },
+    }
+    
      ]
     };
     constructor(private store: Store<ArticleState>) {
