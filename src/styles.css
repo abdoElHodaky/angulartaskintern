@@ -53,3 +53,7 @@ app-news .slick-slide {
 app-news .slick-list {
   margin: 0 -10px;
 }
+
+app-news p:hover{
+  cursor:pointer;
+}
