@@ -29,8 +29,8 @@ export class NewsComponent {
       swipe:true,
       mobileFirst:true,
       arrows: false,
-      slidesToShow: 2,
-      slidesToScroll: 3,
+      slidesToShow: 3,
+      slidesToScroll: 2,
       dots: true,
       infinite: true,
       rtl: true
