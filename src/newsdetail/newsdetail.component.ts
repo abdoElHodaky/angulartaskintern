@@ -41,7 +41,7 @@ export class NewsDetailComponent {
       this.fetechedArticles=e
     })
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
-    if(JSON.stringify(d)=="{}"){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
+    if(Object.entries(d).length===0){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
     else{this.showedArticle=d}
     
 
