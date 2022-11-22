@@ -40,9 +40,9 @@ export class NewsDetailComponent {
     this.articles$.subscribe(e=>{
       this.fetechedArticles=e
     })
-    this.showedArticle=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
-    if(Object.values(this.showedArticle).length==0){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
-
+    var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
+    if(Object.values(d)==[]){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
+    else{this.showedArticle=d}
 
 
 
