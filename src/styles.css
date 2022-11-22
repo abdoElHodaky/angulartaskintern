@@ -15,7 +15,7 @@ app-home .slick-dots{
 }
 app-home .slick-dots li.slick-active button:before,
 app-home .slick-dots li button:before {
-  color: grey;
+  color: var(--bs-light);
   opacity: 1;
   font-size: 16px;
 }
