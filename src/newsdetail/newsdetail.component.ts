@@ -36,12 +36,13 @@ export class NewsDetailComponent {
     this.showMinsArticles()
   }
   showMinsArticles() {
+  var emptyArticle= new Article ()
 		this.store.dispatch(fromActions.MinsArticlesAction());
     this.articles$.subscribe(e=>{
       this.fetechedArticles=e
     })
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
-    if(d == Article ()){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
+    if(d == emptyArticle){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
     else{this.showedArticle=d}
     
 
