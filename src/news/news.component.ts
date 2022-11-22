@@ -11,7 +11,10 @@ export class NewsComponent {
     { img: '../assets/image_bg.jpg', p: 'hello' },
     { img: '../assets/image_bg.jpg', p: 'abdo' },
     { img: '../assets/image_bg.jpg', p: 'abdo' }
-  ];
+    ,{ img: '../assets/image_bg.jpg', p: 'hello' },
+    { img: '../assets/image_bg.jpg', p: 'abdo' },
+    { img: '../assets/image_bg.jpg', p: 'abdo' } 
+];
     slideConfig = {
       adaptiveHeight:true,
       swipe:true,
