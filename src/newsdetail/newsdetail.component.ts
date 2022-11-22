@@ -42,7 +42,7 @@ export class NewsDetailComponent {
       this.fetechedArticles=e
     })
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
-    if(d == emptyArticle){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
+    if(d == undefined){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
     else{this.showedArticle=d}
     
 
