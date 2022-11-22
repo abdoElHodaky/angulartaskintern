@@ -24,9 +24,7 @@ export class NewsComponent {
       slidesToScroll: 3,
       dots: true,
       infinite: true,
-      rtl: true,
-      centerMode: true,
-      centerPadding: '0',
+      rtl: true
     };
     addSlide() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
