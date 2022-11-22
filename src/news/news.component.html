@@ -191,10 +191,10 @@
         <div
           ngxSlickItem
           *ngFor="let fetchedArticle of fetechedArticles; let i =index"
-          class="slide row d-flex overflow-hidden "
+          class="slide overflow-hidden "
         >
         <div class="col-sm-6 col-md-4 flex-column ">
-         <img src="{{fetchedArticle.imgurl}}" alt="" class="img-fluid img-thumbnail" >
+         <img src="{{fetchedArticle.imgurl}}" alt="" class="img-fluid rounded" >
             <p class="text-start align-top text-success mx-1 mt-5" style="font-size: medium; min-width: 20vw; max-width: 40vw;" routerLink="/news/{{fetchedArticle.id}}">
               {{fetchedArticle.title}}
             </p>
