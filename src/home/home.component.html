@@ -202,7 +202,7 @@
       
       <section id="caroselsection">
         <ngx-slick-carousel
-          style="background: transparent; height:40vh;"
+          style="background: transparent;"
           class="carousel"
           #slickModal="slick-carousel"
           [config]="slideConfig"
@@ -214,21 +214,21 @@
           <div
             ngxSlickItem
             *ngFor="let slide of slides; let i = index"
-            class="slide"
+            class="slide overflow-hidden"
           >
           <div class="row d-flex">
-            <div class="col flex-row">
-              <p class="text-start align-top text-success mx-1 mt-1" style="font-size: x-large; min-width:40vw; max-width:60vw">
+            <div class="col flex-row ">
+              <p class="text-start align-top text-black mx-3 mt-3" style="font-size: xxx-large; min-width:40vw; max-width:60vw">
                 فتح باب التقدم لإختبارات
                 أبناؤنا في الخارج الدور الأول
                 2022 - 2023 م
               </p>
 
             </div>
-            <div class="col flex-row">
+            <!--div class="col flex-row">
               <img src="{{ slide.img }}" alt="" class="img-fluid rounded" style="height:40h"  />
             
-            </div>
+            </div-->
             <!---->
             <!--
             <p class="text-start text-warning mx-1 mb-5" style="transform: translate(-10px,-230px); font-size: x-large;">

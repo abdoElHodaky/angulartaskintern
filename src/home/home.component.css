@@ -27,7 +27,13 @@
 */
 #caroselsection {
   margin-bottom: 5rem;
-  background-color: var(--bs-light);
+  /*background-color: var(--bs-light);*/
+  background-image: url(../assets/hugo-productive-work.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
 }
 ._navactive {
   color: white;

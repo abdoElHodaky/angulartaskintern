@@ -21,5 +21,9 @@
   position: relative;
   margin-bottom: 50px;
  }
+ #caroselsection img{
+  min-width: 200px;
+  max-width: 26vw;
+ }
 
  

@@ -8,6 +8,7 @@ body {
 
 app-home .slick-dots{
   text-align: right;
+  transform: translateY(3vh);
 }
 .slick-dots button{
   outline:none;
