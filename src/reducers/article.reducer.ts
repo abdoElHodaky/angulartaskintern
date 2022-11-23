@@ -13,7 +13,8 @@ const _articleReducer = createReducer(
   on(fromActions.FavoriteArticlesAction, (state, {payload}) => {return {articles: payload};}),
   on(fromActions.AddArticleAction, (state, {payload}) => {
   state.articles.push(payload);
-  return {articles:state.articles}})
+  return {articles:state.articles}
+  })
 );
 
 export function articleReducer(state: any, action: Action) {
