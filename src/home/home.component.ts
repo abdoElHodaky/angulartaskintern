@@ -25,8 +25,7 @@ export class HomeComponent {
       infinite: true,
       rtl: true,
       useTransform: true,
-      cssEase: "ease-in-out",
-      variableWidth: true
+      cssEase: "ease-in-out"
     };
     addSlide() {
       this.slides.push({ img: '../assets/hugo-productive-work.png', p: 'hello' });
