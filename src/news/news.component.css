@@ -25,5 +25,7 @@
   min-width: 200px;
   max-width: 40vw;
  }
-
+ #caroselsection .slide:hover{
+  cursor: pointer;
+ }
  
