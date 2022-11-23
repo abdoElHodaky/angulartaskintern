@@ -33,7 +33,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 50vh;
+    min-height: 25vh;
+    max-height: 35vh
 }
 ._navactive {
   color: white;
