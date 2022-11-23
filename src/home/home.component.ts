@@ -8,11 +8,21 @@ import { Component } from "@angular/core";
 export class HomeComponent {
   title = "CodeSandbox";
   slides = [
-    { img: '../assets/hugo-productive-work.png', p: 'hello' },
-    { img: '../assets/hugo-productive-work.png', p: 'abdo' },
-    { img: '../assets/hugo-productive-work.png', p: 'moh' },
-    { img: '../assets/hugo-productive-work.png', p: 'arh' },
-    { img: '../assets/hugo-productive-work.png', p: 'bye' },
+    { img: '../assets/hugo-productive-work.png', p: `فتح باب التقدم لإختبارات
+                أبناؤنا في الخارج الدور الأول
+                2022 - 2023 م` },
+    { img: '../assets/hugo-productive-work.png', p: `فتح باب التقدم لإختبارات
+                أبناؤنا في الخارج الدور الأول
+                2022 - 2023 م`},
+    { img: '../assets/hugo-productive-work.png', p: `فتح باب التقدم لإختبارات
+                أبناؤنا في الخارج الدور الأول
+                2022 - 2023 م` },
+    { img: '../assets/hugo-productive-work.png', p: `فتح باب التقدم لإختبارات
+                أبناؤنا في الخارج الدور الأول
+                2022 - 2023 م` },
+    { img: '../assets/hugo-productive-work.png', p: `فتح باب التقدم لإختبارات
+                أبناؤنا في الخارج الدور الأول
+                2022 - 2023 م` },
   ];
     slideConfig = {
       adaptiveHeight:true,
