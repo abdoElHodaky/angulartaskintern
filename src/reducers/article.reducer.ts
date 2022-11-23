@@ -10,7 +10,10 @@ const _articleReducer = createReducer(
   on(fromActions.JavaArticlesAction, (state) => { return {articles: JAVA_ARTICLES};}),
   on(fromActions.AngularArticlesAction, (state) => { return {articles: ANGULAR_ARTICLES};}),
   on(fromActions.MinsArticlesAction, (state) => { return {articles: MINS_ARTICLES};}),
-  on(fromActions.FavoriteArticlesAction, (state, {payload}) => {return {articles: payload};})
+  on(fromActions.FavoriteArticlesAction, (state, {payload}) => {return {articles: payload};}),
+  on(fromActions.AddArticleAction, (state, {payload}) => {
+  state.articles.push(payload);
+  return {articles:state.articles}})
 );
 
 export function articleReducer(state: any, action: Action) {
