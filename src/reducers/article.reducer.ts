@@ -16,7 +16,7 @@ const _articleReducer = createReducer(
   return {articles:state.articles}
   }),
   on(fromActions.DeleteArticleAction, (state, {payload}) => {
-  const _articles=state.articles.filter(o.id!=payload.id);
+  const _articles=state.articles.filter(o=>o.id!=payload.id);
   return {articles:_articles}
   }),
   on(fromActions.UpdateArticleAction, (state, {payload}) => {
