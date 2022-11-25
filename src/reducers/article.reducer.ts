@@ -22,7 +22,7 @@ const _articleReducer = createReducer(
   on(fromActions.UpdateArticleAction, (state, {payload}) => {
   const _articles=state.articles
   if(payload[0]==payload[1].id){
-  const _article=_articles.find(o.id=>payload[0])
+  const _article=_articles.find(o=>o.id==payload[0])
   state.articles[state.articles.indexOf(_article)]=payload[1]
   }
   return {articles:state.articles}
