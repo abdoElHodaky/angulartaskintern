@@ -13,7 +13,7 @@ export const DeleteArticleAction =
         createAction('[ Article ] Delete_Article', props<{ payload: Article }>());
 
 export const UpdateArticleAction = 
-        createAction('[ Article ] Update_Article', props<{ payload: Array<int, Article>  }>());
+        createAction('[ Article ] Update_Article', props<{ payload:[integer, Article]  }>());
 
 
 export const MinsArticlesAction = 
