@@ -68,4 +68,8 @@ export class NewsComponent {
         })
     
       }
+
+   AddArticle(param: Article) {
+        this.store.dispatch(fromActions.AddArticlesAction(param));  
+      }
 }
