@@ -70,7 +70,15 @@ export class NewsComponent {
       }
 
    AddArticle(param: Article) {
-        this.store.dispatch(fromActions.AddArticlesAction(param));
+        this.store.dispatch(fromActions.AddArticleAction(param));
+          
+        this.articles$.subscribe(e=>{
+          this.fetechedArticles=e
+        })
+
+       }
+    DeleteArticle(param: integer) {
+        this.store.dispatch(fromActions.DeleteArticleAction(param));
           
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
