@@ -15,7 +15,7 @@ export class NewsComponent {
   title = "news";
   articles$: Observable<Article[]>;
   fetechedArticles:Article[];
-  
+  fetchedCat=""
   slides = [
     { img: '../assets/image_bg.jpg', p: 'hello' },
     { img: '../assets/image_bg.jpg', p: 'abdo' },
@@ -65,6 +65,7 @@ export class NewsComponent {
         this.store.dispatch(fromActions.MinsArticlesAction());
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
+          this.fetchedCat=`وزاري`;
         })
     
       }
