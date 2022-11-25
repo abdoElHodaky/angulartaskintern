@@ -70,7 +70,7 @@ export class NewsComponent {
     
       }
 
-   AddArticle(param: Article) {
+   AddArticle(param) {
         this.store.dispatch(fromActions.AddArticleAction(param));
           
         this.articles$.subscribe(e=>{
@@ -78,7 +78,7 @@ export class NewsComponent {
         })
 
        }
-    DeleteArticle(param: Integer) {
+    DeleteArticle(param) {
         this.store.dispatch(fromActions.DeleteArticleAction(param));
           
         this.articles$.subscribe(e=>{
