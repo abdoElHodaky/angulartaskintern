@@ -15,7 +15,7 @@ export class NewsComponent {
   title = "news";
   articles$: Observable<Article[]>;
   fetechedArticles:Article[];
-  fetchedCat="MINS"
+  fetchedCat:String="MINS"
   slides = [
     { img: '../assets/image_bg.jpg', p: 'hello' },
     { img: '../assets/image_bg.jpg', p: 'abdo' },
