@@ -9,5 +9,8 @@ export const FavoriteArticlesAction =
 export const AddArticleAction = 
         createAction('[ Article ] Add_Article', props<{ payload: Article }>());
 
+export const DeleteArticleAction = 
+        createAction('[ Article ] Delete_Article', props<{ payload: Article }>());
+
 export const MinsArticlesAction = 
         createAction('[ Article ] Mins_Articles'); 
