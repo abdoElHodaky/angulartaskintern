@@ -78,7 +78,7 @@ export class NewsComponent {
         })
 
        }
-    DeleteArticle(param: integer) {
+    DeleteArticle(param: Integer) {
         this.store.dispatch(fromActions.DeleteArticleAction(param));
           
         this.articles$.subscribe(e=>{
