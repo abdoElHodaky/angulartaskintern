@@ -18,6 +18,13 @@ const _articleReducer = createReducer(
   on(fromActions.DeleteArticleAction, (state, {payload}) => {
   const _articles=state.articles.filter(o.id!=payload.id);
   return {articles:_articles}
+  }),
+  on(fromActions.UpdateArticleAction, (state, {payload}) => {
+  const _articles=state.articles
+  const _article=_articles.find(o.id=>payload[0])
+  state.articles[state.articles.indexOf(_article)]=payload[1]
+  return {articles:state.articles}
+
   })
 );
 
