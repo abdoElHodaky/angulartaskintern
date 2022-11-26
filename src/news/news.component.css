@@ -21,12 +21,14 @@
   position: relative;
   margin-bottom: 50px;
  }
- #caroselsection img{
+ .caroselsection img{
   min-width: 200px;
   max-width: 40vw;
  }
- #caroselsection .slide:hover{
+ .caroselsection .slide:hover{
   cursor: pointer;
  }
  
-#tera{}
+ .caroselsection h4{
+  background-color: var(--bs-gray);
+}

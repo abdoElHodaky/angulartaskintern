@@ -42,6 +42,7 @@ export class NewsComponent {
     }
     ngOnInit(){
       this.showMinsArticles()
+      this.DeleteArticle(1)
     }
     addSlide() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
@@ -70,20 +71,19 @@ export class NewsComponent {
     
       }
 
-   AddArticle(param) {
-        this.store.dispatch(fromActions.AddArticleAction(param));
+   AddArticle(param:Article):void {
+        this.store.dispatch(fromActions.AddArticleAction({payload:param}));
           
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
         })
 
        }
-    DeleteArticle(param) {
-        this.store.dispatch(fromActions.DeleteArticleAction(param));
-          
-        this.articles$.subscribe(e=>{
-          this.fetechedArticles=e
-        })
+    DeleteArticle(param:number):void {
+        this.store.dispatch(fromActions.DeleteArticleAction({payload:param}));
+        //this.articles$.subscribe(console.log)
+        //this.store.select(articleReducer.getArticles).subscribe(console.log)  
+        
 
        }
 }
