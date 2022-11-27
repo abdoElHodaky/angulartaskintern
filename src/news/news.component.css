@@ -26,6 +26,7 @@
   max-width: 40vw;
   height: 54vh;
   max-height: 55vh;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
  }
  .caroselsection .slide:hover{
   cursor: pointer;
@@ -38,6 +39,7 @@
     font-size: medium;
     min-width: 20vw;
     max-width: 40vw;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
 }
 @media screen and (orientation:portrait){
   .caroselsection,.caroselsection ngx-slick-carousel{
