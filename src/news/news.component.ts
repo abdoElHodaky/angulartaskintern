@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Store } from '@ngrx/store';
-import { Observable,pipe } from 'rxjs';
+import { filter, find, findIndex, map, Observable,pipe } from 'rxjs';
 import * as articleReducer from '../reducers/article.reducer';
 import * as fromActions from '../actions/article.actions';
 import { ArticleState } from '../reducers/app.states';
@@ -42,7 +42,7 @@ export class NewsComponent {
     }
     ngOnInit(){
       this.showMinsArticles()
-      this.DeleteArticle(1)
+      //this.DeleteArticle(1)
     }
     addSlide() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
@@ -64,6 +64,7 @@ export class NewsComponent {
     }
     showMinsArticles() {
         this.store.dispatch(fromActions.MinsArticlesAction());
+        //this.articles$.pipe(filter((o,index)=>index==1)).subscribe(console.log)
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
           this.fetchedCat=`وزاري`;

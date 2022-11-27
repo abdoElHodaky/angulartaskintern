@@ -22,8 +22,10 @@
   margin-bottom: 50px;
  }
  .caroselsection img{
-  min-width: 200px;
+  min-width: 400px;
   max-width: 40vw;
+  height: 54vh;
+  max-height: 60vh;
  }
  .caroselsection .slide:hover{
   cursor: pointer;
