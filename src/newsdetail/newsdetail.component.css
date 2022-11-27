@@ -20,3 +20,7 @@
     max-height: 60vh;
   }  
 }
+@media screen and (orientation:landscape) {
+  img{
+    max-height: 60vh;
+  }  
