@@ -140,3 +140,42 @@ body .slick-next {
     color: transparent;
 }
 */
+.caroselsection,.caroselsection ngx-slick-carousel , #caroselsection2,#caroselsection ngx-slick-carousel {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+#caroselsection2 img{
+  min-width: 185px;
+  max-width: 18vw;
+  height: 54vh;
+  max-height: 55vh;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
+ }
+ #caroselsection2 .slide:hover{
+  cursor: pointer;
+ }
+ 
+ #caroselsection2 h4{
+  background-color: var(--bs-gray);
+}
+#caroselsection2 p{
+    font-size: medium;
+    min-width: 20vw;
+    max-width: 40vw;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
+}
+@media screen and (orientation:portrait){
+  #caroselsection2,#caroselsection2 ngx-slick-carousel{
+    max-height: 83vh;
+  }
+  #caroselsection2 img{
+    
+    max-width: none;
+    height: 30vh;
+    width: 30vw;
+  }
+  #caroselsection2 p{
+    min-width: 19vw;
+    max-width: 30vw;
+  }
+
+}

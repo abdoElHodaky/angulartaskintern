@@ -176,7 +176,7 @@
       </section>
     -->
     
-    <section class="caroselsection">
+    <!--section class="caroselsection">
      <h4 class="text-start text-warning py-2 my-2 rounded-1 mx-1 px-1 ">{{fetchedCat}}</h4>
     
       <ngx-slick-carousel
@@ -203,13 +203,28 @@
         </div>
         </div>
       </ngx-slick-carousel>
-      <!--
+      
       <button (click)="addSlide()">Add</button>
       <button (click)="removeSlide()">Remove</button>
       <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-      <button (click)="slickModal.unslick()">unslick</button-->
-    </section>
+      <button (click)="slickModal.unslick()">unslick</button>
+    </section-->
+    <section class="container-fluid">
 
+      <div class="row d-flex">
+
+        <div class="col-sm-6 col-md-4 flex-column " *ngFor="let fetchedArticle of fetechedArticles; let i =index">
+         <img src="{{fetchedArticle.imgurl}}" alt="" class="rounded img-fluid" >
+            <p class="text-start align-top text-success mx-1 mt-5" style="" routerLink="/news/{{fetchedArticle.id}}">
+              {{fetchedArticle.title}}
+            </p>
+        </div>
+
+
+
+      </div>
+
+    </section>
 
   </div>
   

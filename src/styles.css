@@ -6,11 +6,12 @@ body {
 }
 
 
-app-home .slick-dots{
+app-home #caroselsection .slick-dots{
   text-align: right;
   transform: translateY(3vh);
   
 }
+
 .slick-dots button{
   outline:none;
   transition:all cubic-bezier(.17,.67,.83,.67) .7s;

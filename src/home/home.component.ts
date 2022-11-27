@@ -1,4 +1,10 @@
 import { Component } from "@angular/core";
+import { Store } from '@ngrx/store';
+import { filter, find, findIndex, map, Observable,pipe } from 'rxjs';
+import * as articleReducer from '../reducers/article.reducer';
+import * as fromActions from '../actions/article.actions';
+import { ArticleState } from '../reducers/app.states';
+import  {Article}  from '../models/article';
 
 @Component({
   selector: "<app-home></app-home>",
@@ -7,6 +13,9 @@ import { Component } from "@angular/core";
 })
 export class HomeComponent {
   title = "CodeSandbox";
+  articles$: Observable<Article[]>;
+  fetechedArticles:Article[];
+  fetchedCat:String="MINS"
   slides = [
     { img: '../assets/hugo-productive-work.png', p: `فتح باب التقدم لإختبارات
                 أبناؤنا في الخارج الدور الأول
@@ -36,7 +45,71 @@ export class HomeComponent {
       rtl: true,
       useTransform: true,
       cssEase: "ease-in-out"
+    }
+    slide2Config = {
+      adaptiveHeight:true,
+      swipe:true,
+      mobileFirst:true,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: true,
+      infinite: true,
+      rtl: true,
+      useTransform: true,
+      cssEase: "ease-in-out"
     };
+    constructor(private store: Store<ArticleState>) {
+      this.articles$ = store.select(articleReducer.getArticles);
+      
+    }
+    ngOnInit(){
+      this.showMinsArticles()
+      //this.DeleteArticle(1)
+    }
+    addSlide2() {
+      this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
+    }
+    removeSlide2() {
+      this.slides.length = this.slides.length - 1;
+    }
+    slickInit2(e: any) {
+      console.log('slick initialized');
+    }
+    breakpoint2(e: any) {
+      console.log('breakpoint');
+    }
+    afterChange2(e: any) {
+      console.log('afterChange');
+    }
+    beforeChange2(e: any) {
+      console.log('beforeChange');
+    }
+    showMinsArticles() {
+        this.store.dispatch(fromActions.MinsArticlesAction());
+        //this.articles$.pipe(filter((o,index)=>index==1)).subscribe(console.log)
+        this.articles$.subscribe(e=>{
+          this.fetechedArticles=e
+          this.fetchedCat=`وزاري`;
+        })
+    
+      }
+
+   AddArticle(param:Article):void {
+        this.store.dispatch(fromActions.AddArticleAction({payload:param}));
+          
+        this.articles$.subscribe(e=>{
+          this.fetechedArticles=e
+        })
+
+       }
+    DeleteArticle(param:number):void {
+        this.store.dispatch(fromActions.DeleteArticleAction({payload:param}));
+        //this.articles$.subscribe(console.log)
+        //this.store.select(articleReducer.getArticles).subscribe(console.log)  
+        
+
+       }
     addSlide() {
       this.slides.push({ img: '../assets/hugo-productive-work.png', p: 'hello' });
     }
