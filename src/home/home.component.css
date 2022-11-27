@@ -144,7 +144,7 @@ body .slick-next {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 #caroselsection2 img{
-  min-width: 185px;
+  width: 185px;
   max-width: 18vw;
   height: 54vh;
   max-height: 55vh;
