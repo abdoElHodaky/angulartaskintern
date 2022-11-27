@@ -7,6 +7,7 @@
   .nav-item a{
     color: var(--bs-white);
     transition: all ease-in-out .5s;
+    
   }
   .nav-item a:active,.nav-item a:hover{
     color: white;

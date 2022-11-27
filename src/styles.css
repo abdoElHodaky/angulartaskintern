@@ -64,3 +64,6 @@ app-news .slick-list {
 app-news p:hover{
   cursor:pointer;
 }
+.nav-item a{
+  padding-right: .4rem;
+}
