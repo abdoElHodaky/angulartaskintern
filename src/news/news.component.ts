@@ -42,7 +42,7 @@ export class NewsComponent {
     }
     ngOnInit(){
       this.showMinsArticles()
-      this.DeleteArticle(1)
+      //this.DeleteArticle(1)
     }
     addSlide() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
