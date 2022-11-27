@@ -104,6 +104,7 @@ body .slick-next {
 }
 .nav-item a{
   color: black;
+  padding-right: 0.5rem;
   transition: all ease-in-out .5s;
 }
 .nav-item a:active,.nav-item a:hover{
