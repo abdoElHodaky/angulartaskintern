@@ -144,7 +144,7 @@ body .slick-next {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 #caroselsection2 img{
-  width: 185px;
+  width: 400px;
   max-width: 18vw;
   height: 54vh;
   max-height: 55vh;
@@ -159,7 +159,7 @@ body .slick-next {
 }
 #caroselsection2 p{
     font-size: medium;
-    min-width: 20vw;
+    min-width: 16vw;
     max-width: 40vw;
     transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
 }
@@ -169,7 +169,6 @@ body .slick-next {
   }
   #caroselsection2 img{
     
-    max-width: none;
     height: 30vh;
     width: 30vw;
   }
