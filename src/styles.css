@@ -29,6 +29,11 @@ app-home .slick-dots li.slick-active button:before {
   color: var(--bs-cyan);
 }
 
+app-home .slick-dots li button {
+  color: transparent;
+  border: 2px solid darkgoldenrod;
+  border-radius: 100%;
+}
 
 
 
