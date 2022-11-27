@@ -15,7 +15,7 @@ import {
         ':leave',
         [
           style({ opacity: 1 }),
-          animate('.5s ease-out', style({ opacity: 0})),
+          animate('1.5s ease-out', style({ opacity: 0})),
         ],
         { optional: true }
       ),
@@ -23,7 +23,7 @@ import {
         ':enter',
         [
           style({ opacity: 0 }),
-          animate('5s ease-in', style({ opacity: 1})),
+          animate('1.5s ease-in', style({ opacity: 1})),
         ],
         { optional: true }
       ),
