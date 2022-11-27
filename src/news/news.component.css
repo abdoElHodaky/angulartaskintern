@@ -41,7 +41,7 @@
 }
 @media screen and (orientation:portrait){
   .caroselsection,.caroselsection ngx-slick-carousel{
-    height: 83vh;
+    max-height: 83vh;
   }
   .caroselsection img{
     
