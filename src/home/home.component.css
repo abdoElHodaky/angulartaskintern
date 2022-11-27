@@ -29,7 +29,7 @@
   margin-bottom: 6rem;
   /*background-color: var(--bs-light);*/
   background-image: url(../assets/hugo-productive-work.png);
-    
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .7s;  
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -112,7 +112,11 @@ body .slick-next {
   background-color: var(--bs-cyan);
 }
 
-
+@media screen and  (orientation:portrait){
+  #caroselsection{
+    max-height: 60vh;
+  }
+}
 
 
 
