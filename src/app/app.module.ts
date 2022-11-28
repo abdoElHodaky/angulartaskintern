@@ -39,7 +39,7 @@ import { reducers } from '../reducers/reducers';
         //children: [{ path: "/", component: ANewComponent }]
       },
       { path: "news/:id", component: NewsDetailComponent }
-    ])
+    ],{ scrollPositionRestoration: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent]
