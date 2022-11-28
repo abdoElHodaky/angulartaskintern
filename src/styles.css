@@ -16,21 +16,21 @@ app-home #caroselsection .slick-dots{
   outline:none;
   transition:all cubic-bezier(.17,.67,.83,.67) .7s;
 }
-app-home .slick-dots li.slick-active button:before,
-app-home .slick-dots li button:before {
+app-home #caroselsection .slick-dots li.slick-active button:before,
+app-home #caroselsection .slick-dots li button:before {
   color: var(--bs-light);
   opacity: 1;
   font-size: 16px;
 }
-app-home .slick-dots li.slick-active button {
+app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
   border-radius: 100%;
 }
-app-home .slick-dots li.slick-active button:before {
+app-home #caroselsection .slick-dots li.slick-active button:before {
   color: var(--bs-cyan);
 }
 
-app-home .slick-dots li button {
+app-home #caroselsection .slick-dots li button {
   color: transparent;
   border: 2px solid darkgoldenrod;
   border-radius: 100%;
@@ -41,27 +41,30 @@ app-home .slick-dots li button {
 
 
 
-app-news .slick-dots li.slick-active button:before,
-app-news .slick-dots li button:before {
+app-home #caroselsection2 .slick-dots li.slick-active button:before,
+app-home #caroselsection2 .slick-dots li button:before {
   color: grey;
   opacity: 1;
   font-size: 16px;
 }
-app-news .slick-dots li.slick-active button {
+app-home #caroselsection2 .slick-dots li.slick-active button {
   border: 5px solid var(--bs-warning);
   border-radius: 100%;
 }
-app-news .slick-dots li.slick-active button:before {
+app-home #caroselsection2 .slick-dots li.slick-active button:before {
   color: var(--bs-warning);
 }
 
-app-news .slick-slide {
+app-home #caroselsection2 .slick-slide {
   margin: 0 10px;
 }
-app-news .slick-list {
+app-home #caroselsection2 .slick-list {
   margin: 0 -10px;
 }
 
-app-news p:hover{
+app-home #caroselsection2 p:hover{
   cursor:pointer;
 }
+
+
+

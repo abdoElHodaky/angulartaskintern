@@ -65,7 +65,6 @@ export class HomeComponent {
     }
     ngOnInit(){
       this.showMinsArticles()
-      //this.DeleteArticle(1)
     }
     addSlide2() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
@@ -90,26 +89,9 @@ export class HomeComponent {
         //this.articles$.pipe(filter((o,index)=>index==1)).subscribe(console.log)
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
-          this.fetchedCat=`وزاري`;
         })
     
       }
-
-   AddArticle(param:Article):void {
-        this.store.dispatch(fromActions.AddArticleAction({payload:param}));
-          
-        this.articles$.subscribe(e=>{
-          this.fetechedArticles=e
-        })
-
-       }
-    DeleteArticle(param:number):void {
-        this.store.dispatch(fromActions.DeleteArticleAction({payload:param}));
-        //this.articles$.subscribe(console.log)
-        //this.store.select(articleReducer.getArticles).subscribe(console.log)  
-        
-
-       }
     addSlide() {
       this.slides.push({ img: '../assets/hugo-productive-work.png', p: 'hello' });
     }
