@@ -56,9 +56,9 @@
     height: 30vh;
     width: 30vw;
   }
-  .caroselsection p{
+  .caroselsection p, section.container-fluid p{
     min-width: 19vw;
-    max-width: 30vw;
+    
   }
   section.container-fluid img{
     height: 20vh;
