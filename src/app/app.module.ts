@@ -33,15 +33,18 @@ import { reducers } from '../reducers/reducers';
       {
         path: "news",
         component: NewsComponent,
-        /*children: [
+        children: [
+          {  path:"",
+             component:NewsComponent
+          },
           {
             path: ':id',
             component: NewsDetailComponent
           }
-        ]*/
+        ]
         //children: [{ path: "/", component: ANewComponent }]
-      },
-      { path: "news/:id", component: NewsDetailComponent }
+      }
+      //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
   providers: [],
