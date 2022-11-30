@@ -48,6 +48,7 @@
 }
 section.container-fluid p:hover{
   cursor: pointer;
+  color: darkgold
 }
 @media screen and (orientation:portrait){
   .caroselsection,.caroselsection ngx-slick-carousel{
