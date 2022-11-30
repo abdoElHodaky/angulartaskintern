@@ -48,6 +48,10 @@
 }
 section.container-fluid p:hover{
   cursor: pointer;
+  color: #F6D464
+}
+
+section.container-fluid p:active{
   color: darkgold
 }
 @media screen and (orientation:portrait){
