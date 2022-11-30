@@ -157,6 +157,12 @@ body .slick-next {
  #caroselsection2 h4{
   background-color: var(--bs-gray);
 }
+
+#caroselsection2 h4:hover {
+  cursor: pointer;
+}
+
+
 #caroselsection2 p{
     font-size: medium;
     min-width: 16vw;

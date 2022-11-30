@@ -37,7 +37,7 @@
   cursor: pointer;
  }
  
- .caroselsection h4{
+ .caroselsection h4, section.container-fluid h4{
   background-color: var(--bs-gray);
 }
 .caroselsection p{
