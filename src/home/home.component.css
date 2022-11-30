@@ -176,8 +176,12 @@ body .slick-next {
 }
 #caroselsection2 p:hover{
   cursor: pointer;
+  color:#F6D464;
+}
+#caroselsection2 p:active{
   color:darkgold;
 }
+
 @media screen and (orientation:portrait){
   #caroselsection2,#caroselsection2 ngx-slick-carousel{
     max-height: 83vh;
