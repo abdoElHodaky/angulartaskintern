@@ -25,11 +25,14 @@ import { reducers } from '../reducers/reducers';
       { path: "", redirectTo: "/home", pathMatch: "full" },
       {
         path: "home",
-        component: HomeComponent
+        component: HomeComponent,
+        data:{
+          breadcrumb:{name:"الاخبار"}
+        }
       },
       {
         path: "news",
-        component: NewsComponent
+        component: NewsComponent,
         /*children: [
           {
             path: "anew",
@@ -38,7 +41,8 @@ import { reducers } from '../reducers/reducers';
         ]*/
         //children: [{ path: "/", component: ANewComponent }]
       },
-      { path: "news/:id", component: NewsDetailComponent }
+      { path: "news/:id", component: NewsDetailComponent  
+    }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
   providers: [],

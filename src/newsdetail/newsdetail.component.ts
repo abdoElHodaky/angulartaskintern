@@ -21,6 +21,8 @@ export class NewsDetailComponent {
   constructor(private store: Store<ArticleState>, private route:ActivatedRoute) {
 		this.articles$ = store.select(articleReducer.getArticles);
     this.paramid=this.route.snapshot.params['id']
+    
+    
   }
   
 	/*showJavaArticles() {

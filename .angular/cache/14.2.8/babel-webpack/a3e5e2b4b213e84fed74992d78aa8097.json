@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { articleReducer } from './article.reducer';\nexport const reducers = {\n  articleState: articleReducer\n};","map":null,"metadata":{},"sourceType":"module"}
