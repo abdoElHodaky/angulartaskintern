@@ -32,7 +32,7 @@ import { reducers } from '../reducers/reducers';
       },
       {
         path: "news",
-        component: NewsComponent,
+        
         children: [
           {  path:"",
              component:NewsComponent
