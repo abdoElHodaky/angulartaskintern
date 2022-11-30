@@ -35,9 +35,9 @@ import { reducers } from '../reducers/reducers';
         component: NewsComponent,
         children: [
           {
-            path: ":id",
+            path: ':id',
             component: NewsDetailComponent
-          },
+          }
         ]
         //children: [{ path: "/", component: ANewComponent }]
       },
