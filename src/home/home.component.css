@@ -176,6 +176,7 @@ body .slick-next {
 }
 #caroselsection2 p:hover{
   cursor: pointer;
+  color:darkgold;
 }
 @media screen and (orientation:portrait){
   #caroselsection2,#caroselsection2 ngx-slick-carousel{
