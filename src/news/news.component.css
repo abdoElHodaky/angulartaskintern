@@ -46,6 +46,9 @@
     max-width: 40vw;
     transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
 }
+section.container-fluid p:hover{
+  cursor: pointer;
+}
 @media screen and (orientation:portrait){
   .caroselsection,.caroselsection ngx-slick-carousel{
     max-height: 83vh;
@@ -65,9 +68,7 @@
     width: 100vw;
 
   }
-  section.container-fluid p:hover{
-    cursor: pointer;
-  }
+  
 
 }
 
