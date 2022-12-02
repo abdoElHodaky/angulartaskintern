@@ -9,7 +9,7 @@ export class User implements _User {
     relationship_type:string;
     relationship_id:number;
     related_id:number
-    readonly articles:Article[]
+    private articles:Article[]
 
     constructor(){
     }
