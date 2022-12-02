@@ -11,7 +11,7 @@ export interface ArticleState {
 } 
 
 export interface UserState {
-	//articleState:ArticleState;
+	articleState:ArticleState;
         users:User[]
 } 
 
