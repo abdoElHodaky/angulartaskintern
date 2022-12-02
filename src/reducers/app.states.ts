@@ -6,11 +6,13 @@ export interface AppState {
 	articleState: ArticleState;
 }
 
+export interface ArticleState {
+	articles: Article[];
+} 
+
 export interface UserState {
 	articleState:ArticleState;
         users:User[]
 } 
 
-export interface ArticleState {
-	articles: Article[];
-} 
+
