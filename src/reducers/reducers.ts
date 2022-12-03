@@ -7,5 +7,5 @@ import { courseReducer } from './course.reducer';
 export const reducers: ActionReducerMap<AppState> = {
   articleState: articleReducer,
   userState: userReducer,
-  courseState: courseReducer
+  courseState:courseReducer
 }; 
