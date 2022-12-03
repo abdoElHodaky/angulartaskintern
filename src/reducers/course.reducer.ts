@@ -23,12 +23,18 @@ const _courseReducer = createReducer(
   return {courses:state.courses}
   }),
   /*on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
-  state.subscribers.push(payload);
-  return {subscribers:state.subscribers}
+  const _courses=state.courses
+  const _course=_courses.find(o=>o.id==payload[0])
+  //state.courses[state.courses.indexOf(_course)]=payload[1]
+  state.course.subscribers.push(payload[1])
+  return {course:_course}
   }),
   on(fromActions.DeleteCourseSubscriberAction, (state, {payload}) => {
-  const _subscribers=state.subscribers.filter(o=>o.id!=payload);
-  return {subscribers:_subscribers}
+  const _courses=state.courses
+  const _course=_courses.find(o=>o.id==payload[0])
+  //state.courses[state.courses.indexOf(_course)]=payload[1]
+  _course.subscribers=_course.subscribers.filter(o=>o.id!=payload[1])
+  return {course:_course}
   })*/
 );
 
