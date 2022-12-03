@@ -22,7 +22,7 @@ const _courseReducer = createReducer(
   }
   return {courses:state.courses}
   }),
-  on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
+ /* on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
   const _courses=state.courses
   const _course=_courses.find(o=>o.id==payload[0])
   //state.courses[state.courses.indexOf(_course)]=payload[1]
@@ -34,7 +34,7 @@ const _courseReducer = createReducer(
   const _course=_courses.find(o=>o.id==payload[0])
   _course.subscribers=_course.subscribers.filter(o=>o.id!=payload[1])
   return {course:_course}
-  })
+  })*/
 );
 
 export function courseReducer(state: any, action: Action) {
