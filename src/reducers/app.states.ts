@@ -17,7 +17,7 @@ export interface CourseState {
 } 
 
 export interface UserState {
-	_articleState:ArticleState;
+	//_articleState:ArticleState;
         users:User[]
 } 
 
