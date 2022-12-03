@@ -11,7 +11,7 @@ export const UpdateCourseAction =
         createAction('[ Course ] Update_Course', props<{ payload:[Number, Course]  }>());
 
 export const SubscribeCourseAction = 
-        createAction('[ Course ] Subscribe_Course', props<{ payload: [Course,User]} }>());
+        createAction('[ Course ] Subscribe_Course', props<{ payload: [Number,Number]} }>());
 
 export const UnsubscribeCourseAction = 
         createAction('[ Course ] Unsubscribe_Course', props<{ payload: [Number, Number] }>());
