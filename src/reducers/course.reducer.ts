@@ -28,7 +28,7 @@ const _courseReducer = createReducer(
   const ind=state.courses.indexOf(_course)
   _course.subscribers.push(payload[1])
   state.courses[ind]=_course
-  return {course:_course}
+  return {courses:state.courses}
   }),
 );
 
