@@ -5,6 +5,7 @@ import  {Course} from "../models/course";
 export interface AppState {
         userState:UserState 
 	articleState: ArticleState;
+        courseState: CourseState;
 }
 
 export interface ArticleState {
@@ -16,7 +17,7 @@ export interface CourseState {
 } 
 
 export interface UserState {
-	//articleState:ArticleState;
+	_articleState:ArticleState;
         users:User[]
 } 
 
