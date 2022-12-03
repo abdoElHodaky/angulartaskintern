@@ -21,7 +21,14 @@ const _courseReducer = createReducer(
   state.courses[state.courses.indexOf(_course)]=payload[1]
   }
   return {courses:state.courses}
-
+  }),
+  on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
+  state.subscribers.push(payload);
+  return {courses:state.courses}
+  }),
+  on(fromActions.DeleteCourseSubscriberAction, (state, {payload}) => {
+  const _subscribers=state.subscribers.filter(o=>o.id!=payload);
+  return {subscribers:_courses}
   })
 );
 
@@ -34,4 +41,9 @@ export const getCourseState = createFeatureSelector<CourseState>('courseState');
 export const getCourses = createSelector(
     getCourseState, 
     (state: CourseState) => state.courses 
+); 
+
+export const getSubscribers = createSelector(
+    getCourseState, 
+    (state: CourseState) => state.subscribers 
 ); 
