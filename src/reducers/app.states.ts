@@ -14,6 +14,7 @@ export interface ArticleState {
 
 export interface CourseState {
 	courses: Course[];
+        subscribers:User[];
 } 
 
 export interface UserState {
