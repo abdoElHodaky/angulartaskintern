@@ -24,11 +24,11 @@ const _courseReducer = createReducer(
   }),
   on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
   state.subscribers.push(payload);
-  return {courses:state.courses}
+  return {subscribers:state.subscribers}
   }),
   on(fromActions.DeleteCourseSubscriberAction, (state, {payload}) => {
   const _subscribers=state.subscribers.filter(o=>o.id!=payload);
-  return {subscribers:_courses}
+  return {subscribers:_subscribers}
   })
 );
 
