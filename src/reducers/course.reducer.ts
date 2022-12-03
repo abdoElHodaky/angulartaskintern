@@ -2,7 +2,7 @@ import { createFeatureSelector, createSelector, createReducer, on, Action } from
 import * as fromActions from '../actions/course.actions';
 import { CourseState } from './app.states';
 
-export const initialState: CourseState = { courses: [], subscribers:[] };
+export const initialState: CourseState = { courses: []};
 
 const _courseReducer = createReducer(
   initialState,
@@ -22,14 +22,14 @@ const _courseReducer = createReducer(
   }
   return {courses:state.courses}
   }),
-  on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
+  /*on(fromActions.AddCourseSubscriberAction, (state, {payload}) => {
   state.subscribers.push(payload);
   return {subscribers:state.subscribers}
   }),
   on(fromActions.DeleteCourseSubscriberAction, (state, {payload}) => {
   const _subscribers=state.subscribers.filter(o=>o.id!=payload);
   return {subscribers:_subscribers}
-  })
+  })*/
 );
 
 export function courseReducer(state: any, action: Action) {
@@ -41,9 +41,4 @@ export const getCourseState = createFeatureSelector<CourseState>('courseState');
 export const getCourses = createSelector(
     getCourseState, 
     (state: CourseState) => state.courses 
-); 
-
-export const getSubscribers = createSelector(
-    getCourseState, 
-    (state: CourseState) => state.subscribers 
 ); 
