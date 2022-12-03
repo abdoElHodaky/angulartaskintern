@@ -10,10 +10,3 @@ export const DeleteCourseAction =
 export const UpdateCourseAction = 
         createAction('[ Course ] Update_Course', props<{ payload:[Number, Course]  }>());
 
-
-
-export const AddCourseSubscriberAction = 
-        createAction('[ Course ] Add_CourseSubscriber', props<{ payload: [Number,User] }>());
-
-export const DeleteCourseSubscriberAction = 
-        createAction('[ Course ] DeleteCourseSubscriber', props<{ payload: [Number,Number] }>());
