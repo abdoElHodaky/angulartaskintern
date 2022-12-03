@@ -2,7 +2,7 @@ import { createFeatureSelector, createSelector, createReducer, on, Action } from
 import * as fromActions from '../actions/course.actions';
 import { CourseState } from './app.states';
 
-export const initialState: CourseState = { courses: []};
+export const initialState: CourseState = { courses: [], subscribers:[]};
 
 const _courseReducer = createReducer(
   initialState,
