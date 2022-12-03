@@ -1,4 +1,5 @@
 import _Course from "./course.d"
+import {User} from "./user"
 export class Course implements _Course {
     id: number;
     title: string;
@@ -6,7 +7,7 @@ export class Course implements _Course {
     description:string;
     imgurl:string;
     price:number;
-    
+    subscribers:User[]
     constructor(){
     }
 }
