@@ -24,8 +24,7 @@ const _courseReducer = createReducer(
   }),
   on(fromActions.SubscribeCourseAction, (state, {payload}) => {
   const _courses=state.courses
-  if(payload[0]==payload[1].id){
-  const _course=_courses.find(o=>o.id==payload[0].id)
+  const _course=_courses.find(o=>o.id==payload[0])
   const ind=state.courses.indexOf(_course)
   _course.subscribers.push(payload[1])
   state.courses[ind]=_course
