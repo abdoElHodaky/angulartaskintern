@@ -7,7 +7,7 @@ export class Course implements _Course {
     description:string;
     imgurl:string;
     price:number;
-    private subscribers=[]
+    subscribers=[]
     constructor(){
     }
 }
