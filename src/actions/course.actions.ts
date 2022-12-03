@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import  {Course}  from '../models/Course';
+import  {Course}  from '../models/course';
 
 export const AddCourseAction = 
         createAction('[ Course ] Add_Course', props<{ payload: Course }>());
