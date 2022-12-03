@@ -3,7 +3,7 @@ declare interface _Course {
     title: string;
     category: string;
     description:string;
-    imgurl:string
-    price:number
+    imgurl:string;
+    price:number;
 }
 export default _Course
