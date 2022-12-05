@@ -5,7 +5,7 @@ import * as articleReducer from '../reducers/article.reducer';
 import * as fromActions from '../actions/article.actions';
 import { ArticleState } from '../reducers/app.states';
 import  {Article}  from '../models/article';
-
+import {ArticlesFacade} from "../facades/article.facade";
 @Component({
   selector: "<app-news></app-news>",
   templateUrl: "./news.component.html",
@@ -36,7 +36,7 @@ export class NewsComponent {
       rtl: true
       
     };
-    constructor(private store: Store<ArticleState>) {
+    constructor(private store: Store<ArticleState>, private articlefacade:ArticlesFacade) {
       this.articles$ = store.select(articleReducer.getArticles);
       
     }
