@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { filter, find, findIndex, map, Observable,pipe } from 'rxjs';
+import  {Article}  from '../models/article';
 import {ArticlesFacade} from "../facades/article.facade"
 @Component({
   selector: "<app-home></app-home>",
