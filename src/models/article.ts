@@ -5,7 +5,7 @@ export class Article implements _Article {
     category: string;
     content:string;
     imgurl:string;
-    
+    createdBy?:number;
     constructor(){
     }
 }
