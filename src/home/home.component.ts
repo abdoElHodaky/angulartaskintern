@@ -1,11 +1,6 @@
 import { Component } from "@angular/core";
-import { Store } from '@ngrx/store';
 import { filter, find, findIndex, map, Observable,pipe } from 'rxjs';
-import * as articleReducer from '../reducers/article.reducer';
-import * as fromActions from '../actions/article.actions';
-import { ArticleState } from '../reducers/app.states';
-import  {Article}  from '../models/article';
-
+import {ArticlesFacade} from "../facades/article.facade"
 @Component({
   selector: "<app-home></app-home>",
   templateUrl: "./home.component.html",
@@ -59,8 +54,8 @@ export class HomeComponent {
       useTransform: true,
       cssEase: "ease-in-out"
     };
-    constructor(private store: Store<ArticleState>) {
-      this.articles$ = store.select(articleReducer.getArticles);
+    constructor(private articlefacade: ArticlesFacade ) {
+      this.articles$ = this.articlefacade.articles$;
       
     }
     ngOnInit(){
@@ -85,8 +80,7 @@ export class HomeComponent {
       console.log('beforeChange');
     }
     showMinsArticles() {
-        this.store.dispatch(fromActions.MinsArticlesAction());
-        //this.articles$.pipe(filter((o,index)=>index==1)).subscribe(console.log)
+        this.articlefacade.showMinsArticles();
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
         })
