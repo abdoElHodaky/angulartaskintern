@@ -27,5 +27,9 @@ export class ArticlesFacade {
         
 
        }
+
+    showMinsArticles() {
+        this.store.dispatch(fromActions.MinsArticlesAction());
+      }
   
 }
