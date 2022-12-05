@@ -56,11 +56,12 @@ export class HomeComponent {
       cssEase: "ease-in-out"
     };
     constructor(private articlefacade: ArticlesFacade ) {
-      this.articles$ = this.articlefacade.articles$;
       
     }
     ngOnInit(){
       this.showMinsArticles()
+      this.articles$ = this.articlefacade.articles$;
+      
     }
     addSlide2() {
       this.slides.push({ img: '../assets/image_bg.jpg', p: 'hello' });
