@@ -56,11 +56,11 @@ export class HomeComponent {
       cssEase: "ease-in-out"
     };
     constructor(private articlefacade: ArticlesFacade ) {
-      
+      this.articles$=this.articlefacade.articles$
     }
     ngOnInit(){
       this.showMinsArticles()
-      this.articles$ = this.articlefacade.articles$;
+      //this.articles$ = this.articlefacade.articles$;
       
     }
     addSlide2() {
@@ -82,7 +82,9 @@ export class HomeComponent {
       console.log('beforeChange');
     }
     showMinsArticles() {
+        
         this.articlefacade.showMinsArticles();
+        
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
         })

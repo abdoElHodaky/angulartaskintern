@@ -9,6 +9,8 @@ import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from '../reducers/reducers';
+import { ArticlesFacade } from "src/facades/article.facade";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,7 @@ import { reducers } from '../reducers/reducers';
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
-  providers: [],
+  providers: [ArticlesFacade],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

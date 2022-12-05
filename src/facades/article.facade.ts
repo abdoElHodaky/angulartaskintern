@@ -8,7 +8,9 @@ import  {Article}  from '../models/article';
 
 
 
-@Injectable()
+@Injectable({
+  providedIn:"root"
+})
 export class ArticlesFacade {
   //loaded$ = this.store.select(carsQuery.getIsLoaded);
   articles$ = this.store.select(articleReducer.getArticles);

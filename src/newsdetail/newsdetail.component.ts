@@ -1,12 +1,10 @@
 import { Component } from "@angular/core";
-import { Store } from '@ngrx/store';
+
 import { Observable,pipe } from 'rxjs';
-import * as articleReducer from '../reducers/article.reducer';
-import * as fromActions from '../actions/article.actions';
-import { ArticleState } from '../reducers/app.states';
 import  {Article}  from '../models/article';
 import {filter} from 'rxjs/operators';
 import { ActivatedRoute } from "@angular/router";
+import { ArticlesFacade } from "src/facades/article.facade";
 @Component({
   selector: "<app-newsdetail></app-newsdetail>",
   templateUrl: "./newsdetail.component.html",
@@ -18,8 +16,8 @@ export class NewsDetailComponent {
   fetechedArticles:Article[];
   showedArticle:Article;
 	paramid=''
-  constructor(private store: Store<ArticleState>, private route:ActivatedRoute) {
-		this.articles$ = store.select(articleReducer.getArticles);
+  constructor(private articlefacade:ArticlesFacade, private route:ActivatedRoute) {
+		this.articles$ = this.articlefacade.articles$;
     this.paramid=this.route.snapshot.params['id']
     
     
@@ -38,8 +36,7 @@ export class NewsDetailComponent {
     this.showMinsArticles()
   }
   showMinsArticles() {
-  var emptyArticle= new Article ()
-		this.store.dispatch(fromActions.MinsArticlesAction());
+		this.articlefacade.showMinsArticles();
     this.articles$.subscribe(e=>{
       this.fetechedArticles=e
     })
