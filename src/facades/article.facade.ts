@@ -11,7 +11,7 @@ import  {Article}  from '../models/article';
 @Injectable()
 export class ArticlesFacade {
   //loaded$ = this.store.select(carsQuery.getIsLoaded);
-  articles$ = this.store.select(ArticleState.getArticles);
+  articles$ = this.store.select(articleReducer.getArticles);
   //selectedCar$ = this.store.select(carsQuery.getSelectedCar);
  
   constructor(private store: Store<ArticleState>) {}
