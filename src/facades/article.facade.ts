@@ -9,15 +9,23 @@ import  {Article}  from '../models/article';
 
 
 @Injectable()
-export class CarsFacade {
-  /*loaded$ = this.store.select(carsQuery.getIsLoaded);
-  allCars$ = this.store.select(carsQuery.getAllCars);
-  selectedCar$ = this.store.select(carsQuery.getSelectedCar);
-  */
+export class ArticlesFacade {
+  //loaded$ = this.store.select(carsQuery.getIsLoaded);
+  articles$ = this.store.select(ArticleState.getArticles);
+  //selectedCar$ = this.store.select(carsQuery.getSelectedCar);
+ 
   constructor(private store: Store<ArticleState>) {}
 
-  loadArticles() {
-   // this.store.dispatch();
-  }
+  AddArticle(param:Article):void {
+        this.store.dispatch(fromActions.AddArticleAction({payload:param}));
+         
+       }
+    DeleteArticle(param:number):void {
+        this.store.dispatch(fromActions.DeleteArticleAction({payload:param}));
+        //this.articles$.subscribe(console.log)
+        //this.store.select(articleReducer.getArticles).subscribe(console.log)  
+        
+
+       }
   
 }
