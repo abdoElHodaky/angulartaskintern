@@ -32,7 +32,7 @@ app-home #caroselsection .slick-dots li.slick-active button:before {
 
 app-home #caroselsection .slick-dots li button {
   color: transparent;
-  border: 2px solid darkgoldenrod;
+  border: 2px solid #fafad2;
   border-radius: 100%;
 }
 
