@@ -16,6 +16,6 @@ export class User implements _User {
     public setArticles(articles: Article[]){
      this.articles=articles
     }
-    get fullname (){return `${firstName} ${middleName} ${lastName}`;}
+    get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
     
 }
