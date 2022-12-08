@@ -10,10 +10,12 @@ export class User implements _User {
     relationship_id:number;
     related_id:number
     private articles:Article[]
-
+    
     constructor(){
     }
     public setArticles(articles: Article[]){
      this.articles=articles
     }
+    get fullname (){return `${firstName} ${middleName} ${lastName}`;}
+    
 }
