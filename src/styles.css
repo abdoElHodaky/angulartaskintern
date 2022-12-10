@@ -21,6 +21,7 @@ app-home #caroselsection .slick-dots li button:before {
   color: var(--bs-light);
   opacity: 1;
   font-size: 16px;
+  width:10px; height:10px; padding:5px;
 }
 app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
