@@ -21,7 +21,7 @@ app-home #caroselsection .slick-dots{
     margin: 0;
 }*/
 
-app-home .slick-dots {
+app-home #caroselsection .slick-dots {
     margin-top: 50px;
 }
 
