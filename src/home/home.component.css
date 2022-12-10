@@ -113,6 +113,25 @@ body .slick-next {
   background-color: var(--bs-cyan);
 }
 
+#caroselsection p{
+
+  font-size: xx-large; 
+  min-width:40vw; 
+  max-width:60vw:
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
+ 
+}
+#caroselsection p:hover{
+ cursor:pointer;
+ color:#F6D464;
+ 
+}
+#caroselsection p:active{
+
+ color:#fafad2;
+}
+
+
 @media screen and  (orientation:portrait){
   #caroselsection{
     max-height: 80vh;
