@@ -18,8 +18,8 @@ app-home #caroselsection .slick-dots{
 }
 app-home #caroselsection .slick-dots li.slick-active button:before,
 app-home #caroselsection .slick-dots li button:before {
+  color: transparent;
   opacity: 1;
-  font-size: 16px;
 }
 /*app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
