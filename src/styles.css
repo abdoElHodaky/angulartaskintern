@@ -19,6 +19,7 @@ app-home #caroselsection .slick-dots{
 
 app-home .slick-dots li {
     margin: 5px;
+    padding:5px;
 }
 
 app-home #caroselsection .slick-dots {
@@ -38,6 +39,7 @@ app-home #caroselsection .slick-dots li button:before {
   border-radius: 100%;
 } */
 app-home #caroselsection .slick-dots li.slick-active button:before {
+  color:red;
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
   width:2.1rem;
