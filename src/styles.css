@@ -38,8 +38,8 @@ app-home #caroselsection .slick-dots li button:before {
 app-home #caroselsection .slick-dots li.slick-active button:before {
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
-  width:2rem;
-  height: 5px;
+  width:1rem;
+  height: 10px;
 }
 
 /*app-home #caroselsection .slick-dots li button {
@@ -53,7 +53,7 @@ app-home #caroselsection .slick-dots li button:before{
     border: 3px solid #fafad2;
     border-radius: 20%;
     display: inline-block;
-    height: 5px;
+    height: 10px;
     width: 15px;
  
 }
