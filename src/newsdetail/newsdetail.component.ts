@@ -40,7 +40,10 @@ export class NewsDetailComponent {
     this.articles$.subscribe(e=>{
       this.fetechedArticles=e
     })
-    this.fetechedArticles=this.fetechedArticles.sort();
+    this.fetechedArticles=this.fetechedArticles.sort((a1,a2)=>{
+      if (a1.id<a2.id){return 1}
+      else{return -1}
+    });
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
     if(d == undefined){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
     else{this.showedArticle=d}
