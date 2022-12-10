@@ -17,7 +17,8 @@ app-home #caroselsection .slick-dots{
   transition:all cubic-bezier(.17,.67,.83,.67) .7s;
 }
 
-app-home .slick-dots li {
+app-home #caroselsection .slick-dots li,
+app-home #caroselsection .slick-dots li.slick-active {
     margin-left: 5px;
     padding-left:5px;
 }
