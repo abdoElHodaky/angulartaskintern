@@ -18,14 +18,14 @@ app-home #caroselsection .slick-dots{
 }
 app-home #caroselsection .slick-dots li.slick-active button:before,
 app-home #caroselsection .slick-dots li button:before {
-  color: var(--bs-light);
+  color: transparent;
   opacity: 1;
   font-size: 16px;
 }
-app-home #caroselsection .slick-dots li.slick-active button {
+/*app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
   border-radius: 100%;
-} 
+} */
 app-home #caroselsection .slick-dots li.slick-active button:before {
   color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
@@ -33,11 +33,12 @@ app-home #caroselsection .slick-dots li.slick-active button:before {
   height: 5px;
 }
 
-app-home #caroselsection .slick-dots li button {
+/*app-home #caroselsection .slick-dots li button {
   color: transparent;
   border: 2px solid #fafad2;
   border-radius: 100%;
-}
+}*/
+
 app-home #caroselsection .slick-dots li button:before{
     margin-top: 5px;
     border: 2px solid #fafad2;
