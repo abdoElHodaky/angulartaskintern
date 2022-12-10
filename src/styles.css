@@ -23,6 +23,7 @@ app-home #caroselsection .slick-dots{
 
 app-home #caroselsection .slick-dots {
     margin-top: 50px;
+    margin-bottom:50px;
 }
 
 app-home #caroselsection .slick-dots li.slick-active button:before,
