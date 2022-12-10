@@ -19,10 +19,12 @@ app-home #caroselsection .slick-dots{
 
 app-home #caroselsection .slick-dots li
 {
-  margin-left:.3rem;
+   margin-left:.3rem;
+   margin-right:.3rem;
 }
 app-home #caroselsection .slick-dots li.slick-active {
     margin-left: 1rem;
+    margin-right:.7rem;
 }
 
 app-home #caroselsection .slick-dots {
