@@ -16,10 +16,20 @@ app-home #caroselsection .slick-dots{
   outline:none;
   transition:all cubic-bezier(.17,.67,.83,.67) .7s;
 }
+
+app-home .slick-dots li {
+    margin: 0;
+}
+
+app-home .slick-dots {
+    margin-top: 50px;
+}
+
 app-home #caroselsection .slick-dots li.slick-active button:before,
 app-home #caroselsection .slick-dots li button:before {
   color: transparent;
   opacity: 1;
+  transition:all cubic-bezier(.17,.67,.83,.67) 1s; 
 }
 /*app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
@@ -44,7 +54,7 @@ app-home #caroselsection .slick-dots li button:before{
     border-radius: 20%;
     display: inline-block;
     height: 15px;
-    width: 10px;
+    width: 15px;
  
 }
 
