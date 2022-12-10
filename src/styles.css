@@ -59,11 +59,11 @@ app-home #caroselsection .slick-dots li.slick-active button:before {
 app-home #caroselsection .slick-dots li button:before{
     margin-top: 5px;
     background-color:var(--bs-light);
-    border: 3px solid darkgoldenrod;
-    border-radius: 20%;
+    border: 5px solid darkgoldenrod;
+    border-radius: 25%;
     display: inline-block;
     height: 4px;
-    width: 10px;
+    width: .5rem;
  
 }
 
