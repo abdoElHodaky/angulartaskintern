@@ -40,6 +40,7 @@ export class NewsDetailComponent {
     this.articles$.subscribe(e=>{
       this.fetechedArticles=e
     })
+    this.fetechedArticles=this.fetechedArticles.reverse();
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
     if(d == undefined){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
     else{this.showedArticle=d}
