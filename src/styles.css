@@ -29,6 +29,7 @@ app-home #caroselsection .slick-dots {
 app-home #caroselsection .slick-dots li.slick-active button:before,
 app-home #caroselsection .slick-dots li button:before {
   color: transparent;
+  content:"•";
   opacity: 1;
   transition:all cubic-bezier(.17,.67,.83,.67) .5s; 
 }
