@@ -40,8 +40,8 @@ app-home #caroselsection .slick-dots li button:before {
 app-home #caroselsection .slick-dots li.slick-active button:before {
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
-  width:2.4rem;
-  height: 10px;
+  width:2.1rem;
+  height: 7px;
 }
 
 /*app-home #caroselsection .slick-dots li button {
@@ -51,9 +51,10 @@ app-home #caroselsection .slick-dots li.slick-active button:before {
 }*/
 
 app-home #caroselsection .slick-dots li button:before{
-    margin-top: 5px;
+    /*margin-top: 5px;*/
+    background-color:var(--bs-light)
     border: 3px solid darkgoldenrod;
-    border-radius: 50%;
+    border-radius: 20%;
     display: inline-block;
     height: 5px;
     width: 10px;
