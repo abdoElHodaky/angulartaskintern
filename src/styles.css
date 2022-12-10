@@ -18,8 +18,8 @@ app-home #caroselsection .slick-dots{
 }
 
 app-home .slick-dots li {
-    margin: 5px;
-    padding:5px;
+    margin-left: 5px;
+    padding-left:5px;
 }
 
 app-home #caroselsection .slick-dots {
