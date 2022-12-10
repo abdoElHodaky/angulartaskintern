@@ -214,7 +214,7 @@
        
       <div class="row d-flex">
 
-        <div class="col-sm-6 col-md-4 flex-column " *ngFor="let fetchedArticle of fetechedArticles; let i =index">
+        <div class="col-sm-6 col-md-4 flex-column " *ngFor="let fetchedArticle of fetechedArticles.slice().reverse(); let i =index">
          <img src="{{fetchedArticle.imgurl}}" alt="" class="rounded img-fluid" >
             <p class="text-start align-top text-black mx-1 mt-5" style="" routerLink="/news/{{fetchedArticle.id}}">
               {{fetchedArticle.title}}
