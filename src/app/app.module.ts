@@ -10,6 +10,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from '../reducers/reducers';
 import { ArticlesFacade } from "src/facades/article.facade";
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ArticlesFacade } from "src/facades/article.facade";
     NewsDetailComponent
   ],
   imports: [
+    EffectsModule.forRoot([]),
     StoreModule.forRoot(reducers),
     SlickCarouselModule,
     BrowserModule,
