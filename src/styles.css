@@ -30,14 +30,14 @@ app-home #caroselsection .slick-dots li.slick-active button:before,
 app-home #caroselsection .slick-dots li button:before {
   color: transparent;
   opacity: 1;
-  transition:all cubic-bezier(.17,.67,.83,.67) 1s; 
+  transition:all cubic-bezier(.17,.67,.83,.67) .5s; 
 }
 /*app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
   border-radius: 100%;
 } */
 app-home #caroselsection .slick-dots li.slick-active button:before {
-  background-color: var(--bs-cyan);
+  color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
   width:3rem;
   height: 5px;
@@ -51,7 +51,7 @@ app-home #caroselsection .slick-dots li.slick-active button:before {
 
 app-home #caroselsection .slick-dots li button:before{
     margin-top: 5px;
-    border: 3px solid lightgoldenrodyellow;
+    border: 3px solid darkgoldenrod;
     border-radius: 20%;
     display: inline-block;
     height: 10px;
