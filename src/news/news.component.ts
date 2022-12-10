@@ -63,7 +63,7 @@ export class NewsComponent {
         
         this.articlefacade.showMinsArticles();
         this.articles$.subscribe(e=>{
-          this.fetechedArticles=e
+          this.fetechedArticles=e.reverse()
           this.fetchedCat=`وزاري`;
         })
     
