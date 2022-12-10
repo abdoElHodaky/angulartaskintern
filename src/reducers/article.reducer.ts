@@ -12,7 +12,7 @@ const _articleReducer = createReducer(
   on(fromActions.MinsArticlesAction, (state) => { return {articles: MINS_ARTICLES};}),
   on(fromActions.FavoriteArticlesAction, (state, {payload}) => {return {articles: payload};}),
   on(fromActions.AddArticleAction, (state, {payload}) => {
-  state.articles.unshift(payload);
+  state.articles.push(payload);
   return {articles:state.articles}
   }),
   on(fromActions.DeleteArticleAction, (state, {payload}) => {
