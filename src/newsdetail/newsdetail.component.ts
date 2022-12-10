@@ -41,7 +41,7 @@ export class NewsDetailComponent {
       this.fetechedArticles=e
     })
     this.fetechedArticles=this.fetechedArticles.sort((a1,a2)=>{
-      if (a1.id<a2.id){return 1}
+      return a1.id-a2.id
     });
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
     if(d == undefined){this.showedArticle=this.fetechedArticles[this.fetechedArticles.length-1]}
