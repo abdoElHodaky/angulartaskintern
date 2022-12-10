@@ -60,7 +60,7 @@ app-home #caroselsection .slick-dots li button:before{
     border: 3px solid darkgoldenrod;
     border-radius: 20%;
     display: inline-block;
-    height: 5px;
+    height: 4px;
     width: 10px;
  
 }
