@@ -37,7 +37,7 @@ app-home #caroselsection .slick-dots li button:before {
   color: transparent;
   content:"•";
   opacity: 1;
-  transition:all cubic-bezier(.17,.67,.83,.67) .5s; 
+  transition:all cubic-bezier(.17,.67,.83,.95) 1s; 
 }
 /*app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
@@ -46,9 +46,9 @@ app-home #caroselsection .slick-dots li button:before {
 app-home #caroselsection .slick-dots li.slick-active button:before {
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
-  width:1.7rem;
+  width:1.2rem;
   height: .1rem;
-  border-radius:15%;
+  border-radius:10%;
 }
 
 /*app-home #caroselsection .slick-dots li button {
