@@ -18,7 +18,6 @@ app-home #caroselsection .slick-dots{
 }
 app-home #caroselsection .slick-dots li.slick-active button:before,
 app-home #caroselsection .slick-dots li button:before {
-  color: transparent;
   opacity: 1;
   font-size: 16px;
 }
@@ -27,10 +26,10 @@ app-home #caroselsection .slick-dots li button:before {
   border-radius: 100%;
 } */
 app-home #caroselsection .slick-dots li.slick-active button:before {
-  color: var(--bs-cyan);
+  background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
   width:20px;
-  height: 5px;
+  height: 15px;
 }
 
 /*app-home #caroselsection .slick-dots li button {
@@ -44,7 +43,7 @@ app-home #caroselsection .slick-dots li button:before{
     border: 2px solid #fafad2;
     border-radius: 20%;
     display: inline-block;
-    height: 5px;
+    height: 15px;
     width: 10px;
  
 }
