@@ -4,5 +4,5 @@ import {User} from '../models/user'
 export const CreateSupTicketAction = 
         createAction('[ Ticket ] Create_Ticket', props<{ payload: Ticket }>());
 
-export const DeleteCourseAction = 
+export const DeleteSupTicketAction = 
         createAction('[ Ticket ] Delete_Ticket', props<{ payload: number }>());
