@@ -4,7 +4,7 @@ import { SpTicketState } from './app.states';
 
 export const initialState: SpTicketState = { tickets: []};
 
-const _courseReducer = createReducer(
+const _ticketReducer=createReducer(
   initialState,
   on(fromActions.CreateSupTicketAction, (state, {payload}) => {
   state.tickets.push(payload);
