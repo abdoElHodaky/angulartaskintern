@@ -1,7 +1,7 @@
 import  {Article}  from "../models/article";
 import  {User} from "../models/user";
 import  {Course} from "../models/course";
-import  {Ticket} from "../models/sptickets"
+import  {Ticket} from "../models/suptickets"
 export interface AppState {
         userState:UserState 
 	articleState: ArticleState;
