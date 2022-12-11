@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "../home/home.component";
 import { NewsComponent } from "../news/news.component";
 import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
+import { ContactComponent} from "../contact/contact.component";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from '../reducers/reducers';
@@ -17,7 +18,8 @@ import { EffectsModule } from '@ngrx/effects';
     AppComponent,
     HomeComponent,
     NewsComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    ContactComponent
   ],
   imports: [
     EffectsModule.forRoot([]),
@@ -47,7 +49,10 @@ import { EffectsModule } from '@ngrx/effects';
           }
         ]
         //children: [{ path: "/", component: ANewComponent }]
-      }
+      },
+       {
+        path:"contact", component: ContactComponent
+       }
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
