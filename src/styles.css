@@ -38,28 +38,28 @@ app-home #caroselsection .slick-dots li button:before {
   opacity: 1;
   transition:all cubic-bezier(.17,.67,.83,.95) 1s; 
 }
-app-home #caroselsection .slick-dots li.slick-active button {
+/*app-home #caroselsection .slick-dots li.slick-active button {
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
   width:4rem;
-} 
+}*/
 app-home #caroselsection .slick-dots li.slick-active button:before {
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
   width:1.4rem;
   height: 0.1125rem;
-  border-top-left-radius:20%;
-  border-top-right-radius:15%;
-  border-bottom-left-radius:20%;
-  border-bottom-right-radius:25%;
+  border-top-left-radius:30%;
+  border-top-right-radius:35%;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:35%;
 }
-
+/*
 app-home #caroselsection .slick-dots li button {
   color: transparent;
   border: 5px solid darkgoldenrod;
   width: 1.5rem;
 }
-
+*/
 app-home #caroselsection .slick-dots li button:before{
     margin-top: 5px;
     background-color:var(--bs-light);
