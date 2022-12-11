@@ -6,5 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./contact.component.css"]
 })
 export class ContactComponent {
-  title = "CodeSandbox";
+  title = "تواصل معنا لعمل شكوي او دعم فني";
 }
