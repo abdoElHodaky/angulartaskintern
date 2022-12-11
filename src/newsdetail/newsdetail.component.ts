@@ -44,7 +44,7 @@ export class NewsDetailComponent {
       return (a1.id-a2.id==1)?1:-1
     });*/
     var d=this.fetechedArticles.find(o=>o.id==parseInt(this.paramid))
-    if(d == undefined){this.showedArticle=this.fetechedArticles.last()}
+    if(d == undefined){this.showedArticle=this.fetechedArticles.slice().last()}
     else{this.showedArticle=d}
     
 
