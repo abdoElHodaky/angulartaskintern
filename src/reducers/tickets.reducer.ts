@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector, createReducer, on, Action } from '@ngrx/store';
-import * as fromActions from '../actions/course.actions';
+import * as fromActions from '../actions/tickets.actions';
 import { SpTicketState } from './app.states';
 
 export const initialState: SpTicketState = { tickets: []};
