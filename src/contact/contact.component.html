@@ -59,5 +59,43 @@
 <div class="container my-5">
   <main class="container">
    <h2 class="text-success bg-light">{{title}}</h2>
+   <div class="row">
+    <div class="col col-md-8" style="overflow-y: scroll; max-height: 100vh">
+      <form [formGroup]="contactForm" (ngSubmit)="save()">
+        <div class="mb-3">
+          <label for="userName" class="form-label">username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userName"
+            formControlName="userName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="subjectName" class="form-label">Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subjectName"
+            formControlName="subjectName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">description</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="description"
+            formControlName="description"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="col col-md-4">
+      <div style="position: fixed">{{ preview }}</div>
+    </div>
+  </div>
+
 </main>
 </div>

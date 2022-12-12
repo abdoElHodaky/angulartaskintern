@@ -12,6 +12,9 @@ import { StoreModule } from "@ngrx/store";
 import { reducers } from '../reducers/reducers';
 import { ArticlesFacade } from "src/facades/article.facade";
 import { EffectsModule } from '@ngrx/effects';
+import { TicketsFacade } from "src/facades/ticket.facade";
+import { CoursesFacade } from "src/facades/course.facade";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { EffectsModule } from '@ngrx/effects';
     ContactComponent
   ],
   imports: [
+    ReactiveFormsModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot(reducers),
     SlickCarouselModule,
@@ -51,12 +55,16 @@ import { EffectsModule } from '@ngrx/effects';
         //children: [{ path: "/", component: ANewComponent }]
       },
        {
-        path:"contact", component: ContactComponent
+        path:"contact", 
+        children:[
+          {path:"",component: ContactComponent}
+        ]
+        
        }
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
-  providers: [ArticlesFacade],
+  providers: [ArticlesFacade,TicketsFacade,CoursesFacade],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { from } from "rxjs";
+import {FormGroup,FormControl} from "@angular/forms";
 
 @Component({
   selector: "<app-contact></app-contact>",
@@ -7,4 +9,23 @@ import { Component } from "@angular/core";
 })
 export class ContactComponent {
   title = "تواصل معنا لعمل شكوي او دعم فني";
+  constructor() {
+    this.contactForm.valueChanges.subscribe(e=>{
+      this.preview=JSON.stringify(e)
+    })
+  }
+ 
+  contactForm = new FormGroup({
+    userName: new FormControl(''),
+    subjectName: new FormControl(''),
+    description:new FormControl(),
+  });
+ 
+  preview: string = '';
+ 
+  ngOnInit(): void {}
+ 
+  save() {
+    this.preview = JSON.stringify(this.contactForm.value);
+  }
 }
