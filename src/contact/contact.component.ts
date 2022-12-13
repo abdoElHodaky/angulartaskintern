@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { from } from "rxjs";
-import {FormGroup,FormControl} from "@angular/forms";
+import {FormGroup,FormControl,Validators} from "@angular/forms";
 
 @Component({
   selector: "<app-contact></app-contact>",
@@ -16,9 +16,9 @@ export class ContactComponent {
   }
  
   contactForm = new FormGroup({
-    userName: new FormControl(''),
-    subjectName: new FormControl(''),
-    description:new FormControl(),
+    userName: new FormControl('',[Validators.required]),
+    subjectName: new FormControl('',[Validators.required]),
+    description:new FormControl("",[Validators.required]),
   });
  
   preview: string = '';
@@ -26,6 +26,6 @@ export class ContactComponent {
   ngOnInit(): void {}
  
   save() {
-    this.preview = JSON.stringify(this.contactForm.value);
+    console.log(this.contactForm.value);
   }
 }
