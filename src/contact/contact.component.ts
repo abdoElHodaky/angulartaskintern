@@ -32,7 +32,7 @@ export class ContactComponent {
   save() {
     let formvalue=this.contactForm.value
     console.log(this.ticketfacade.FromJson({
-     id: ticketid++,
+     id:this.ticketid++,
      ...formvalue
     }))
     this.contactForm.reset()
