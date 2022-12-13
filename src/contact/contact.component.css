@@ -9,6 +9,7 @@ select
 input.ng-valid.ng-touched, 
 select.ng-valid.ng-touched,
 textarea.ngvalid.ng-touched  {
+  outline: 4px solid #F90000;
   box-shadow: 0px 4px 16px rgba(19,202,40,0.05),
   inset 0px 8px 32px rgba(0,218,89,0.05);
  }
@@ -16,6 +17,7 @@ textarea.ngvalid.ng-touched  {
 input.ng-invalid.ng-touched, 
 select.ng-ivalid.ng-touched,
 textarea.ng-inalid.ng-touched  {
+  outline: 4px solid rgba(0, 249, 16, 0.79);
   box-shadow: 0px 4px 16px rgba(255,0,42,0.05),
   inset 0px 8px 32px rgba(255,0,42,0.05);
 }
