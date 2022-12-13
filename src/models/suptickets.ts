@@ -1,18 +1,19 @@
 import _Ticket from "./suptickets.d"
 export class Ticket implements _Ticket {
-    id: number;
-    title: string;
-    type: string;
-    description:string;
-    subject:string;
-    constructor (){}
-    static fromJson(param):Ticket{
-    let obj=new Ticket();
-     for(var i in param){
-         if(i in obj){ obj[i]=param[i]  }
-         else{break}
-     }
-      return obj;
+    id: number=1;
+     title?: string="default";
+     type: string="default";
+     description:string="default";
+     subject:string="default";
+     userName:string="default";
+    constructor (init:Ticket)
+    {
+        Object.assign(this, init);
+    }
+
+    static fromobj(param){
+    return new Ticket(<Ticket>{...param})
+    ;
     
    }
 }
