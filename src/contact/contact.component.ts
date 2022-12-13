@@ -20,7 +20,7 @@ export class ContactComponent {
   contactForm = new FormGroup({
     userName: new FormControl('',[Validators.required]),
     subjectName: new FormControl('',[Validators.required]),
-    type:new Form control("",[Validators.required]),
+    type:new FormControl("",[Validators.required]),
     description:new FormControl("",[Validators.required]),
   });
  
