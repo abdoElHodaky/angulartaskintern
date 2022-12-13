@@ -11,7 +11,8 @@ import { TicketsFacade } from "src/facades/ticket.facade";
 })
 export class ContactComponent {
   title = "تواصل معنا لعمل شكوي او دعم فني";
-  constructor() {
+  private ticketid:number=1
+  constructor(private ticketfacade:TicketsFacade) {
     this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
     })
@@ -29,7 +30,11 @@ export class ContactComponent {
   ngOnInit(): void {}
  
   save() {
-    console.log(this.contactForm.value);
+    let formvalue=this.contactForm.value
+    console.log(this.ticketfacade.FromJson({
+     id: ticketid++,
+     ...formvalue
+    }))
     this.contactForm.reset()
   }
 }
