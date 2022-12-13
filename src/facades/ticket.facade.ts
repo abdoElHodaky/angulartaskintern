@@ -17,8 +17,9 @@ export class TicketsFacade {
   //selectedCar$ = this.store.select(carsQuery.getSelectedCar);
  
   constructor(private store: Store<SpTicketState>) {}
-
-  AddSpTicket(param:Ticket):void {
+  articleFromJson(param){Ticket.fromJson(param)}
+  
+    AddSpTicket(param:Ticket):void {
         this.store.dispatch(fromActions.CreateSupTicketAction({payload:param}));
          
        }
