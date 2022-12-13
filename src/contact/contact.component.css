@@ -8,7 +8,7 @@ textarea.ngvalid.ng-touched  {
   border: 5px solid #42A948;
 }
 
-input.ng-invalid, 
+input.ng-invalid.ng-touched, 
 select.ng-ivalid.ng-touched,
 textarea.ng-inalid.ng-touched  {
   border: 5px solid red;
