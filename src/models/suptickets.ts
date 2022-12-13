@@ -7,7 +7,7 @@ export class Ticket implements _Ticket {
     subject:string;
     constructor (){}
     private fromJson(param){
-    let obj=new Article();
+    let obj=new Ticket();
      for(var i in param){
          if(i in obj){ obj[i]=param[i]  }
          else{break}
