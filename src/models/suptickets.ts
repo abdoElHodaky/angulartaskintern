@@ -6,7 +6,7 @@ export class Ticket implements _Ticket {
     description:string;
     subject:string;
     constructor (){}
-    private static fromJson(param):Ticket{
+    static fromJson(param):Ticket{
     let obj=new Ticket();
      for(var i in param){
          if(i in obj){ obj[i]=param[i]  }
