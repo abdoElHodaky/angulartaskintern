@@ -2,9 +2,9 @@
  transition:all cubic-bezier(1,0,0,1) .6s
 }
 
-input.ng-valid, 
-select.ng-valid,
-textarea.ngvalid  {
+input.ng-valid.ng-touched, 
+select.ng-valid.ng-touched,
+textarea.ngvalid.ng-touched  {
   border: 5px solid #42A948;
 }
 
