@@ -1,1 +1,7 @@
+ng-valid.ng-touched {
+  border: 5px solid #42A948;
+}
 
+ng-invalid.ng-touched {
+  border: 5px solid red;
+}
