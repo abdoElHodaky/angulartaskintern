@@ -1,7 +1,13 @@
-.ng-valid  {
+.ng-touched{
+ transition:all cubic-bezier(1,0,0,1) .6s
+}
+
+input.ng-valid, 
+select.ng-valid  {
   border: 5px solid #42A948;
 }
 
-.ng-invalid  {
+input.ng-invalid, 
+select.ng-ivalid.ng-touched  {
   border: 5px solid red;
 }
