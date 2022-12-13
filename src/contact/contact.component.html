@@ -89,7 +89,7 @@
             formControlName="description"
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
       </form>
     </div>
     <div class="col col-md-4">
