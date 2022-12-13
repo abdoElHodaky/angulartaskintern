@@ -6,4 +6,13 @@ export class Ticket implements _Ticket {
     description:string;
     subject:string;
     constructor (){}
+    private fromJson(param){
+    let obj=new Article();
+     for(var i in param){
+         if(i in obj){ obj[i]=param[i]  }
+         else{break}
+     }
+      return obj;
+    
+   }
 }
