@@ -30,5 +30,6 @@ export class ContactComponent {
  
   save() {
     console.log(this.contactForm.value);
+    this.contactForm.reset()
   }
 }
