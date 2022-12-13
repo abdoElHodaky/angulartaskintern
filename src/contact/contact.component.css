@@ -1,13 +1,15 @@
-.ng-touched{
+.ng-touched,input,textarea,select{
  transition:all cubic-bezier(1,0,0,1) .6s
 }
 
 input.ng-valid, 
-select.ng-valid  {
+select.ng-valid,
+textarea.ngvalid  {
   border: 5px solid #42A948;
 }
 
 input.ng-invalid, 
-select.ng-ivalid.ng-touched  {
+select.ng-ivalid.ng-touched,
+textarea.ng-inalid.ng-touched  {
   border: 5px solid red;
 }
