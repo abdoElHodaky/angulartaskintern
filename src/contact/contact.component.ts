@@ -14,13 +14,15 @@ export class ContactComponent {
   title = "تواصل معنا لعمل شكوي او دعم فني";
   private ticketid:number=1
   constructor(private ticketfacade:TicketsFacade) {
-    this.contactForm.valueChanges.subscribe(e=>{
+  /*  this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
-    })
+    })*/
   }
   ngOnInit():void{
     
-    this.ticketfacade.tickets$.subscribe(console.log)
+    this.ticketfacade.tickets$.subscribe(e=>{
+     this.preview=JSON.stringify(e)
+    })
   }
   ngOnChanges(){
 
