@@ -21,6 +21,9 @@ export class User implements _User {
     static fromobj(param){
     return new User(<User>{...param})
     }
+    static AuthorizedUser(param:User){
+      return (AuthorizedUser)param
+    }
 }
 
 export class AuthorizedUser extends User{
