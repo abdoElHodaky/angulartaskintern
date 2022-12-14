@@ -9,6 +9,7 @@ export class User implements _User {
     relationship_type:string;
     relationship_id:number;
     related_id:number
+    protected permissions=[]
     private articles:Article[]
     
     constructor(){
@@ -17,11 +18,18 @@ export class User implements _User {
      this.articles=articles
     }
     get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
-    
+    static fromobj(param):T{
+    return new T(<T>{...param})
+    }
 }
 
 export class AuthorizedUser extends User{
- isAuthorized?:string
- permissions=[]
+ isAuthorized?:boolean
+ isAuthenticated:boolean=true
+ constructor (init:AuthorizedUser)
+    {
+       Object.assign(this, init);
+    }
 
+    
 }
