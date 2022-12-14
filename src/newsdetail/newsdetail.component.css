@@ -15,12 +15,12 @@
   margin: 14px 8px;
   
 }
-.nav-item a{
+/*.nav-item a{
   color: var(--bs-white);
   padding-right: 0.5rem;
   transition: all ease-in-out .5s;
   
-}
+}*/
 .nav-item a:active,.nav-item a:hover,.nav-item a.active{
   color: white;
   border-radius: 10%;
