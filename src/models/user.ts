@@ -18,8 +18,8 @@ export class User implements _User {
      this.articles=articles
     }
     get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
-    static fromobj(param):T{
-    return new <T>(<T>{...param})
+    static fromobj(param){
+    return new User(<User>{...param})
     }
 }
 
@@ -29,6 +29,7 @@ export class AuthorizedUser extends User{
  constructor (init:AuthorizedUser)
     {
        Object.assign(this, init);
+       super()
     }
 
     
