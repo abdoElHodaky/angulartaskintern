@@ -8,11 +8,13 @@ select.ng-touched
 input.ng-valid.ng-touched, 
 select.ng-valid.ng-touched,
 textarea.ngvalid.ng-touched  {
-  outline: 5px solid #42A948;
-}
+  border: 2px solid rgba(0, 249, 16, 0.79);
+  box-shadow: 0px 6px 16px rgba(19,202,40,0.15),inset 0px 8px 10px rgba(0,218,89,0.05);
+ }
 
 input.ng-invalid.ng-touched, 
 select.ng-ivalid.ng-touched,
 textarea.ng-inalid.ng-touched  {
-  outline: 5px solid red;
+  border: 2px solid #F90000;
+  box-shadow: 0px 6px 16px rgba(255,0,42,0.15),inset 0px 8px 10px rgba(255,0,42,0.05);
 }
