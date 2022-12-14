@@ -57,7 +57,13 @@
             $this.addClass('active');
         }
         else{
-          ($this.attr('href').indexOf(current.split('/')[0]) !== -1)?$this.addClass("active"):""
+          if($this.attr('href').indexOf(current.split("/")[0]) !== -1){
+            $this.addClass('active');
+        }
+
+
+
+
         }
     })
   })
