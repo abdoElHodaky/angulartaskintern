@@ -18,7 +18,7 @@ export class User implements _User {
      this.articles=articles
     }
     get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
-    static fromobj(param)<User>{
+    static fromobj(param){
     return new User(<User>{...param})
     }
 }
