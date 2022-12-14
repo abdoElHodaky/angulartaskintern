@@ -19,3 +19,9 @@ export class User implements _User {
     get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
     
 }
+
+export class AuthorizedUser extends User{
+ isAuthorized?:string
+ permissions=[]
+
+}
