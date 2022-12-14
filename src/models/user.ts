@@ -12,7 +12,8 @@ export class User implements _User {
     protected permissions=[]
     private articles:Article[]
     
-    constructor(){
+    constructor(init:User){
+      Object.assign(this,init)
     }
     public setArticles(articles: Article[]){
      this.articles=articles
@@ -29,12 +30,6 @@ export class User implements _User {
 export class AuthorizedUser extends User{
  isAuthorized?:boolean
  isAuthenticated:boolean=true
- constructor (init:AuthorizedUser)
-    {
-       super()
-       Object.assign(this, init);
-       
-    }
 
     
 }
