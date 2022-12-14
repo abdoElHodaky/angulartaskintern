@@ -20,15 +20,15 @@ export class User implements _User {
     }
     get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
     static fromobj(param){
-    return new User(<User>{...param})
+    return new User(<User>{...param});
     }
     static AuthorizedUser(param:User){
-      return (AuthorizedUser)param ;
+      return <AuthorizedUser>param ;
     }
 }
 
 export class AuthorizedUser extends User{
- isAuthorized?:boolean
+ isAuthorized?:boolean;
  isAuthenticated:boolean=true
 
     
