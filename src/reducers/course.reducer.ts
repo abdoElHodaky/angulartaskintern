@@ -1,14 +1,15 @@
 import { createFeatureSelector, createSelector, createReducer, on, Action } from '@ngrx/store';
+import { Course } from 'src/models/course';
 import * as fromActions from '../actions/course.actions';
 import { CourseState } from './app.states';
 
 export const initialState: CourseState = { courses: []};
-
+let courses:Array<Course>
 const _courseReducer = createReducer(
   initialState,
   on(fromActions.AddCourseAction, (state, {payload}) => {
-  state.courses.push(payload);
-  return {courses:state.courses}
+  courses.push(payload);
+  return {courses:courses}
   }),
   on(fromActions.DeleteCourseAction, (state, {payload}) => {
   const _courses=state.courses.filter(o=>o.id!=payload);
@@ -41,4 +42,8 @@ export const getCourseState = createFeatureSelector<CourseState>('courseState');
 export const getCourses = createSelector(
     getCourseState, 
     (state: CourseState) => state.courses 
+);
+export const _getCourses = createSelector(
+  getCourseState, 
+  (state: CourseState) => courses 
 ); 

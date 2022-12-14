@@ -1,7 +1,6 @@
-.ng-touched,
-input,
-textarea,
-select
+input.ng-touched,
+textarea.ng-touched,
+select.ng-touched
 {
  transition:all cubic-bezier(1,0,0,1) .6s
 }
