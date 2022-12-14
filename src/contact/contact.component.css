@@ -41,7 +41,7 @@ textarea.ng-inalid.ng-touched  {
   border: 2px solid #F90000;
   box-shadow: 0px 6px 16px rgba(255,0,42,0.15),inset 0px 8px 10px rgba(255,0,42,0.05);
 }
-
+/*
 textarea:valid{
 border: 2px solid rgba(0, 249, 16, 0.79);
   box-shadow: 0px 6px 16px rgba(19,202,40,0.15),inset 0px 8px 10px rgba(0,218,89,0.05);
@@ -52,3 +52,4 @@ border: 2px solid #F90000;
   box-shadow: 0px 6px 16px rgba(255,0,42,0.15),inset 0px 8px 10px rgba(255,0,42,0.05);
 
 }
+*/
