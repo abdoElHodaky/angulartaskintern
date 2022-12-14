@@ -19,7 +19,7 @@ export class User implements _User {
     }
     get fullname (){return `${this.firstName} ${this.middleName} ${this.lastName}`;}
     static fromobj(param):T{
-    return new T(<T>{...param})
+    return new <T>(<T>{...param})
     }
 }
 
