@@ -114,11 +114,17 @@
       <table class="table table-striped">
       <thead>
        <th>id</th>
-       <th>type</th>
-       <th>subject</th>
-       <th>description</th>
+       <th>نوع الرساله</th>
+       <th>عنوان الرساله</th>
+       <th>وصف الرساله</th>
       </thead>
       <tbody>
+        <tr *ngFor="let ticket of preview;let i=index">
+          <td>{{ticket.id}}</td>
+          <td>{{ticket.type}}</td>
+          <td>{{ticket.subject}}</td>
+          <td>{{ticket.description}}</td>
+        </tr>
       </tbody>
       </table>
     </div>
