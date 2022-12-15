@@ -16,12 +16,15 @@
     background-color:var(--bs-cyan);
   }
  .navbar{
+  position: relative;
+  margin-bottom: 50px;
+ }
+ .navbar.bg-img{
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../assets/Mask_Group_3.jpg");
-  position: relative;
-  margin-bottom: 50px;
+
  }
  .caroselsection,.caroselsection ngx-slick-carousel{
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
