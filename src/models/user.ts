@@ -8,9 +8,10 @@ export class User implements _User {
     lastName:string;
     relationship_type:string;
     relationship_id:number;
-    related_id:number
-    protected permissions=[]
-    private articles:Article[]
+    related_id:number;
+    protected permissions=[];
+    private articles:Article[];
+    protected accesstok?:string
     
     constructor(init:User){
       Object.assign(this,init)
