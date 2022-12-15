@@ -21,7 +21,7 @@ export class ContactComponent {
   ngOnInit():void{
     
     this.ticketfacade.tickets$.subscribe(e=>{
-     this.preview=JSON.stringify(e)
+     this.preview=e
     })
   }
   ngOnChanges(){
@@ -34,7 +34,7 @@ export class ContactComponent {
     description:new FormControl("",[Validators.required]),
   });
  
-  preview: string = '';
+  preview:Array<Ticket>;
  
   
   save() {
