@@ -15,6 +15,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { TicketsFacade } from "src/facades/ticket.facade";
 import { CoursesFacade } from "src/facades/course.facade";
 import { ReactiveFormsModule } from "@angular/forms";
+import { coursesComponent } from "../courses/courses.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     HomeComponent,
     NewsComponent,
     NewsDetailComponent,
-    ContactComponent
+    ContactComponent,
+    coursesComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -60,6 +62,12 @@ import { ReactiveFormsModule } from "@angular/forms";
           {path:"",component: ContactComponent}
         ]
         
+       },
+       {
+        path:"courses",
+        children:[
+          {path:"",component:coursesComponent}
+        ]
        }
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
