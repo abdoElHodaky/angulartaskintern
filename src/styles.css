@@ -23,7 +23,7 @@ app-home #caroselsection .slick-dots li
    margin-right:.1rem;
 }
 app-home #caroselsection .slick-dots li.slick-active {
-    margin-left: 1rem;
+    margin-left: 1.4rem;
     margin-right:.8rem;
 }
 
