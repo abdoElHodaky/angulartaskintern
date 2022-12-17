@@ -40,16 +40,16 @@ app-home #caroselsection .slick-dots li button:before {
   transition:all cubic-bezier(.17,.67,.83,.95) 1s; 
 }
 app-home #caroselsection .slick-dots li.slick-active button {
-  background-color: #E0FFFF;
-  border: 5px solid #70D1F7;
+  background-color: var(--bs-cyan);
+  border: 5px solid var(--bs-cyan);
   width:2rem;
-  border-radius:30%;
+  border-radius:25%;
   
 }
 app-home #caroselsection .slick-dots li.slick-active button:before {
   background-color: var(--bs-cyan);
   border: 5px solid var(--bs-cyan);
-  width:1.4rem;
+  width:1.8rem;
   height: 0.0rem;
   border-top-left-radius:25%;
   border-top-right-radius:25%;
