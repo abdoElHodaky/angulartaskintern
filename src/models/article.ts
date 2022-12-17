@@ -6,6 +6,7 @@ export class Article implements _Article {
     content:string;
     imgurl:string;
     createdBy?:number;
+    createdAt?:Date 
     constructor(){
     }
 }
