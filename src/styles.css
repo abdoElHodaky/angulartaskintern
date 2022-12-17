@@ -44,10 +44,10 @@ app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
   width:2.8rem;
   height:.8rem;
-  border-top-left-radius:45%;
-  border-top-right-radius:45%;
-  border-bottom-left-radius:45%;
-  border-bottom-right-radius:45%;
+  border-top-left-radius:25%;
+  border-top-right-radius:25%;
+  border-bottom-left-radius:15%;
+  border-bottom-right-radius:15%;
   
 }
 app-home #caroselsection .slick-dots li.slick-active button:before {
