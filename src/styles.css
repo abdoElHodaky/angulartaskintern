@@ -42,7 +42,7 @@ app-home #caroselsection .slick-dots li button:before {
 app-home #caroselsection .slick-dots li.slick-active button {
   background-color: #E0FFFF;
   border: 5px solid #70D1F7;
-  width:4rem;
+  width:2rem;
   border-radius:30%;
   
 }
