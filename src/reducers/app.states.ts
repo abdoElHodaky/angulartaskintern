@@ -1,5 +1,5 @@
 import  {Article}  from "../models/article";
-import  {User, AuthorizedUser } from "../models/user";
+import  {User} from "../models/user";
 import  {Course} from "../models/course";
 import  {Ticket} from "../models/suptickets"
 export interface AppState {
@@ -27,7 +27,7 @@ export interface SpTicketState {
 
 }
 export interface AuthState{
-   user: AuthorizedUser
+   user: User
    errorMessage?:string|string[]
 }
 
