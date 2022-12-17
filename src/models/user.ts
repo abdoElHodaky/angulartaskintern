@@ -23,7 +23,7 @@ export class User implements _User {
     static fromobj(param){
     return new User(<User>{...param});
     }
-    static AuthorizedUser(param:User){
+    static authorizedUser(param:User){
       return <AuthorizedUser>param ;
     }
 }
