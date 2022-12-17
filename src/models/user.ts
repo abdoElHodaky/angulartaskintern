@@ -31,6 +31,8 @@ export class User implements _User {
 export class AuthorizedUser extends User{
  isAuthorized?:boolean;
  isAuthenticated:boolean=true
-
+ setAuthorization(){
+  this.isAuthorized=(this.permissions.length!=0)?true:false
+ }
     
 }
