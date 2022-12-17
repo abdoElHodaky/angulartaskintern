@@ -11,7 +11,9 @@ export class User implements _User {
     related_id:number;
     protected permissions=[];
     private articles:Article[];
-    protected accesstok?:string
+    protected accesstok?:string;
+    userName:string;
+    protected password:string;
     
     constructor(init:User){
       Object.assign(this,init)
@@ -23,12 +25,12 @@ export class User implements _User {
     static fromobj(param){
     return new User(<User>{...param});
     }
-    static authorizedUser(param:User){
-      return <AuthorizedUser>param ;
+    static authenticatedUser(param:User){
+      return <AuthenticatedUser>param ;
     }
 }
 
-export class AuthorizedUser extends User{
+export class AuthenticatedUser extends User{
  isAuthorized?:boolean;
  isAuthenticated:boolean=true
  setAuthorization(){
