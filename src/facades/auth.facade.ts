@@ -4,7 +4,7 @@ import {Injectable} from "@angular/core";
 import * as authReducer from '../reducers/auth.reducer';
 import * as fromActions from '../actions/auth.actions';
 import { AuthState } from '../reducers/app.states';
-import  {User,AuthenticatedUser}  from '../models/user';
+import  {User}  from '../models/user';
 
 
 
@@ -14,6 +14,7 @@ import  {User,AuthenticatedUser}  from '../models/user';
 export class AuthFacade {
   //loaded$ = this.store.select(carsQuery.getIsLoaded);
   user$ = this.store.select(authReducer.getUser);
+  message$=this.store.select(authReducer.getMessage)
   //selectedCar$ = this.store.select(carsQuery.getSelectedCar);
  
   constructor(private store: Store<AuthState>) {}

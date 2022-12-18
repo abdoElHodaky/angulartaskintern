@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from "@angular/core";
+import { Component, NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "../home/home.component";
@@ -17,6 +17,8 @@ import { CoursesFacade } from "src/facades/course.facade";
 import { ReactiveFormsModule } from "@angular/forms";
 import { coursesComponent } from "../courses/courses.component";
 import { AuthFacade } from "../facades/auth.facade";
+import { LoginComponent } from "../auth/login.component";
+import { SignupComponent } from "../auth/signup.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AuthFacade } from "../facades/auth.facade";
     NewsComponent,
     NewsDetailComponent,
     ContactComponent,
-    coursesComponent
+    coursesComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -68,6 +72,14 @@ import { AuthFacade } from "../facades/auth.facade";
         path:"courses",
         children:[
           {path:"",component:coursesComponent}
+        ]
+       },
+       {
+        path:"auth",
+        children:[
+          {path:"login",
+          component:LoginComponent},
+          {path:"signup",component:SignupComponent}
         ]
        }
       //{ path: "news/:id", component: NewsDetailComponent }

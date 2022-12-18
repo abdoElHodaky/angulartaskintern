@@ -12,13 +12,13 @@ const _authReducer = createReducer(
     return {...state}
   }),
   on(fromActions.LoginSuccessAction, (state, {payload}) => {
-    return {...state,user:payload}
+    return {...state,user:User.authenticatedUser(payload)}
   }),
   on(fromActions.SignupAction, (state, {payload}) => {
     return {...state}
   }),
   on(fromActions.SignupSuccessAction, (state, {payload}) => {
-    return {...state,user:payload}
+    return {...state,user:User.authenticatedUser(payload)}
   }),
   on(fromActions.SignupFailureAction, (state, {payload}) => {
     return {...state,errorMessage:payload}
@@ -38,4 +38,8 @@ export const getAuthState = createFeatureSelector<AuthState>('authState');
 export const getUser = createSelector(
     getAuthState, 
     (state: AuthState) => state.user 
+);
+export const getMessage = createSelector(
+  getAuthState, 
+  (state: AuthState) => state.errorMessage 
 ); 

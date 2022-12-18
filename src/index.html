@@ -52,6 +52,7 @@
     var current = location.pathname;
     $('header nav li a').each(function(){
         var $this = $(this);
+        console.log(current==$this.attr("href"))
         // if the current path is like this link, make it active
         if($this.attr('href').indexOf(current) !== -1){
             $this.addClass('active');
