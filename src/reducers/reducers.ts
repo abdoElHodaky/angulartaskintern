@@ -4,9 +4,11 @@ import { articleReducer } from './article.reducer';
 import { userReducer} from "./user.reducer";
 import { courseReducer } from './course.reducer';
 import {ticketReducer} from "./tickets.reducer"
+import { authReducer } from './auth.reducer';
 export const reducers: ActionReducerMap<AppState> = {
   articleState: articleReducer,
   userState: userReducer,
   courseState:courseReducer,
-  ticketState: ticketReducer
+  ticketState: ticketReducer,
+  authState:authReducer
 }; 

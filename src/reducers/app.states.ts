@@ -6,7 +6,8 @@ export interface AppState {
         userState:UserState 
 	articleState: ArticleState;
         courseState: CourseState;
-        ticketState: SpTicketState
+        ticketState: SpTicketState;
+        authState:AuthState;
 }
 
 export interface ArticleState {
