@@ -50,7 +50,7 @@
   <script type="text/javascript">
     $(function(){
     var current = location.pathname;
-    $('header nav li a').each(function(){
+    /*$('header nav li a').each(function(){
         var $this = $(this);
         console.log(current==$this.attr("href"))
         // if the current path is like this link, make it active
@@ -58,7 +58,12 @@
             $this.addClass('active');
         }
         
-    })
+    })*/
+    res=$("header nav li a").filter((i,el)=>{
+      return $(el).attr("href")==current
+    });
+    $(res).addClass("active")
+    console.log(res)
   })
 
   </script>

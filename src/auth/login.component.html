@@ -64,7 +64,58 @@
    <div class="container">
     <h2 class="text-success bg-light">{{title}}</h2>
     <section class="row d-flex my-4">
-     
+        <!--
+        <div class="col col-md-8 col-sm-5 flex-column" style="overflow-y: scroll; max-height: 100vh">
+            <form [formGroup]="contactForm" (ngSubmit)="save()">
+              <div class="mb-3">
+                <label for="userName" class="form-label">اسم المستخدم</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userName"
+                  formControlName="userName"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="type" class="form-label">نوع رسالتك</label>
+                <select
+                  
+                  class="form-control"
+                  id="type"
+                  formControlName="type">
+                  <option value="">
+                    اختر نوع رسالتك
+                  </option>
+                  <option value="complaint">
+                    شكوي
+                  </option>
+                  <option value="inquiry">
+                    استفسار 
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">عنوان الرساله</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  formControlName="subject"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">وصف الرساله</label>
+                <textarea 
+                  required="true"
+                  class="form-control"
+                  id="description"
+                  formControlName="description"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid"><b class="bi bi-cursor-fill"> &nbsp;  اضافه تذكره </b></button>
+            </form>
+          </div>
+        -->
     </section>
  </div>
  </div>
