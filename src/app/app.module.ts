@@ -19,9 +19,11 @@ import { coursesComponent } from "../courses/courses.component";
 import { AuthFacade } from "../facades/auth.facade";
 import { LoginComponent } from "../auth/login.component";
 import { SignupComponent } from "../auth/signup.component";
+import { NotFoundComponent } from "../notFoundPage/notfound.component";
 
 @NgModule({
   declarations: [
+    NotFoundComponent,
     AppComponent,
     HomeComponent,
     NewsComponent,
@@ -81,7 +83,8 @@ import { SignupComponent } from "../auth/signup.component";
           component:LoginComponent},
           {path:"signup",component:SignupComponent}
         ]
-       }
+       },
+       {path: '**', component:NotFoundComponent}
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
