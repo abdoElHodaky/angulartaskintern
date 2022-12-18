@@ -67,33 +67,37 @@
         
         <div class="col col-md-8 col-sm-5 flex-column" style="overflow-y: scroll; max-height: 100vh">
             <form [formGroup]="signupForm" (ngSubmit)="signup()">
-              <div class="mb-3">
-                <label for="userName" class="form-label">اسم المستخدم</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="userName"
-                  formControlName="userName"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="type" class="form-label">نوع رسالتك</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  formControlName="password">
-                  
-              </div>
-              <div class="mb-3">
-                <label for="IdCard" class="form-label">عنوان الرساله</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="IdCard"
-                  formControlName="IdCard"
-                />
-              </div>
+                <div class="mb-3">
+                    <label for="userName" class="form-label">اسم المستخدم</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userName"
+                      formControlName="userName"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="type" class="form-label">
+                    كلمه السر
+                    </label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      formControlName="password">
+                      
+                  </div>
+                  <div class="mb-3">
+                    <label for="IdCard" class="form-label">
+                        الؤقم القومي
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="IdCard"
+                      formControlName="IdCard"
+                    />
+                  </div>
               <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid"><b class="bi bi-arrow-right-circle-fill"> &nbsp;  تسجيل </b></button>
             </form>
         </div>
