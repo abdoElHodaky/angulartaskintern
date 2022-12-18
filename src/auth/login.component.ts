@@ -22,5 +22,6 @@ export class LoginComponent {
   }
   login(){
     this.user=User.fromobj(this.loginForm.value)
+    console.log(this.user)
   }
 }
