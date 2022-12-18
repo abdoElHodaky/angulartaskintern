@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { filter, find, findIndex, map, Observable,pipe } from 'rxjs';
 import  {Article}  from '../models/article';
 import {ArticlesFacade} from "../facades/article.facade";
-
+import csvDownload from 'json-to-csv-export'
+import exportFromJSON from 'export-from-json'
 @Component({
   selector: "<app-news></app-news>",
   templateUrl: "./news.component.html",
@@ -39,6 +40,7 @@ export class NewsComponent {
     }
     ngOnInit(){
       this.showMinsArticles()
+      this.exportAscsv()
       //this.DeleteArticle(1)
     }
     addSlide() {
@@ -68,7 +70,13 @@ export class NewsComponent {
         })
     
       }
-
+    exportAscsv(){
+      const fileName = 'articles'
+      const data=this.fetechedArticles;
+      const exportType = 'xls'
+      var d=exportFromJSON({data,fileName,exportType})
+      console.log(d)
+    }  
   /* AddArticle(param:Article):void {
         this.store.dispatch(fromActions.AddArticleAction({payload:param}));
           
