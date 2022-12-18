@@ -40,7 +40,7 @@ export class NewsComponent {
     }
     ngOnInit(){
       this.showMinsArticles()
-      this.exportAscsv()
+      //this.exportAscsv()
       //this.DeleteArticle(1)
     }
     addSlide() {
