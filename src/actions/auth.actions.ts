@@ -12,3 +12,9 @@ export const SignupAction =
 
 export const SignupSuccessAction = 
         createAction('[ Auth ] SignupSuccess_User', props<{ payload:User  }>());
+
+export const LoginFailureAction = 
+        createAction('[ Auth ] LoginFailure_User', props<{ payload: any }>());
+
+export const SignupFailureAction = 
+        createAction('[ Auth ] SignUpFailure_User', props<{ payload: any }>());

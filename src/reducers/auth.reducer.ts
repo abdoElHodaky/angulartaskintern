@@ -4,7 +4,7 @@ import * as fromActions from '../actions/auth.actions';
 //import { JAVA_ARTICLES, ANGULAR_ARTICLES , MINS_ARTICLES } from '../models/article';
 import { AuthState } from './app.states';
 
-export const initialState: AuthState = {user:<User>{} };
+export const initialState: AuthState = {user:<User>{},errorMessage:"" };
 
 const _authReducer = createReducer(
   initialState,
@@ -19,6 +19,13 @@ const _authReducer = createReducer(
   }),
   on(fromActions.SignupSuccessAction, (state, {payload}) => {
     return {...state,user:payload}
+  }),
+  on(fromActions.SignupFailureAction, (state, {payload}) => {
+    return {...state,errorMessage:payload}
+  }),
+  
+  on(fromActions.LoginFailureAction, (state, {payload}) => {
+    return {...state,errorMessage:payload}
   })
 );
 
