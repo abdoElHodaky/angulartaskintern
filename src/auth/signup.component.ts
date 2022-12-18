@@ -23,6 +23,7 @@ export class SignupComponent {
   }
   signup(){
     this.user=User.fromobj(this.signupForm.value)
+    console.log(this.user)
   }
 
 }
