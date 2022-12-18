@@ -16,6 +16,7 @@ import { TicketsFacade } from "src/facades/ticket.facade";
 import { CoursesFacade } from "src/facades/course.facade";
 import { ReactiveFormsModule } from "@angular/forms";
 import { coursesComponent } from "../courses/courses.component";
+import { AuthFacade } from "../facades/auth.facade";
 
 @NgModule({
   declarations: [
@@ -72,7 +73,7 @@ import { coursesComponent } from "../courses/courses.component";
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
-  providers: [ArticlesFacade,TicketsFacade,CoursesFacade],
+  providers: [ArticlesFacade,TicketsFacade,CoursesFacade,AuthFacade],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
