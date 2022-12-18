@@ -9,6 +9,6 @@ import { Course } from "../models/course";
 })
 export class coursesComponent {
   title = "courses";
-
+  indexes:number[]=[1,2,3,4,5,6]
     constructor(){}
 }
