@@ -64,7 +64,38 @@
    <div class="container">
     <h2 class="text-success bg-light">{{title}}</h2>
     <section class="row d-flex my-4">
-     
+        
+        <div class="col col-md-8 col-sm-5 flex-column" style="overflow-y: scroll; max-height: 100vh">
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+              <div class="mb-3">
+                <label for="userName" class="form-label">اسم المستخدم</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userName"
+                  formControlName="userName"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="type" class="form-label">نوع رسالتك</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  formControlName="password">
+                  
+              </div>
+              <div class="mb-3">
+                <label for="IdCard" class="form-label">عنوان الرساله</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="IdCard"
+                  formControlName="IdCard"
+                />
+              </div>
+            </form>
+        </div>
     </section>
  </div>
  </div>
