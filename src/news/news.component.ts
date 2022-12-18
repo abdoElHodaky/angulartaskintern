@@ -75,7 +75,7 @@ export class NewsComponent {
       const data=this.fetechedArticles;
       const exportType = 'xls'
       var d=exportFromJSON({data,fileName,exportType})
-      console.log(d)
+      console.log(d,true)
     }  
   /* AddArticle(param:Article):void {
         this.store.dispatch(fromActions.AddArticleAction({payload:param}));
