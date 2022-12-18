@@ -28,14 +28,15 @@ section.container-fluid p:active{
 
 
 @media screen and (orientation:portrait){
-  section.container-fluid p{
-    min-width: 19vw;
-    
-  }
   section.container-fluid img{
     height: 20vh;
     width: 100vw;
 
+  }
+  section.container-fluid p{
+    min-width: 20vw;
+    max-width: 30vw;
+    font-size: 0.69em;
   }
   
 
