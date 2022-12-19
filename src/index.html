@@ -59,11 +59,11 @@
         }
         
     })*/
-    res=$("header nav li a").filter((i,el)=>{
+    const nava=$("header nav li a")
+    const res=nava.filter((i,el)=>{
       return $(el).attr("href")==current
     });
     $(res).addClass("active")
-    console.log(res)
   })
 
   </script>

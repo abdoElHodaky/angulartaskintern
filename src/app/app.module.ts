@@ -64,9 +64,10 @@ import { NotFoundComponent } from "../notFoundPage/notfound.component";
         //children: [{ path: "/", component: ANewComponent }]
       },
        {
-        path:"contact", 
+        path:"support", 
         children:[
-          {path:"",component: ContactComponent}
+          {path:"contact",component: ContactComponent},
+          {path:"complaint" ,component:ContactComponent}
         ]
         
        },
