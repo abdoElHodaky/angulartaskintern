@@ -16,10 +16,11 @@ export class NewsDetailComponent {
   fetechedArticles:Article[];
   showedArticle:Article;
 	paramid=''
+  isActive=false;
   constructor(private articlefacade:ArticlesFacade, private route:ActivatedRoute) {
 		this.articles$ = this.articlefacade.articles$;
     this.paramid=this.route.snapshot.params['id']
-    
+    this.isActive=(this.route.snapshot.parent.url.at(0).path=="news")?true:false
     
   }
   

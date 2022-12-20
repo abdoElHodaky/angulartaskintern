@@ -56,14 +56,6 @@
       return $(el).attr("href")==current
     });
     $(res).addClass("active")
-    
-    if(current.includes("news")==true){
-      headnav.toggleClass("bg-img")
-      const res=nava.filter((i,e)=>{
-        return $(nava[i]).attr("href").includes("news")
-      })
-      $(res).addClass("active")
-    }
   })
 
   </script>

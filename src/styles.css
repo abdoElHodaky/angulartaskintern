@@ -4,20 +4,6 @@ html,
 body {
   font-family: sans-serif;
 }
-app-news .nav-item a{
-  color: var(--bs-white);
-  padding-right: 0.5rem;
-  transition: all ease-in-out .5s;
-  
-}
-app-news .nav-item a:active,
-app-news .nav-item a:hover,
-app-news .nav-item a.active{
-  color: white;
-  border-radius: 10%;
-  background-color:var(--bs-cyan);
-}
-
 app-home #caroselsection .slick-dots{
   text-align: right;
   transform: translateY(3vh);

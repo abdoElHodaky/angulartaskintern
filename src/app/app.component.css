@@ -1,33 +1,4 @@
-.navbar li {
-  float: left;
-  list-style: none;
-  margin: 14px 8px;
-  
-}
-.nav-item a{
-  padding-right: 0.5rem;
-  color: black;
-  transition: all ease-in-out .5s;
-}
-.navbar li {
-  float: left;
-  list-style: none;
-  margin: 14px 8px;
-  
-}
-.nav-item a:active,.nav-item a:hover,.nav-item a.active{
-  color: white;
-  border-radius: 10%;
-  background-color:var(--bs-cyan);
-}
 
-.navbar.bg-img{
-background-position:center;
-background-size: cover;
-background-repeat: no-repeat;
-background-image: url("../assets/Mask_Group_3.jpg");
-
-}
 
 
 div {
