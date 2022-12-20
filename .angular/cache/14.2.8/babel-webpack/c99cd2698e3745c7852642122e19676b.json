@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { createAction, props } from '@ngrx/store';\nexport const CreateSupTicketAction = createAction('[ Ticket ] Create_Ticket', props());\nexport const DeleteSupTicketAction = createAction('[ Ticket ] Delete_Ticket', props());","map":null,"metadata":{},"sourceType":"module"}
