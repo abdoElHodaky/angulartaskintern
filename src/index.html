@@ -48,22 +48,22 @@
    }();
   </script-->
   <script type="text/javascript">
-    $(function(){
     var current = location.pathname;
-    /*$('header nav li a').each(function(){
-        var $this = $(this);
-        console.log(current==$this.attr("href"))
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('active');
-        }
-        
-    })*/
+    $(function(){
     const nava=$("header nav li a")
+    const headnav=$("header nav")
     const res=nava.filter((i,el)=>{
       return $(el).attr("href")==current
     });
     $(res).addClass("active")
+    
+    if(current.includes("news")==true){
+      headnav.toggleClass("bg-img")
+      const res=nava.filter((i,e)=>{
+        return $(nava[i]).attr("href").includes("news")
+      })
+      $(res).addClass("active")
+    }
   })
 
   </script>

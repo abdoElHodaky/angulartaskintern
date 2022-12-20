@@ -9,6 +9,9 @@ export class Article implements _Article {
     createdAt?:Date 
     constructor(){
     }
+    toString(){
+        return "Atricle "+ {...this}
+    }
 }
 
 export const JAVA_ARTICLES: Article[] = [

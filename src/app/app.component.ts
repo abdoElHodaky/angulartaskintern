@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { fadeAnimation } from "./routeTransition";
+declare var $:any;
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -8,4 +9,8 @@ import { fadeAnimation } from "./routeTransition";
 })
 export class AppComponent {
   title = "CodeSandbox";
+  ngAfterViewInit(){
+    
+
+  }
 }

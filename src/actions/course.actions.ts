@@ -4,6 +4,9 @@ import {User} from '../models/user'
 export const AddCourseAction = 
         createAction('[ Course ] Add_Course', props<{ payload: Course }>());
 
+export const AddCourseSucessAction = 
+        createAction('[ Course ] AddSuccess_Course', props<{ payload: Course }>());
+
 export const DeleteCourseAction = 
         createAction('[ Course ] Delete_Course', props<{ payload: number }>());
 
