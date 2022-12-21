@@ -16,6 +16,10 @@ export const AddArticleSuccessAction =
 export const DeleteArticleAction = 
         createAction('[ Article ] Delete_Article', props<{ payload: number }>());
 
+export const DeleteArticleSuccessAction = 
+        createAction('[ Article ] DeleteSuccess_Article', props<{ payload: number }>());
+
+
 export const UpdateArticleAction = 
         createAction('[ Article ] Update_Article', props<{ payload:[Number, Article]  }>());
 

@@ -28,7 +28,7 @@ export interface SpTicketState {
 
 }
 export interface AuthState{
-   user: User
+   user?: User
    errorMessage?:string|string[]
 }
 
