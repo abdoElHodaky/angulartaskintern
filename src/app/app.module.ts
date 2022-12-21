@@ -3,19 +3,36 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Component, NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
+import { HomeComponent } from "../home/home.component";
+import { NewsComponent } from "../news/news.component";
+import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
+import { ContactComponent} from "../contact/contact.component";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { StoreModule } from "@ngrx/store";
 import { reducers } from '../reducers/reducers';
+import { ArticlesFacade } from "src/facades/article.facade";
 import { EffectsModule } from '@ngrx/effects';
+import { TicketsFacade } from "src/facades/ticket.facade";
+import { CoursesFacade } from "src/facades/course.facade";
 import { ReactiveFormsModule } from "@angular/forms";
+import { coursesComponent } from "../courses/courses.component";
+import { AuthFacade } from "../facades/auth.facade";
+import { LoginComponent } from "../auth/login.component";
+import { SignupComponent } from "../auth/signup.component";
+import { NotFoundComponent } from "../notFoundPage/notfound.component";
+import { UsersFacade } from "../facades/user.facade";
 
-import * as components from "../components";
-import * as facades from "../facades/facades";
 @NgModule({
   declarations: [
-    
+    NotFoundComponent,
     AppComponent,
-    [...components.components]
+    HomeComponent,
+    NewsComponent,
+    NewsDetailComponent,
+    ContactComponent,
+    coursesComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -28,7 +45,7 @@ import * as facades from "../facades/facades";
       { path: "", redirectTo: "/home", pathMatch: "full" },
       {
         path: "home",
-        component: components.homecomp,
+        component: HomeComponent,
         data:{
           breadcrumb:{name:"الاخبار"}
         }
@@ -38,11 +55,11 @@ import * as facades from "../facades/facades";
         
         children: [
           {  path:"",
-             component:components.newscomp
+             component:NewsComponent
           },
           {
             path: ':id',
-            component: components.newdetailcomp
+            component: NewsDetailComponent
           }
         ]
         //children: [{ path: "/", component: ANewComponent }]
@@ -50,32 +67,30 @@ import * as facades from "../facades/facades";
        {
         path:"support", 
         children:[
-          {path:"contact",component:components.contaccomp},
-          {path:"complaint" ,component:components.contaccomp}
+          {path:"contact",component: ContactComponent},
+          {path:"complaint" ,component:ContactComponent}
         ]
         
        },
        {
         path:"courses",
         children:[
-          {path:"",component:components.coursescomp}
+          {path:"",component:coursesComponent}
         ]
        },
        {
         path:"auth",
         children:[
           {path:"login",
-          component:components.logincomp},
-          {path:"signup",component:components.signupcomp}
+          component:LoginComponent},
+          {path:"signup",component:SignupComponent}
         ]
        },
-       {path: '**', component:components.notfoundcomp}
+       {path: '**', component:NotFoundComponent}
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
-  providers: [
-    ...facades.facades
-  ],
+  providers: [ArticlesFacade,TicketsFacade,CoursesFacade,AuthFacade,UsersFacade],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
