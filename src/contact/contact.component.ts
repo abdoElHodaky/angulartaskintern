@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, SimpleChanges } from "@angular/core";
 import { from } from "rxjs";
 import {FormGroup,FormControl,Validators} from "@angular/forms";
 import { TicketsFacade } from "src/facades/ticket.facade";
@@ -19,12 +19,13 @@ export class ContactComponent {
     })*/
   }
   ngOnInit():void{
-    
+    console.log(Ticket.fromobj({}))
     this.ticketfacade.tickets$.subscribe(e=>{
      this.preview=e
     })
   }
-  ngOnChanges(){
+  ngOnChanges(changes:SimpleChanges){
+    console.log(changes)
 
   }
   contactForm = new FormGroup({
@@ -39,6 +40,7 @@ export class ContactComponent {
   
   save() {
     let formvalue=this.contactForm.value
+    
     let obj=Ticket.fromobj({id:this.ticketid++,...formvalue})
     this.ticketfacade.AddSpTicket(obj)
     this.contactForm.reset()

@@ -4,7 +4,7 @@ import { Observable,pipe } from 'rxjs';
 import  {Article}  from '../models/article';
 import {filter} from 'rxjs/operators';
 import { ActivatedRoute } from "@angular/router";
-import { ArticlesFacade } from "src/facades/article.facade";
+import { ArticlesFacade } from "../facades/article.facade";
 @Component({
   selector: "<app-newsdetail></app-newsdetail>",
   templateUrl: "./newsdetail.component.html",

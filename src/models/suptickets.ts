@@ -6,11 +6,14 @@ export class Ticket implements _Ticket {
      description:string="default";
      subject:string="default";
      userName:string="default";
+     toString(){
+        return "Ticket {"+{...this}+"}"
+     }
     constructor (init:Ticket)
     {
         Object.assign(this, init);
     }
-
+    
     static fromobj(param){
     return new Ticket(<Ticket>{...param})
     ;
