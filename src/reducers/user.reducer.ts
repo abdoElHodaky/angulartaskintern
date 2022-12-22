@@ -7,10 +7,6 @@ export const initialState: UserState = { users: []};
 
 const _userReducer = createReducer(
   initialState,
-  on(fromActions.AddUserAction, (state, {payload}) => {
-  state.users.push(payload);
-  return {users:state.users}
-  }),
   on(fromActions.DeleteUserAction, (state, {payload}) => {
   const _users=state.users.filter(o=>o.id!=payload);
   return {users:_users}
