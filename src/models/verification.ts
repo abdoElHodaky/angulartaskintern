@@ -13,5 +13,6 @@ export class Verification implements _Verification{
 }
 export class EmailVerification extends Verification{
     type: string="email";
-    verify_code:string
+    private verify_code:string
+    
 }
