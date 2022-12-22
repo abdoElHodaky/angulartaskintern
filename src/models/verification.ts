@@ -8,7 +8,11 @@ export class Verification implements _Verification{
     constructor(init:Verification){
         Object.assign(this,init);
     }
-
+    static generateCode(length=6){
+     const crypto = require("crypto");
+     var d=crypto.randomBytes(length).toString('hex')
+     return d
+    }
 
 }
 export class EmailVerification extends Verification{
