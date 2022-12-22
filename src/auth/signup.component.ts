@@ -11,6 +11,7 @@ import { User } from "../models/user";
 })
 export class SignupComponent {
   title = "تسجيل مستخدم جديد";
+  userid:number=1
   user:User;
   signupForm=new FormGroup({
     userName:new FormControl("",[Validators.required]),
@@ -22,7 +23,7 @@ export class SignupComponent {
 
   }
   signup(){
-    this.user=User.fromobj(this.signupForm.value)
+    this.user=User.fromobj({id:this.userid++,...this.signupForm.value})
     this.signupForm.reset();
     console.log(this.user)
   }
