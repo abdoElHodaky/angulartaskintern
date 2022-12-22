@@ -15,8 +15,7 @@ export class LoginComponent {
   loginForm=new FormGroup({
     userName:new FormControl("",[Validators.required]),
     password:new FormControl("",[Validators.required]),
-    IdCard:new FormControl("",[Validators.required,Validators.maxLength(14)]),
-    email:new FormControl("",[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])
+    IdCard:new FormControl("",[Validators.required,Validators.maxLength(14)])
   });
   constructor(){
   }
