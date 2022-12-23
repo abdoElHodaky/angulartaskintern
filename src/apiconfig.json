@@ -1,9 +1,9 @@
 {
-hostname:"",
-api:{
-   auth:"",
-   users:"",
-   courses:"",
-   tickets:""
+'hostname':"",
+'api':{
+   'auth':"",
+   'users':"",
+   'courses':"",
+   'tickets':""
   }
 }
