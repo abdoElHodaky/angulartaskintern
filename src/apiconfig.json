@@ -3,7 +3,7 @@
 "hostname":"d",
 "api":
     {
-      "auth':"d",
+      "auth":"d",
       "users":"d",
       "courses":"d",
       "tickets":"d"
