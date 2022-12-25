@@ -54,7 +54,16 @@
    <div class="row d-flex">
     <div class="col col-md-8 col-sm-5 flex-column" style="overflow-y: scroll; max-height: 100vh">
       <form [formGroup]="contactForm" (ngSubmit)="save()">
-        <div class="mb-3">
+          <div class="mb-3">
+          <label for="userId" class="form-label">كود المستخدم</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userId"
+            formControlName="userId"
+          />
+        </div>
+          <div class="mb-3">
           <label for="userName" class="form-label">اسم المستخدم</label>
           <input
             type="text"
