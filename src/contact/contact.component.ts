@@ -29,6 +29,7 @@ export class ContactComponent {
 
   }
   contactForm = new FormGroup({
+    userId: new FormControl('',[Validators.required]),
     userName: new FormControl('',[Validators.required]),
     subject: new FormControl('',[Validators.required]),
     type:new FormControl("",[Validators.required]),
@@ -41,7 +42,7 @@ export class ContactComponent {
   save() {
     let formvalue=this.contactForm.value
     
-    let obj=Ticket.fromobj({id:this.ticketid++,...formvalue})
+    let obj=Ticket.fromobj({...formvalue})
     this.ticketfacade.AddSpTicket(obj)
     this.contactForm.reset()
   }
