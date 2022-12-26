@@ -14,13 +14,18 @@ import  {Ticket}  from '../models/suptickets';
 export class TicketsFacade {
   //loaded$ = this.store.select(carsQuery.getIsLoaded);
   tickets$ = this.store.select(ticketReducer.getTickets)||this.store.select(ticketReducer._getTickets);
+  message$= this.store.select(ticketReducer.getMessage)
   //selectedCar$ = this.store.select(carsQuery.getSelectedCar);
  
   constructor(private store: Store<SpTicketState>) {}
  // FromJson(param){Ticket.fromJson(param)}
   
-    AddSpTicket(param:Ticket):void {
-        this.store.dispatch(fromActions.CreateSupTicketAction({payload:param}));
+    AddSpTicket(param1:Ticket,param2:number):void {
+      let payload={
+        userid:param2,
+        ticket:param1
+      }
+        this.store.dispatch(fromActions.CreateSupTicketAction({payload:payload}));
          
        }
     DeleteSpTicket(param:number):void {

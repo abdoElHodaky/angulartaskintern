@@ -4,6 +4,7 @@ import {FormGroup,FormControl,Validators} from "@angular/forms";
 import { TicketsFacade } from "src/facades/ticket.facade";
 import { Ticket } from "src/models/suptickets";
 import { User } from "src/models/user";
+import { TicketsService } from "src/services/tickets.service";
 
 @Component({
   selector: "<app-contact></app-contact>",
@@ -13,7 +14,7 @@ import { User } from "src/models/user";
 export class ContactComponent {
   title = "تواصل معنا لعمل شكوي او دعم فني";
   private ticketid:number=1
-  constructor(private ticketfacade:TicketsFacade) {
+  constructor(private ticketfacade:TicketsFacade,private ticketserv:TicketsService) {
   /*  this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
     })*/
@@ -23,6 +24,8 @@ export class ContactComponent {
     this.ticketfacade.tickets$.subscribe(e=>{
      this.preview=e
     })
+    this.ticketserv.getAlltickets();
+
   }
   ngOnChanges(changes:SimpleChanges){
     console.log(changes)
@@ -30,7 +33,6 @@ export class ContactComponent {
   }
   contactForm = new FormGroup({
     userId: new FormControl('',[Validators.required]),
-    userName: new FormControl('',[Validators.required]),
     subject: new FormControl('',[Validators.required]),
     type:new FormControl("",[Validators.required]),
     description:new FormControl("",[Validators.required]),
@@ -41,9 +43,14 @@ export class ContactComponent {
   
   save() {
     let formvalue=this.contactForm.value
-    
-    let obj=Ticket.fromobj({...formvalue})
-    this.ticketfacade.AddSpTicket(obj)
+    let userId=Number(formvalue.userId);
+    let ticket={
+      type:formvalue.type,
+      subject:formvalue.subject,
+      decription:formvalue.description
+    }
+    let payload={sticket:ticket,userid:userId}
+    this.ticketfacade.AddSpTicket(Ticket.fromobj(ticket),userId)
     this.contactForm.reset()
   }
 }

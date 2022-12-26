@@ -24,7 +24,8 @@ export interface UserState {
 }
 
 export interface SpTicketState {
-     tickets:Ticket[]
+     tickets:Ticket[],
+     message?:string
 
 }
 export interface AuthState{

@@ -5,7 +5,7 @@ export class Ticket implements _Ticket {
      type: string="default";
      description:string="default";
      subject:string="default";
-     userName:string="default";
+     userName?:string="default";
      toString(){
         return "Ticket {"+{...this}+"}"
      }

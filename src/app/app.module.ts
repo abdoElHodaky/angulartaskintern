@@ -21,7 +21,9 @@ import { LoginComponent } from "../auth/login.component";
 import { SignupComponent } from "../auth/signup.component";
 import { NotFoundComponent } from "../notFoundPage/notfound.component";
 import { UsersFacade } from "../facades/user.facade";
-
+import { HttpClientModule } from '@angular/common/http';
+import { TicketsService } from "src/services/tickets.service";
+import { TicketEffects } from "src/effects/ticket.effects";
 @NgModule({
   declarations: [
     NotFoundComponent,
@@ -35,8 +37,9 @@ import { UsersFacade } from "../facades/user.facade";
     SignupComponent
   ],
   imports: [
+    HttpClientModule,
     ReactiveFormsModule,
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([TicketEffects]),
     StoreModule.forRoot(reducers),
     SlickCarouselModule,
     BrowserModule,
@@ -90,7 +93,12 @@ import { UsersFacade } from "../facades/user.facade";
       //{ path: "news/:id", component: NewsDetailComponent }
     ],{ scrollPositionRestoration: 'enabled' })
   ],
-  providers: [ArticlesFacade,TicketsFacade,CoursesFacade,AuthFacade,UsersFacade],
+  providers: [
+    TicketsService,
+    ArticlesFacade,
+    TicketsFacade,
+    CoursesFacade,
+    AuthFacade,UsersFacade],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
