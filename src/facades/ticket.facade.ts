@@ -28,10 +28,13 @@ export class TicketsFacade {
         this.store.dispatch(fromActions.CreateSupTicketAction({payload:payload}));
          
        }
-    DeleteSpTicket(param:number):void {
+    /*DeleteSpTicket(param:number):void {
         this.store.dispatch(fromActions.DeleteSupTicketAction({payload:param}));
 
-       }
+       }*/
+    getAllspTickets(){
+      this.store.dispatch(fromActions.LoadSupTicketsAction());
+    }
 
       
 }

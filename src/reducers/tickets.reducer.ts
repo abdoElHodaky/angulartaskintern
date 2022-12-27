@@ -15,17 +15,17 @@ const _ticketReducer=createReducer(
   on(fromActions.CreateSupTicketFailedAction, (state, {payload}) => {
     return {...state,message:"created falied"}
   }),
-  on(fromActions.LoadSupTicketsAction, (state, {payload}) => {
+  on(fromActions.LoadSupTicketsAction, (state) => {
     return {...state,tickets:[]}
   }),
   on(fromActions.LoadSupTicketSuccessAction, (state, {payload}) => {
     return {...state,tickets:[...payload]}
   }),
-  on(fromActions.DeleteSupTicketAction, (state, {payload}) => {
+  /*on(fromActions.DeleteSupTicketAction, (state, {payload}) => {
   const _tickets=state.tickets.filter(o=>o.id!=payload);
   return {tickets:_tickets}
   }),
-  
+  */
 );
 
 export function ticketReducer(state: any, action: Action) {

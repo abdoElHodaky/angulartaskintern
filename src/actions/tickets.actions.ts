@@ -16,7 +16,7 @@ export const DeleteSupTicketAction =
         createAction('[ Ticket ] Delete_Ticket', props<{ payload: number }>());
 
 export const LoadSupTicketsAction = 
-        createAction('[ Ticket ] Load_Tickets', props<{ payload: any }>());
+        createAction('[ Ticket ] Load_Tickets');
 
 
 export const LoadSupTicketSuccessAction = 
