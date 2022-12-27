@@ -21,10 +21,11 @@ export class ContactComponent {
   }
   ngOnInit():void{
     console.log(Ticket.fromobj({}))
+    this.ticketfacade.getAllspTickets()
     this.ticketfacade.tickets$.subscribe(e=>{
-     this.preview=e
+     console.log(e)
     })
-    this.ticketserv.getAlltickets();
+    
 
   }
   ngOnChanges(changes:SimpleChanges){
