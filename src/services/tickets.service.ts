@@ -9,7 +9,7 @@ import {apiconfig} from "../apiconfig"
 export class TicketsService {
     url=apiconfig.tickets;
     headers= new HttpHeaders({
-        "Accept":"application/json",
+        "Accept":"*/*",
         "Content-Type":"apllication/json"
     });
     constructor(private http:HttpClient){
