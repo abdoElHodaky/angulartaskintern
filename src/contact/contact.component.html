@@ -116,14 +116,14 @@
     <div class="col col-12 flex-column  my-3">
       <table class="table table-striped">
       <thead>
-       
+       <th>رقم التذكره</th>
        <th>نوع الرساله</th>
        <th>عنوان الرساله</th>
        <th>وصف الرساله</th>
       </thead>
       <tbody>
         <tr *ngFor="let ticket of preview;let i=index">
-          
+          <td>{{ticket.id}}</td>
           <td>{{ticket.type}}</td>
           <td>{{ticket.subject}}</td>
           <td style="hyphens:auto">{{ticket.description}}</td>
