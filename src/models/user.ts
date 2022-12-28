@@ -28,6 +28,11 @@ export class User implements _User {
     static authenticatedUser(param:User){
       return <AuthenticatedUser>param ;
     }
+   nationalIdvalid(){
+     const message=this.IDcardNumber.toString()
+     const pattern=/^([1-9]{1})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})[0-9]{3}([0-9]{1})[0-9]{1}$/
+     return (pattern.test(message));
+    }
 }
 
 export class AuthenticatedUser extends User{
