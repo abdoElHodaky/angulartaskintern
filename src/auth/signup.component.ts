@@ -16,7 +16,7 @@ export class SignupComponent {
   signupForm=new FormGroup({
     userName:new FormControl("",[Validators.required]),
     password:new FormControl("",[Validators.required]),
-    IdCard:new FormControl("",[Validators.required,Validators.maxLength(14),Validators.pattern("/^([1-9]{1})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})[0-9]{3}([0-9]{1})[0-9]{1}$/")]),
+    IdCard:new FormControl("",[Validators.required,Validators.maxLength(14),Validators.pattern("^([1-9]{1})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})[0-9]{3}([0-9]{1})[0-9]{1}$")]),
     email:new FormControl("",[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])
   });
   constructor(){
