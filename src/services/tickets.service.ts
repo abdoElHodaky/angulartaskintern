@@ -17,7 +17,7 @@ export class TicketsService {
     }
     getAlltickets():Observable<Ticket[]>{
         
-        return this.http.get<Ticket[]>(this.url);
+        return this.http.get<Ticket[]>(this.url,{},{...this.headers});
     }
     createsupTicket(supticket:Ticket,userid:number):Observable<any>{
         let payload={
