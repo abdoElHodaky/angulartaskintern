@@ -23,7 +23,7 @@ export class ContactComponent {
     console.log(Ticket.fromobj({}))
     this.ticketfacade.getAllspTickets()
     this.ticketfacade.tickets$.subscribe(e=>{
-     console.log(e)
+     this.preview=e
     })
     
 
