@@ -7,7 +7,7 @@ import {apiconfig} from "../apiconfig"
   providedIn:"root"
 })
 export class TicketsService {
-    url=`${apiconfig.hostname}/${apiconfig.tickets}`;
+    url=`${apiconfig.hostname}"/"${apiconfig.tickets}`;
     headers= new HttpHeaders(apiconfig.headers);
     constructor(private http:HttpClient){
 
