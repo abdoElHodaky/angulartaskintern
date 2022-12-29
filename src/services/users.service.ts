@@ -7,7 +7,7 @@ import {apiconfig} from "../apiconfig";
   providedIn:"root"
 })
 export class UsersService {
-    url=`${apiconfig.hostname}/${apiconfig.users}`;
+    url=`${apiconfig.hostname}`+`${apiconfig.users}`;
     headers= new HttpHeaders(apiconfig.headers);
     constructor(private http:HttpClient){
 
@@ -17,6 +17,7 @@ export class UsersService {
         return this.http.get<User[]>(this.url,{...this.headers});
     }
     getOneUser(userid:number):Observable<any>{
-        return this.http.get(`${this.url}/${userid}`,{...this.headers});
+        let _url=`${this.url}`+'/'+`${userid}`
+        return this.http.get(_url,{...this.headers});
     }    
 }

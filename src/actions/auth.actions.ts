@@ -2,7 +2,7 @@ import { createAction, props } from '@ngrx/store';
 import  {User}  from '../models/user';
 
 export const LoginAction = 
-        createAction('[ Auth ] Login_User', props<{ payload: User }>());
+        createAction('[ Auth ] Login_User', props<{ payload: {useranme:string,passwordHash:string} }>());
 
 export const LoginSuccessAction = 
         createAction('[ Auth ] LoginSuccess_User', props<{ payload: User }>());

@@ -17,11 +17,12 @@ export class TicketsService {
         return this.http.get<Ticket[]>(this.url,{...this.headers});
     }
     createsupTicket(supticket:Ticket,userid:number):Observable<any>{
+        let _url=this.url+"/create/";
         let payload={
             userid:userid,
             ticket:supticket
         }
-        return this.http.post(`${this.url}/create/`,{
+        return this.http.post(_url,{
             ...payload
         },{...this.headers});
     }    
