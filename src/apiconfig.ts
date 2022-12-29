@@ -1,8 +1,13 @@
 export const apiconfig={
-    auth:"d",
-    tickets:"https://angulartaskintern.onrender.com/suptickets",
+    headers:{
+        "Accept":"*/*",
+        "Content-Type":"apllication/json"
+    },
+    hostname:"https://angulartaskintern.onrender.com/",
+    auth:"auth",
+    tickets:"suptickets",
     atricles:"d",
     courses:"d",
-    users:"d"
+    users:"users"
 
 }

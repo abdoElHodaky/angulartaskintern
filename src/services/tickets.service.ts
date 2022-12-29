@@ -7,11 +7,8 @@ import {apiconfig} from "../apiconfig"
   providedIn:"root"
 })
 export class TicketsService {
-    url=apiconfig.tickets;
-    headers= new HttpHeaders({
-        "Accept":"*/*",
-        "Content-Type":"apllication/json"
-    });
+    url=`${apiconfig.hostname}/${apiconfig.tickets}`;
+    headers= new HttpHeaders(apiconfig.headers);
     constructor(private http:HttpClient){
 
     }

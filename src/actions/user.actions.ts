@@ -10,3 +10,8 @@ export const DeleteUserAction =
 export const UpdateUserAction = 
         createAction('[ User ] Update_User', props<{ payload:[Number, User]  }>());
 
+export const LoadUserAction = 
+        createAction('[ User ] Load_User', props<{ payload: number }>());
+
+export const LoadUserSuccessAction = 
+        createAction('[ User ] LoadSuccess_User', props<{ payload: User }>());

@@ -13,7 +13,9 @@ export class TicketEffects {
     private ticketserv:TicketsService
   ) { }
 
-    loadTickets$=createEffect(()=>this.actions$.pipe(ofType(fromActions.LoadSupTicketsAction),
+    loadTickets$=createEffect(()=>this.actions$.pipe(
+      ofType(fromActions.LoadSupTicketsAction),
+      debounceTime(1000),
     switchMap(()=>
     this.ticketserv.getAlltickets().pipe(
         map(data=>fromActions.LoadSupTicketSuccessAction({payload:data}))
