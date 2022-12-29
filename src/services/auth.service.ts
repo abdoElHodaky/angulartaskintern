@@ -22,6 +22,6 @@ export class AuthService {
     }
     signup(user:User):Observable<any>{
         let _url=this.url+"/register/";
-        return this.http.post(_url,{...this.headers});
+        return this.http.post(_url,{...user},{...this.headers});
     }    
 }
