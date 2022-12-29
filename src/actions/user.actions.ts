@@ -15,3 +15,9 @@ export const LoadUserAction =
 
 export const LoadUserSuccessAction = 
         createAction('[ User ] LoadSuccess_User', props<{ payload: User }>());
+
+export const LoadAllUserAction = 
+        createAction('[ User ] Load_Users');
+
+export const LoadAllUserSuccessAction = 
+        createAction('[ User ] LoadSuccess_Users', props<{ payload: User[] }>());

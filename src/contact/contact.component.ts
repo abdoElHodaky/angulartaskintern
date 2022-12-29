@@ -1,5 +1,5 @@
 import { Component, SimpleChanges } from "@angular/core";
-import { from } from "rxjs";
+import { takeUntil,Subject } from "rxjs";
 import {FormGroup,FormControl,Validators} from "@angular/forms";
 import { TicketsFacade } from "src/facades/ticket.facade";
 import { Ticket } from "src/models/suptickets";
@@ -12,6 +12,7 @@ import { TicketsService } from "src/services/tickets.service";
   styleUrls: ["./contact.component.css"]
 })
 export class ContactComponent {
+  destroy$: Subject<boolean> = new Subject<boolean>();
   title = "تواصل معنا لعمل شكوي او دعم فني";
   private ticketid:number=1
   constructor(private ticketfacade:TicketsFacade,private ticketserv:TicketsService) {
@@ -22,7 +23,7 @@ export class ContactComponent {
   ngOnInit():void{
     console.log(Ticket.fromobj({}))
     this.ticketfacade.getAllspTickets()
-    this.ticketfacade.tickets$.subscribe(e=>{
+    this.ticketfacade.tickets$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
      this.preview=e
     })
     

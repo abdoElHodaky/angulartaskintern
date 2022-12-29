@@ -25,6 +25,12 @@ export class UsersFacade {
        }
     DeleteUser(param:number){
         this.store.dispatch(fromActions.DeleteUserAction({payload:param}))
-    }   
+    } 
+    getAllUsers(){
+      this.store.dispatch(fromActions.LoadAllUserAction())
+    }
+    getOneUser(param:number){
+      this.store.dispatch(fromActions.LoadUserAction({payload:param}))
+    }  
       
 }

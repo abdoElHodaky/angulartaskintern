@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
+import { takeUntil,Subject } from "rxjs";
+import { UsersFacade } from "src/facades/user.facade";
 import { fadeAnimation } from "./routeTransition";
-declare var $:any;
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -9,8 +10,16 @@ declare var $:any;
 })
 export class AppComponent {
   title = "CodeSandbox";
-  ngAfterViewInit(){
-    
+  //destroy$: Subject<boolean> = new Subject<boolean>();
 
+  constructor(private userfacade:UsersFacade){
+
+  }
+  ngOnInit(){
+    
+    /*this.userfacade.getAllUsers();
+    this.userfacade.users$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
+      console.log(e)
+    })*/
   }
 }

@@ -19,6 +19,22 @@ const _userReducer = createReducer(
   }
   return {users:state.users}
 
+  }),
+  on(fromActions.LoadAllUserAction, (state) => {
+    return {...state,users:[]}
+  
+  }),
+  on(fromActions.LoadUserAction, (state,{payload}) => {
+    return {...state,users:[]}
+  
+  }),
+  on(fromActions.LoadAllUserSuccessAction, (state,{payload}) => {
+    return {...state,users:payload}
+  
+  }),
+  on(fromActions.LoadUserSuccessAction, (state,{payload}) => {
+    return {...state,users:[payload]}
+  
   })
 );
 

@@ -6,19 +6,24 @@ import * as fromActions from '../actions/user.actions';
 import { UsersService } from '../services/users.service';
 
 @Injectable()
-export class TicketEffects {
+export class UserEffects {
 
   constructor(
     private actions$: Actions,
     private Usererv:UsersService
   ) { }
 
-    /*loadUsers$=createEffect(()=>this.actions$.pipe(ofType(fromActions.LoadSupUserAction),
-    switchMap(()=>
-    this.Usererv.getAllUser().pipe(
-        map(data=>fromActions.LoadSupUseruccessAction({payload:data}))
-    )
-    )));*/
+    loadUsers$=createEffect(()=>
+    this.actions$.pipe(
+      ofType(fromActions.LoadAllUserAction),
+      debounceTime(100),
+      switchMap(()=>
+      this.Usererv.getAllUsers().pipe(
+        map(res=>fromActions.LoadAllUserSuccessAction({payload:res}))
+        )
+      )
+    ));
+
   loadUser$=createEffect(()=>
         this.actions$.pipe(
             ofType(fromActions.LoadUserAction),
