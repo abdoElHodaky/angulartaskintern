@@ -20,8 +20,12 @@ export class AuthFacade {
   constructor(private store: Store<AuthState>) {}
  // FromJson(param){Ticket.fromJson(param)}
   
-    LoginUser(param:User):void {
-        this.store.dispatch(fromActions.LoginAction({payload:param}));
+    LoginUser(username:string,password:string):void {
+      let payload={
+        username:username,
+        passwordHash:password
+      }
+        this.store.dispatch(fromActions.LoginAction({payload:{useranme:payload.username,passwordHash:payload.passwordHash}}));
          
        }
     SignUpUser(param:User){
