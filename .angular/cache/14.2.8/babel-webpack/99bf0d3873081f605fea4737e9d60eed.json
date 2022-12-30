@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const apiconfig = {\n  headers: {\n    \"Accept\": \"*/*\",\n    \"Content-Type\": \"apllication/json\"\n  },\n  hostname: \"https://angulartaskintern.onrender.com/\",\n  auth: \"auth\",\n  tickets: \"suptickets\",\n  atricles: \"articles\",\n  courses: \"d\",\n  users: \"users\"\n};","map":null,"metadata":{},"sourceType":"module"}
