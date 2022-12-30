@@ -3,7 +3,7 @@ import { takeUntil,Subject } from "rxjs";
 import { UsersFacade } from "../facades/user.facade";
 import { AuthFacade } from "../facades/auth.facade";
 import { AuthService } from "../services/auth.service";
-import { User } from "../models/user"
+import { User } from "../models/user";
 import { fadeAnimation } from "./routeTransition";
 @Component({
   selector: "app-root",
@@ -19,8 +19,8 @@ export class AppComponent {
 
   }
   ngOnInit(){
-    this.facade.LoginUser("abdo_test21","test234567")
-    this.facade.user$.subscribe(e=>console.log(User.fromobj(e))))
+    this.facade.LoginUser("abdo_test21","test234567");
+    this.facade.user$.subscribe(e=>{console.log(User.fromobj(e)))})
    
   }
 }
