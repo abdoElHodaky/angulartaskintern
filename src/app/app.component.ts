@@ -20,7 +20,9 @@ export class AppComponent {
   }
   ngOnInit(){
     this.facade.LoginUser("abdo_test21","test234567");
-    this.facade.user$.subscribe(e=>{console.log(User.fromobj(e)))})
+    this.facade.user$.subscribe(e=>{
+     console.log(User.fromobj(e))
+     })
    
   }
 }
