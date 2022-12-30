@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 import { takeUntil,Subject } from "rxjs";
-import { UsersFacade } from "src/facades/user.facade";
-import { AuthFacade } from "src/facades/auth.facade";
-import { AuthService } from "src/services/auth.service";
+import { UsersFacade } from "../facades/user.facade";
+import { AuthFacade } from "../facades/auth.facade";
+import { AuthService } from "../services/auth.service";
+import { User } from "../models/user"
 import { fadeAnimation } from "./routeTransition";
 @Component({
   selector: "app-root",
@@ -19,7 +20,7 @@ export class AppComponent {
   }
   ngOnInit(){
     this.facade.LoginUser("abdo_test21","test234567")
-    this.facade.user$.subscribe(e=>{console.log(e)})
+    this.facade.user$.subscribe(e=>console.log(User.fromobj(e))))
    
   }
 }
