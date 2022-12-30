@@ -1,6 +1,6 @@
 import _Ticket from "./suptickets.d"
 export class Ticket implements _Ticket {
-    id: number=1;
+    id: number;
      title?: string="default";
      type: string="default";
      description:string="default";
