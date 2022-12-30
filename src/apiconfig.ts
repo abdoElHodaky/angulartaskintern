@@ -6,7 +6,7 @@ export const apiconfig={
     hostname:"https://angulartaskintern.onrender.com/",
     auth:"auth",
     tickets:"suptickets",
-    atricles:"d",
+    atricles:"articles",
     courses:"d",
     users:"users"
 
