@@ -5,7 +5,7 @@ export const LoginAction =
         createAction('[ Auth ] Login_User', props<{ payload: {useranme:string,passwordHash:string} }>());
 
 export const LoginSuccessAction = 
-        createAction('[ Auth ] LoginSuccess_User', props<{ payload: User }>());
+        createAction('[ Auth ] LoginSuccess_User', props<{ payload: any }>());
 
 export const SignupAction = 
         createAction('[ Auth ] Signup_User', props<{ payload:User  }>());

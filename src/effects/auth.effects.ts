@@ -6,7 +6,7 @@ import * as fromActions from '../actions/auth.actions';
 import { AuthService } from 'src/services/auth.service';
 
 @Injectable()
-export class TicketEffects {
+export class AuthEffects {
 
   constructor(
     private actions$: Actions,
@@ -20,7 +20,9 @@ export class TicketEffects {
             this.authserv.login(
               payload.useranme,payload.passwordHash
             ).pipe(
-                map((res)=>fromActions.LoginSuccessAction({payload:res})),
+                map((res)=>
+                  fromActions.LoginSuccessAction({payload:res["user"]})
+                  ),
                 catchError(err=>of(fromActions.LoginFailureAction({payload:err})))
             )
         )

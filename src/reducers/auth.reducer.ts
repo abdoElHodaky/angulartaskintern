@@ -3,8 +3,8 @@ import { User } from '../models/user';
 import * as fromActions from '../actions/auth.actions';
 //import { JAVA_ARTICLES, ANGULAR_ARTICLES , MINS_ARTICLES } from '../models/article';
 import { AuthState } from './app.states';
-
-export const initialState: AuthState = {user:<User>{},errorMessage:"" };
+let user=User.fromobj({});
+export const initialState: AuthState = {user:user,errorMessage:"" };
 
 const _authReducer = createReducer(
   initialState,

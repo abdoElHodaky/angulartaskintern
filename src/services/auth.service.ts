@@ -12,7 +12,7 @@ export class AuthService {
     constructor(private http:HttpClient){
 
     }
-    login(username:string,password:string):Observable<User>{
+    login(username:string,password:string):Observable<any>{
         let _url=this.url+"/login/";
         let payload={
             username:username,

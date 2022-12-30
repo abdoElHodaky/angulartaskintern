@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TicketsService } from "src/services/tickets.service";
 import { TicketEffects } from "src/effects/ticket.effects";
 import { UserEffects } from "src/effects/user.effects";
+import { AuthEffects } from "src/effects/auth.effects";
 @NgModule({
   declarations: [
     NotFoundComponent,
@@ -40,7 +41,7 @@ import { UserEffects } from "src/effects/user.effects";
   imports: [
     HttpClientModule,
     ReactiveFormsModule,
-    EffectsModule.forRoot([TicketEffects,UserEffects]),
+    EffectsModule.forRoot([TicketEffects,UserEffects,AuthEffects]),
     StoreModule.forRoot(reducers),
     SlickCarouselModule,
     BrowserModule,
