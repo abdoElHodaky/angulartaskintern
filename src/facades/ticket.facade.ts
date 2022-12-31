@@ -13,7 +13,7 @@ import  {Ticket}  from '../models/suptickets';
 })
 export class TicketsFacade {
   //loaded$ = this.store.select(carsQuery.getIsLoaded);
-  tickets$ = this.store.select(ticketReducer.getTickets)||this.store.select(ticketReducer._getTickets);
+  tickets$ = this.store.select(ticketReducer.getTickets);
   message$= this.store.select(ticketReducer.getMessage)
   //selectedCar$ = this.store.select(carsQuery.getSelectedCar);
  
