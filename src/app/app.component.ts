@@ -13,19 +13,19 @@ import {User} from "../models/user";
 })
 export class AppComponent {
   title = "CodeSandbox";
-  destroy$: Subject<boolean> = new Subject<boolean>();
+  //destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(private facade:UsersFacade,private servs:AuthService){
 
   }
   ngOnInit(){
-    var user:User;
+   /* var user:User;
     this.facade.getOneUser(5);
     this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
      user=<User>e
      console.log(user)
      })
      console.log(user)
-   
+    */
   }
 }
