@@ -22,7 +22,7 @@ export class AppComponent {
     let user;
     this.facade.getOneUser(5);
     this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
-     console.log(<User>e)
+     console.log(<User>{...e})
      })
    
   }

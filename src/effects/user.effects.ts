@@ -27,7 +27,7 @@ export class UserEffects {
   loadUser$=createEffect(()=>
         this.actions$.pipe(
             ofType(fromActions.LoadUserAction),
-            debounceTime(1000),
+            debounceTime(500),
             map(action=>action.payload),
             switchMap(payload=>
                 this.Usererv.getOneUser(payload).pipe(
