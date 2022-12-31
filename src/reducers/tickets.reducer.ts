@@ -38,10 +38,10 @@ export const getTickets = createSelector(
     getSpTicketState, 
     (state: SpTicketState) => state.tickets
 );
-export const _getTickets = createSelector(
+/*export const _getTickets = createSelector(
   getSpTicketState, 
   (state: SpTicketState) => tickets
-); 
+);*/ 
 export const getMessage = createSelector(
   getSpTicketState, 
   (state: SpTicketState) => state.message
