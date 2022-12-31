@@ -1,9 +1,8 @@
 import { Component } from "@angular/core";
-import { takeUntil,Subject } from "rxjs";
+import { takeUntil,Subject, map } from "rxjs";
 import { UsersFacade } from "../facades/user.facade";
 import { AuthFacade } from "../facades/auth.facade";
 import { AuthService } from "../services/auth.service";
-import { User } from "../models/user";
 import { fadeAnimation } from "./routeTransition";
 @Component({
   selector: "app-root",
@@ -15,13 +14,13 @@ export class AppComponent {
   title = "CodeSandbox";
   destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private facade:AuthFacade,private servs:AuthService){
+  constructor(private facade:UsersFacade,private servs:AuthService){
 
   }
   ngOnInit(){
-    this.facade.LoginUser("abdo_test21","test234567");
-    this.facade.user$.subscribe(e=>{
-     console.log(<User>e)
+    this.facade.getOneUser(5);
+    this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
+     console.log(e.tickets)
      })
    
   }
