@@ -23,7 +23,7 @@ export class AppComponent {
     this.facade.users$.pipe(map(res=>res.at(0))).subscribe((e)=>{
      user=e
      })
-     console.log(user.tickets)
+     console.log(user)
    
   }
 }
