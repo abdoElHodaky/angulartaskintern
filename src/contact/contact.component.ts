@@ -22,7 +22,7 @@ export class ContactComponent {
    
   }
   ngOnInit():void{
-    getAllTickets()
+    this.getAllTickets()
     
 
   }
@@ -51,7 +51,7 @@ export class ContactComponent {
     let payload={sticket:ticket,userid:userId}
     this.ticketfacade.AddSpTicket(Ticket.fromobj(ticket),userId)
     this.contactForm.reset()
-    getAllTickets()
+    this.getAllTickets()
   }
    getAllTickets(){
     this.ticketfacade.getAllspTickets()
