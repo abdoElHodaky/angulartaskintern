@@ -1,17 +1,14 @@
 import _User from "./user.d"
 import {Article} from "./article"
+import { Ticket } from "./suptickets";
 export class User implements _User {
     id: number;
-    IDcardNumber:number;
+    IDcardNumber?:number;
     firstName: string;
-    middleName: string;
+    middleName?: string;
     lastName:string;
-    relationship_type:string;
-    relationship_id:number;
-    related_id:number;
-    protected permissions=[];
-    private articles:Article[];
-    protected accesstok?:string;
+    articles:Article[];
+    tickets:Ticket[];
     userName:string;
     protected password:string;
     
@@ -36,6 +33,8 @@ export class User implements _User {
 }
 
 export class AuthenticatedUser extends User{
+  private permissions=[];
+  private accesstok?:string;
  isAuthorized?:boolean;
  isAuthenticated:boolean=true
  setAuthorization(){

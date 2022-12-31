@@ -1,11 +1,11 @@
 declare interface _User {
     id: number;
-    IDcardNumber:number;
+    IDcardNumber?:number;
     firstName: string;
-    middleName: string;
+    middleName?: string;
     lastName:string;
-    relationship_type:string;
-    relationship_id:number;
-    related_id:number
+    relationship_type?:string;
+    relationship_id?:number;
+    related_id?:number
 }
 export default _User
