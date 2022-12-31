@@ -49,7 +49,7 @@ export class ContactComponent {
     let ticket={
       type:formvalue.type,
       subject:formvalue.subject,
-      decription:formvalue.description
+      description:formvalue.description
     }
     let payload={sticket:ticket,userid:userId}
     this.ticketfacade.AddSpTicket(Ticket.fromobj(ticket),userId)
