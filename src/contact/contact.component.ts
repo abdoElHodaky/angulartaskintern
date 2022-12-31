@@ -19,13 +19,10 @@ export class ContactComponent {
   /*  this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
     })*/
+   
   }
   ngOnInit():void{
-    console.log(Ticket.fromobj({}))
-    this.ticketfacade.getAllspTickets()
-    this.ticketfacade.tickets$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
-     this.preview=e
-    })
+    getAllTickets()
     
 
   }
@@ -54,5 +51,13 @@ export class ContactComponent {
     let payload={sticket:ticket,userid:userId}
     this.ticketfacade.AddSpTicket(Ticket.fromobj(ticket),userId)
     this.contactForm.reset()
+    getAllTickets()
   }
+   getAllTickets(){
+    this.ticketfacade.getAllspTickets()
+    this.ticketfacade.tickets$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
+     this.preview=e
+    })
+
+   }
 }
