@@ -20,7 +20,7 @@ export class AppComponent {
   ngOnInit(){
     this.facade.getOneUser(5);
     this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
-     console.log(e)
+     console.log(e["tickets"])
      })
    
   }
