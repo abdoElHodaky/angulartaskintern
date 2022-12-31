@@ -4,6 +4,7 @@ import { UsersFacade } from "../facades/user.facade";
 import { AuthFacade } from "../facades/auth.facade";
 import { AuthService } from "../services/auth.service";
 import { fadeAnimation } from "./routeTransition";
+import {User} from "../models/user";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -20,8 +21,8 @@ export class AppComponent {
   ngOnInit(){
     let user;
     this.facade.getOneUser(5);
-    this.facade.users$.pipe(map(res=>res.at(0))).subscribe(({tickets})=>{
-     console.log(tickets)
+    this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
+     console.log(<User>e)
      })
    
   }
