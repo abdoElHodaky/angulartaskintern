@@ -19,11 +19,11 @@ export class AppComponent {
 
   }
   ngOnInit(){
-    let user={};
+    var user:User;
     this.facade.getOneUser(5);
     this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
-     console.log(<User>e)
      user=<User>e
+     console.log(user)
      })
      console.log(user)
    
