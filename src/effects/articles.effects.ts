@@ -15,7 +15,7 @@ export class ArticlesEffects {
 
     loadArticles$=createEffect(()=>this.actions$.pipe(
       ofType(fromActions.LoadArticlesAction),
-      debounceTime(1000),
+      debounceTime(300),
     switchMap(()=>
     this.articleserv.getAllArticles().pipe(
         map(data=>fromActions.LoadSuccessArticlesAction({payload:data}))

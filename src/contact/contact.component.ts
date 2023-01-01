@@ -12,6 +12,7 @@ import { TicketsService } from "src/services/tickets.service";
   styleUrls: ["./contact.component.css"]
 })
 export class ContactComponent {
+  preview:Ticket[];
   destroy$: Subject<boolean> = new Subject<boolean>();
   title = "تواصل معنا لعمل شكوي او دعم فني";
   private ticketid:number=1
@@ -19,7 +20,9 @@ export class ContactComponent {
   /*  this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
     })*/
-    this.preview=this.ticketfacade.tickets$
+    this.ticketfacade.tickets$.subscribe(e=>{
+      this.preview=e;
+    })
    
   }
   ngOnInit():void{
@@ -38,7 +41,7 @@ export class ContactComponent {
     description:new FormControl("",[Validators.required]),
   });
  
-  preview:Observable<Ticket[]>;
+  
  
   
   save() {

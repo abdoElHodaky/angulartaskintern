@@ -36,11 +36,16 @@ export class NewsComponent {
     };
     constructor(private articlefacade:ArticlesFacade) {
       this.articles$ = this.articlefacade.articles$
-      
+      /*this.articles$.subscribe(e=>{
+        this.fetechedArticles=e
+        this.fetchedCat=`وزاري`;
+      })*/
     }
     ngOnInit(){
-      this.articles$.subscribe(e=>{
-        console.log(e)
+      this.articles$.pipe(map(res=>res.slice().reverse())).subscribe(e=>{
+        this.fetechedArticles=e
+        this.fetchedCat=`وزاري`;
+        //console.log(this.fetechedArticles)
       })
       //this.showMinsArticles()
       //this.exportAscsv()
@@ -64,7 +69,7 @@ export class NewsComponent {
     beforeChange(e: any) {
       console.log('beforeChange');
     }
-    showMinsArticles() {
+    /*showMinsArticles() {
         
         this.articlefacade.showMinsArticles();
         this.articles$.subscribe(e=>{
@@ -80,5 +85,5 @@ export class NewsComponent {
       const exportType = 'xls'
       var d=exportFromJSON({data,fileName,exportType})
       console.log(d,true)
-    }  
+    } */ 
 }
