@@ -14,11 +14,9 @@ import { TicketsFacade } from "src/facades/ticket.facade";
 export class AppComponent {
   title = "CodeSandbox";
   destroy$: Subject<boolean> = new Subject<boolean>();
-  private articlefacade:ArticlesFacade
-  private ticketfacde:TicketsFacade
-  constructor(){
-
-  }
+  constructor(
+    private articlefacade:ArticlesFacade,
+    private ticketfacde:TicketsFacade){}
   ngOnInit(){
    this.articlefacade.loadArticles();
    this.ticketfacde.getAllspTickets()
