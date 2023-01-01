@@ -4,6 +4,7 @@ import { fadeAnimation } from "./routeTransition";
 import {User} from "../models/user";
 import { ArticlesFacade } from "src/facades/article.facade";
 import { ArticlesService } from "src/services/articles.service";
+import { TicketsFacade } from "src/facades/ticket.facade";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -13,13 +14,15 @@ import { ArticlesService } from "src/services/articles.service";
 export class AppComponent {
   title = "CodeSandbox";
   destroy$: Subject<boolean> = new Subject<boolean>();
-
-  constructor(private facade:ArticlesFacade,private servs:ArticlesService){
+  private articlefacade:ArticlesFacade
+  private ticketfacde:TicketsFacade
+  constructor(){
 
   }
   ngOnInit(){
-   this.facade.loadArticles();
-   this.facade.articles$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
+   this.articlefacade.loadArticles();
+   this.ticketfacde.getAllspTickets()
+   this.articlefacade.articles$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
     console.log(e)
    })
   }
