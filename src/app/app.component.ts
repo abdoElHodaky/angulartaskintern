@@ -1,10 +1,9 @@
 import { Component } from "@angular/core";
 import { takeUntil,Subject, map } from "rxjs";
-import { UsersFacade } from "../facades/user.facade";
-import { AuthFacade } from "../facades/auth.facade";
-import { AuthService } from "../services/auth.service";
 import { fadeAnimation } from "./routeTransition";
 import {User} from "../models/user";
+import { ArticlesFacade } from "src/facades/article.facade";
+import { ArticlesService } from "src/services/articles.service";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -13,19 +12,15 @@ import {User} from "../models/user";
 })
 export class AppComponent {
   title = "CodeSandbox";
-  //destroy$: Subject<boolean> = new Subject<boolean>();
+  destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private facade:UsersFacade,private servs:AuthService){
+  constructor(private facade:ArticlesFacade,private servs:ArticlesService){
 
   }
   ngOnInit(){
-   /* var user:User;
-    this.facade.getOneUser(5);
-    this.facade.users$.pipe(map(res=>res.at(0))).subscribe(e=>{
-     user=<User>e
-     console.log(user)
-     })
-     console.log(user)
-    */
+   this.facade.loadArticles();
+   this.facade.articles$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
+    console.log(e)
+   })
   }
 }

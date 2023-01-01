@@ -33,5 +33,8 @@ export class ArticlesFacade {
     showMinsArticles() {
         this.store.dispatch(fromActions.MinsArticlesAction());
       }
+    loadArticles(){
+      this.store.dispatch(fromActions.LoadArticlesAction());
+    }
   
 }
