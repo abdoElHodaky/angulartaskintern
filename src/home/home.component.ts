@@ -85,7 +85,7 @@ export class HomeComponent {
         
        // this.articlefacade.showMinsArticles();
         
-        this.articles$.map(res=>res.slice().reverse()).subscribe(e=>{
+        this.articles$.pipe(map(res=>res.slice().reverse())).subscribe(e=>{
           this.fetechedArticles=e
         })
     
