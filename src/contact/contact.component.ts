@@ -54,7 +54,7 @@ export class ContactComponent {
     this.getAllTickets()
   }
    getAllTickets(){
-    //this.ticketfacade.getAllspTickets()
+    this.ticketfacade.getAllspTickets()
     this.ticketfacade.tickets$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
      this.preview=e
     })

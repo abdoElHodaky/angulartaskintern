@@ -39,7 +39,10 @@ export class NewsComponent {
       
     }
     ngOnInit(){
-      this.showMinsArticles()
+      this.articles$.subscribe(e=>{
+        console.log(e)
+      })
+      //this.showMinsArticles()
       //this.exportAscsv()
       //this.DeleteArticle(1)
     }
@@ -70,6 +73,7 @@ export class NewsComponent {
         })
     
       }
+
     exportAscsv(){
       const fileName = 'articles'
       const data=this.fetechedArticles;

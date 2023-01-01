@@ -20,8 +20,5 @@ export class AppComponent {
   ngOnInit(){
    this.articlefacade.loadArticles();
    this.ticketfacde.getAllspTickets()
-   this.articlefacade.articles$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
-    console.log(e)
-   })
   }
 }
