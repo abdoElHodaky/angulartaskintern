@@ -26,3 +26,10 @@ export const UpdateArticleAction =
 
 export const MinsArticlesAction = 
         createAction('[ Article ] Mins_Articles'); 
+
+export const LoadArticlesAction = 
+        createAction('[ Article ] Load_Articles');
+
+export const LoadSuccessArticlesAction = 
+        createAction('[ Article ] LoadSuccess_Articles', props<{ payload: Article[] }>()); 
+

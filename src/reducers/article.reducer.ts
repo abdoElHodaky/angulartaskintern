@@ -27,7 +27,16 @@ const _articleReducer = createReducer(
   }
   return {articles:state.articles}
 
-  })
+  }),
+  on(fromActions.LoadArticlesAction, (state) => { 
+    return {...state};
+  }),
+  on(fromActions.LoadSuccessArticlesAction, (state, {payload}) => {
+    return {...state,articles:[...payload]}
+  }),
+  
+  
+  
 );
 
 export function articleReducer(state: any, action: Action) {
