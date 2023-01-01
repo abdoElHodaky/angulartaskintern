@@ -59,7 +59,7 @@ export class HomeComponent {
       this.articles$=this.articlefacade.articles$
     }
     ngOnInit(){
-      this.showMinsArticles()
+      this.showArticles()
       //this.articles$ = this.articlefacade.articles$;
       
     }
