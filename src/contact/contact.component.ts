@@ -1,5 +1,5 @@
 import { Component, SimpleChanges } from "@angular/core";
-import { takeUntil,Subject } from "rxjs";
+import { takeUntil,Subject, Observable } from "rxjs";
 import {FormGroup,FormControl,Validators} from "@angular/forms";
 import { TicketsFacade } from "src/facades/ticket.facade";
 import { Ticket } from "src/models/suptickets";
@@ -19,6 +19,7 @@ export class ContactComponent {
   /*  this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
     })*/
+    this.preview=this.ticketfacade.tickets$
    
   }
   ngOnInit():void{
@@ -37,7 +38,7 @@ export class ContactComponent {
     description:new FormControl("",[Validators.required]),
   });
  
-  preview:Array<Ticket>;
+  preview:Observable<Ticket[]>;
  
   
   save() {
@@ -55,9 +56,5 @@ export class ContactComponent {
   }
    getAllTickets(){
     this.ticketfacade.getAllspTickets()
-    this.ticketfacade.tickets$.pipe(takeUntil(this.destroy$)).subscribe(e=>{
-     this.preview=e
-    })
-
    }
 }

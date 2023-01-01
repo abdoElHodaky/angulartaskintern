@@ -81,19 +81,4 @@ export class NewsComponent {
       var d=exportFromJSON({data,fileName,exportType})
       console.log(d,true)
     }  
-  /* AddArticle(param:Article):void {
-        this.store.dispatch(fromActions.AddArticleAction({payload:param}));
-          
-        this.articles$.subscribe(e=>{
-          this.fetechedArticles=e
-        })
-
-       }
-    DeleteArticle(param:number):void {
-        this.store.dispatch(fromActions.DeleteArticleAction({payload:param}));
-        this.articles$.subscribe(console.log)
-        this.store.select(articleReducer.getArticles).subscribe(console.log)  
-        
-
-       }*/
 }
