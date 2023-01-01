@@ -81,9 +81,9 @@ export class HomeComponent {
     beforeChange2(e: any) {
       console.log('beforeChange');
     }
-    showMinsArticles() {
+    showArticles() {
         
-        this.articlefacade.showMinsArticles();
+       // this.articlefacade.showMinsArticles();
         
         this.articles$.subscribe(e=>{
           this.fetechedArticles=e
