@@ -302,7 +302,7 @@
           
            <div
              ngxSlickItem
-             *ngFor="let fetchedArticle of fetechedArticles.slice().reverse()"
+             *ngFor="let fetchedArticle of fetechedArticles.slice(0,9)"
              class="slide overflow-hidden " routerLink="/news/{{fetchedArticle.id}}"
            >
            <div class="col-sm-6 col-md-4 flex-column ">

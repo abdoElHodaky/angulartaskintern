@@ -59,7 +59,7 @@ export class HomeComponent {
       this.articles$=this.articlefacade.articles$
     }
     ngOnInit(){
-      this.showMinsArticles()
+      this.showArticles()
       //this.articles$ = this.articlefacade.articles$;
       
     }
@@ -81,11 +81,11 @@ export class HomeComponent {
     beforeChange2(e: any) {
       console.log('beforeChange');
     }
-    showMinsArticles() {
+    showArticles() {
         
-        this.articlefacade.showMinsArticles();
+       // this.articlefacade.showMinsArticles();
         
-        this.articles$.subscribe(e=>{
+        this.articles$.pipe(map(res=>res.slice().reverse())).subscribe(e=>{
           this.fetechedArticles=e
         })
     
