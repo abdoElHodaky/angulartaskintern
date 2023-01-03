@@ -1,5 +1,5 @@
 import { Component, SimpleChanges } from "@angular/core";
-import { takeUntil,Subject, Observable } from "rxjs";
+import { takeUntil,Subject, Observable,pipe,map } from "rxjs";
 import {FormGroup,FormControl,Validators} from "@angular/forms";
 import { TicketsFacade } from "src/facades/ticket.facade";
 import { Ticket } from "src/models/suptickets";
@@ -20,7 +20,7 @@ export class ContactComponent {
   /*  this.contactForm.valueChanges.subscribe(e=>{
       this.preview=JSON.stringify(e)
     })*/
-    this.ticketfacade.tickets$.subscribe(e=>{
+    this.ticketfacade.tickets$.pipe(map(res=>res.slice().reverse())).subscribe(e=>{
       this.preview=e;
     })
    
