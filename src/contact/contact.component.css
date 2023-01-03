@@ -55,7 +55,7 @@ border: 2px solid #F90000;
 
 }
 
-tbody {
-  height: 80em;
+.table tbody {
+  height: 30em;
   overflow: scroll;
 }
