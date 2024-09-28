@@ -11,7 +11,12 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/vendor.*.js",
+          "/main.*.js",
+          "/polyfills.*.js",
+          "/runtime.*.js",
+          "/*.js",
+          "!/*-sw.js"
         ]
       }
     },
@@ -23,7 +28,24 @@
         "files": [
           "/assets/**",
           "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ],
+        "urls": [
+          "https://cdn.*.com/**",
+          "https://fonts.*.com/**"
         ]
+      }
+    }
+  ],
+    "dataGroups": [
+    {
+      "name": "from-api",
+      "version": 2,
+      "urls": ["https://angulartaskintern.onrender.com/**"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 15,
+        "maxAge": "1h",
+        "timeout": "3s"
       }
     }
   ]
