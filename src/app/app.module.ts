@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Component, NgModule } from "@angular/core";
+import { Component, NgModule, isDevMode } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "../home/home.component";
@@ -27,6 +27,7 @@ import { TicketEffects } from "../effects/ticket.effects";
 import { UserEffects } from "../effects/user.effects";
 import { AuthEffects } from "../effects/auth.effects";
 import { ArticlesEffects } from "../effects/articles.effects";
+import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [
     NotFoundComponent,
@@ -94,7 +95,13 @@ import { ArticlesEffects } from "../effects/articles.effects";
        },
        {path: '**', component:NotFoundComponent}
       //{ path: "news/:id", component: NewsDetailComponent }
-    ],{ scrollPositionRestoration: 'enabled' })
+    ],{ scrollPositionRestoration: 'enabled' }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     TicketsService,
