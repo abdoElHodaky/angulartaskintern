@@ -10,7 +10,6 @@ import { LoginComponent } from "../auth/login.component";
 import { SignupComponent } from "../auth/signup.component";
 import { NotFoundComponent } from "../notFoundPage/notfound.component";
 @NgModule({
-  
   imports:[
   RouterModule.forRoot([
       { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -65,5 +64,5 @@ import { NotFoundComponent } from "../notFoundPage/notfound.component";
      ],
     exports:[RouterModule]   
 })
- export class AppRoutingModule {}
+export class AppRoutingModule {}
     
