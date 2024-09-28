@@ -4,6 +4,9 @@
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
+  "id":"angulartask-674#",
+  "orientation":"natural",
+  "dir":"auto",
   "scope": "./",
   "start_url": "./",
   "icons": [
