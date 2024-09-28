@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/common";
-import { RouterModule } from "@angular/router";
+import { RouterModule,PreloadAllModules } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "../home/home.component";
 import { NewsComponent } from "../news/news.component";
@@ -11,7 +11,7 @@ import { SignupComponent } from "../auth/signup.component";
 import { NotFoundComponent } from "../notFoundPage/notfound.component";
 @NgModule({
   
-  exports:[
+  imports:[
   RouterModule.forRoot([
       { path: "", redirectTo: "/home", pathMatch: "full" },
       {
@@ -59,8 +59,11 @@ import { NotFoundComponent } from "../notFoundPage/notfound.component";
        },
        {path: '**', component:NotFoundComponent}
       //{ path: "news/:id", component: NewsDetailComponent }
-    ],{ scrollPositionRestoration: 'enabled' })
-
-    ])
+    ],{ scrollPositionRestoration: 'enabled',
+        preloadingStrategy: PreloadAllModules
+      })
+     ],
+    exports:[RouterModule]   
+  )
  export class AppRoutingModule {}
     
