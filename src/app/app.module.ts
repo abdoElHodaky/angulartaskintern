@@ -28,6 +28,7 @@ import { UserEffects } from "../effects/user.effects";
 import { AuthEffects } from "../effects/auth.effects";
 import { ArticlesEffects } from "../effects/articles.effects";
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AppRoutingModule} from "./app-routing.module";
 @NgModule({
   declarations: [
     NotFoundComponent,
@@ -48,7 +49,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     SlickCarouselModule,
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([
+   /* RouterModule.forRoot([
       { path: "", redirectTo: "/home", pathMatch: "full" },
       {
         path: "home",
@@ -95,7 +96,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
        },
        {path: '**', component:NotFoundComponent}
       //{ path: "news/:id", component: NewsDetailComponent }
-    ],{ scrollPositionRestoration: 'enabled' }),
+    ],{ scrollPositionRestoration: 'enabled' })*/
+    AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
