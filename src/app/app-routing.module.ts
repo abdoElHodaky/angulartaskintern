@@ -1,4 +1,4 @@
-import {NgModule} from "@angular/common";
+import {NgModule} from "@angular/core";
 import { RouterModule,PreloadAllModules } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "../home/home.component";
