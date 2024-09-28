@@ -64,6 +64,6 @@ import { NotFoundComponent } from "../notFoundPage/notfound.component";
       })
      ],
     exports:[RouterModule]   
-  )
+})
  export class AppRoutingModule {}
     
