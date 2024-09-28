@@ -1,4 +1,4 @@
-import { BrowserModule } from "@angular/platform-browser";
+import { BrowserModule, provideClientHydration } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Component, NgModule, isDevMode } from "@angular/core";
 import { RouterModule } from "@angular/router";
@@ -110,7 +110,7 @@ import { AppRoutingModule} from "./app-routing.module";
     ArticlesFacade,
     TicketsFacade,
     CoursesFacade,
-    AuthFacade,UsersFacade],
+    AuthFacade,UsersFacade, provideClientHydration()],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
